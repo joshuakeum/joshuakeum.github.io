@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 378"
+     width="700" height="378" role="img" aria-labelledby="figTitle figDesc">
+  <title id="figTitle">Circular and hyperbolic parametrizations compared</title>
+  <desc id="figDesc">Left: the unit circle x squared plus y squared equals 1, with the
+point (cos t, sin t) marked and the parameter t shown as the subtended angle. Right:
+the right branch of the unit hyperbola x squared minus y squared equals 1, with the
+point (cosh t, sinh t) marked and the asymptotes y equals plus or minus x drawn
+dashed. Both panels are drawn at the same scale, so the unit tick marked 1 is the
+same distance from the origin in each. In the circular case t is an angle; in the
+hyperbolic case it is only a parameter.</desc>
+  <style>
+    /* Base values are the validated light-mode palette. Both curve hues also clear
+       3:1 on the dark surface and the greys stay legible on either, so a viewer
+       whose OS scheme and site theme disagree still gets a readable figure. */
+    svg { --curve-a:#2a78d6; --curve-b:#eb6834; --ink:#7a7a74; --axis:#91918a; }
+    @media (prefers-color-scheme: dark) {
+      svg { --curve-a:#3987e5; --curve-b:#d95926; --ink:#c3c2b7; --axis:#6f6f68; }
+    }
+    .ax   { stroke:var(--axis); stroke-width:1.6; fill:none; }
+    .asym { stroke:var(--axis); stroke-width:2; fill:none; stroke-dasharray:7 7; }
+    .ca   { stroke:var(--curve-a); stroke-width:3.2; fill:none; }
+    .cb   { stroke:var(--curve-b); stroke-width:3.2; fill:none; }
+    .ra   { stroke:var(--curve-a); stroke-width:1.8; fill:none; }
+    .rb   { stroke:var(--curve-b); stroke-width:1.8; fill:none; }
+    .da   { fill:var(--curve-a); }
+    .db   { fill:var(--curve-b); }
+    text  { fill:var(--ink); font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+    .eq   { font-size:25px; font-style:italic; text-anchor:middle; }
+    .key  { font-size:21px; }
+    .sm   { font-size:17px; }
+    .prm  { font-size:20px; font-style:italic; }
+  </style>
+
+  <!-- left panel: unit circle.  The key dot carries identity; label text stays ink. -->
+  <circle class="da" cx="52" cy="49" r="7"/>
+  <text class="key" x="68" y="56">(cos t, sin t)</text>
+  <path class="ax" d="M 48,186 H 300"/>
+  <path class="ax" d="M 175,72 V 302"/>
+  <path class="ax" d="M 278,181 v 10"/>
+  <text class="sm" x="267" y="207" text-anchor="end">1</text>
+  <circle class="ca" cx="175" cy="186" r="103"/>
+  <path class="ra" d="M 175,186 L 241.21,107.10"/>
+  <path class="ra" d="M 215,186 A 40,40 0 0 0 200.71,155.36"/>
+  <text class="prm" x="226" y="171">t</text>
+  <circle class="da" cx="241.21" cy="107.10" r="9"/>
+  <text class="eq" x="175" y="348">x² + y² = 1</text>
+
+  <!-- right panel: right branch of the unit hyperbola, same scale as the circle -->
+  <circle class="db" cx="364" cy="49" r="7"/>
+  <text class="key" x="380" y="56">(cosh t, sinh t)</text>
+  <path class="asym" d="M 365,291 L 597,59"/>
+  <path class="asym" d="M 365,81 L 597,313"/>
+  <text class="sm" x="603" y="53" text-anchor="middle">y = x</text>
+  <text class="sm" x="603" y="333" text-anchor="middle">y = −x</text>
+  <path class="ax" d="M 352,186 H 648"/>
+  <path class="ax" d="M 470,72 V 302"/>
+  <path class="ax" d="M 573,181 v 10"/>
+  <text class="sm" x="562" y="207" text-anchor="end">1</text>
+  <path class="cb" d="M 623.08,299.25 L 620.43,295.64 L 617.87,292.10 L 615.39,288.62 L 613.00,285.19 L 610.68,281.83 L 608.45,278.51 L 606.29,275.25 L 604.21,272.04 L 602.20,268.87 L 600.27,265.76 L 598.41,262.68 L 596.63,259.66 L 594.91,256.67 L 593.27,253.72 L 591.70,250.81 L 590.19,247.94 L 588.75,245.10 L 587.38,242.30 L 586.08,239.53 L 584.84,236.79 L 583.67,234.07 L 582.56,231.39 L 581.51,228.73 L 580.53,226.09 L 579.61,223.47 L 578.75,220.88 L 577.95,218.31 L 577.21,215.75 L 576.53,213.22 L 575.92,210.69 L 575.36,208.18 L 574.86,205.69 L 574.43,203.20 L 574.05,200.73 L 573.73,198.26 L 573.47,195.80 L 573.26,193.34 L 573.12,190.89 L 573.03,188.45 L 573.00,186.00 L 573.03,183.55 L 573.12,181.11 L 573.26,178.66 L 573.47,176.20 L 573.73,173.74 L 574.05,171.27 L 574.43,168.80 L 574.86,166.31 L 575.36,163.82 L 575.92,161.31 L 576.53,158.78 L 577.21,156.25 L 577.95,153.69 L 578.75,151.12 L 579.61,148.53 L 580.53,145.91 L 581.51,143.27 L 582.56,140.61 L 583.67,137.93 L 584.84,135.21 L 586.08,132.47 L 587.38,129.70 L 588.75,126.90 L 590.19,124.06 L 591.70,121.19 L 593.27,118.28 L 594.91,115.33 L 596.63,112.34 L 598.41,109.32 L 600.27,106.24 L 602.20,103.13 L 604.21,99.96 L 606.29,96.75 L 608.45,93.49 L 610.68,90.17 L 613.00,86.81 L 615.39,83.38 L 617.87,79.90 L 620.43,76.36 L 623.08,72.75"/>
+  <path class="rb" d="M 470,186 L 600.87,105.26"/>
+  <circle class="db" cx="600.87" cy="105.26" r="9"/>
+  <text class="eq" x="470" y="348">x² − y² = 1</text>
+</svg>

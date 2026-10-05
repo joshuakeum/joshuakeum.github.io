@@ -1,6 +1,6 @@
 ---
 title: "Calculus 1: Course Overview"
-date: 2026-10-05 10:00:00 +0900
+date: 2026-10-05 09:00:00 +0900
 categories: [Course Notes, Calculus 1]
 tags: [overview, calculus, linear algebra, series, curves]
 description: Scope, unit map, notation conventions, and key takeaways for Mathematics 1 at Seoul National University, Spring 2022.

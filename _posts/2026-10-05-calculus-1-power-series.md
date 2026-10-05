@@ -445,12 +445,7 @@ $$
 
 The identity $$\cosh^2 t - \sinh^2 t = 1$$ says that $$(\cosh t, \sinh t)$$ lies on the hyperbola $$x^2 - y^2 = 1$$, exactly as $$(\cos t, \sin t)$$ lies on the circle $$x^2+y^2=1$$.
 
-<!-- Figure not drawn yet. Restore the line below once
-     assets/img/calculus-1/hyperbola-parametrization.png exists:
-![Unit circle parametrized by cosine and sine beside the unit hyperbola parametrized by cosh and sinh](/assets/img/calculus-1/hyperbola-parametrization.png)
--->
-
-<!-- TODO: draw figure — left panel: unit circle with the point (cos t, sin t) marked; right panel: right branch of x^2 - y^2 = 1 with the point (cosh t, sinh t) marked and the asymptotes y = ±x dashed. -->
+![Unit circle parametrized by cosine and sine beside the unit hyperbola parametrized by cosh and sinh](/assets/img/calculus-1/hyperbola-parametrization.svg)
 
 One disanalogy worth noting. In the circular parametrization $$t$$ is time under uniform circular motion, so it has a direct physical reading. In the hyperbolic parametrization $$t$$ has no such meaning; it is a parameter and nothing more.
 
