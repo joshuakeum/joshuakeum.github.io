@@ -65,7 +65,7 @@ main() {
   # Course units that are drafted but not yet posted are linked from the course
   # overview on purpose. Remove a slug from this list as its post goes live, so
   # the link check tightens with each unit instead of staying permanently loose.
-  _pending="/^\/posts\/calculus-1-(power-series|taylor|coordinates-vectors|determinants|curves|line-integrals-curvature)\/$/"
+  _pending="/^\/posts\/calculus-1-(taylor|coordinates-vectors|determinants|curves|line-integrals-curvature)\/$/"
 
   bundle exec htmlproofer "$SITE_DIR" \
     --disable-external \
