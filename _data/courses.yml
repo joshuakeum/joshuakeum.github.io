@@ -17,14 +17,15 @@
 #               Leave it out for a course you have not written about yet.
 #   instructor  Optional.
 #   summary     Optional. One or two sentences on what the course covered.
-
-- term: 2025 Spring
-  code: MATH 221
-  title: Linear Algebra
-  subject: Mathematics
-  category: Linear Algebra
-  instructor:
-  summary: >-
-    Vector spaces, linear maps and their matrix representations, determinants,
-    eigenvalues and eigenvectors, inner product spaces, and the spectral
-    theorem for symmetric matrices.
+#
+# Uncomment and adapt the entry below to add your first course:
+#
+# - term: 2025 Spring
+#   code: MATH 221
+#   title: Linear Algebra
+#   subject: Mathematics
+#   category: Linear Algebra
+#   instructor: Prof. Name
+#   summary: >-
+#     Vector spaces, linear maps and their matrix representations,
+#     eigenvalues, and the spectral theorem.

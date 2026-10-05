@@ -8,9 +8,13 @@ order: 1
 An index of the undergraduate courses I have written up here. Each entry links
 to that course's archive, where its posts are collected.
 
-{% assign terms = site.data.courses | group_by: "term" %}
+{%- comment -%}
+  The `size` filter returns 0 for both nil (every entry commented out) and an
+  empty list, so this guard holds however the registry is emptied.
+{%- endcomment -%}
+{% assign course_count = site.data.courses | size %}
 
-{% if terms.size == 0 %}
+{% if course_count == 0 %}
 
 > No courses in the registry yet. Add entries to `_data/courses.yml`{: .filepath }
 > and they will appear here.
@@ -18,6 +22,7 @@ to that course's archive, where its posts are collected.
 
 {% else %}
 
+{% assign terms = site.data.courses | group_by: "term" %}
 {% for term in terms %}
 
 ## {{ term.name }}
