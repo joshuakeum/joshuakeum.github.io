@@ -1,0 +1,30 @@
+# The course registry that powers the "Courses" tab (`_tabs/courses.md`).
+#
+# Add one entry per course. Entries are grouped under their `term`, in the
+# order the terms first appear in this file, so keep newest terms at the top.
+#
+# Fields
+# ------
+#   term        Required. Grouping header, e.g. "2025 Spring".
+#   title       Required. The course title as you want it displayed.
+#   code        Optional. Course code as your university writes it.
+#   subject     Optional. Broad field, shown as a small label on the card.
+#   category    Optional but recommended. Must match the SECOND element of a
+#               post's `categories:` front matter. This is what links the card
+#               to that course's archive page and counts its posts. With
+#                   categories: [Mathematics, Linear Algebra]
+#               the course entry needs `category: Linear Algebra`.
+#               Leave it out for a course you have not written about yet.
+#   instructor  Optional.
+#   summary     Optional. One or two sentences on what the course covered.
+
+- term: 2025 Spring
+  code: MATH 221
+  title: Linear Algebra
+  subject: Mathematics
+  category: Linear Algebra
+  instructor:
+  summary: >-
+    Vector spaces, linear maps and their matrix representations, determinants,
+    eigenvalues and eigenvectors, inner product spaces, and the spectral
+    theorem for symmetric matrices.
