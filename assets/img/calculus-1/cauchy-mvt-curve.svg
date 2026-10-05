@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 378"
+     width="700" height="378" role="img" aria-labelledby="figTitle figDesc">
+  <title id="figTitle">Cauchy's mean value theorem, geometrically</title>
+  <desc id="figDesc">A curved path in the plane runs from the point gamma(a) at the
+lower left to gamma(b) at the upper right. A straight arrow, the displacement
+gamma(b) minus gamma(a), joins the two endpoints. At an interior point gamma(c) on
+the curve a second arrow, the velocity gamma prime of c, points in exactly the same
+direction as that displacement: somewhere along the path the velocity is parallel to
+the straight displacement from start to finish.</desc>
+  <style>
+    /* Base values are the validated light-mode palette; both hues also clear 3:1 on
+       the dark surface and the greys stay legible on either, so a viewer whose OS
+       scheme and site theme disagree still gets a readable figure. */
+    svg { --curve:#2a78d6; --vec:#eb6834; --ink:#7a7a74; }
+    @media (prefers-color-scheme: dark) {
+      svg { --curve:#3987e5; --vec:#d95926; --ink:#c3c2b7; }
+    }
+    .path { stroke:var(--curve); stroke-width:3.2; fill:none; stroke-linecap:round; }
+    .dot  { fill:var(--curve); }
+    .chord { stroke:var(--vec); stroke-width:2.2; fill:none; }
+    .vel   { stroke:var(--vec); stroke-width:3.4; fill:none; }
+    text  { fill:var(--ink); font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+    .lbl  { font-size:22px; font-style:italic; }
+  </style>
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="8.5" refY="5"
+            markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+      <path d="M 0,0.8 L 9.6,5 L 0,9.2 z" fill="var(--vec)"/>
+    </marker>
+  </defs>
+
+  <!-- the displacement from start to finish -->
+  <line class="chord" x1="102.5" y1="288.6" x2="595.3" y2="127.5"
+        marker-end="url(#ah)"/>
+  <text class="lbl" x="364" y="236">γ(b) − γ(a)</text>
+
+  <!-- the path itself -->
+  <path class="path" d="M 92,292 C 230,130 450,80 612,122"/>
+
+  <!-- the velocity at the interior point, parallel to the displacement -->
+  <line class="vel" x1="328.8" y1="134.9" x2="450.4" y2="95.2"
+        marker-end="url(#ah)"/>
+  <text class="lbl" x="460.4" y="85.2">γ′(c)</text>
+
+  <circle class="dot" cx="92" cy="292" r="9"/>
+  <text class="lbl" x="88" y="322" text-anchor="middle">γ(a)</text>
+  <circle class="dot" cx="612" cy="122" r="9"/>
+  <text class="lbl" x="628" y="124">γ(b)</text>
+  <circle class="dot" cx="328.8" cy="134.9" r="9"/>
+  <text class="lbl" x="314.8" y="164.9" text-anchor="end">γ(c)</text>
+</svg>
