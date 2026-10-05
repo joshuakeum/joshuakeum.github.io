@@ -61,9 +61,15 @@ main() {
     -d "$SITE_DIR$_baseurl" -c "$_config"
 
   # test
+  #
+  # Course units that are drafted but not yet posted are linked from the course
+  # overview on purpose. Remove a slug from this list as its post goes live, so
+  # the link check tightens with each unit instead of staying permanently loose.
+  _pending="/^\/posts\/calculus-1-(power-series|taylor|coordinates-vectors|determinants|curves|line-integrals-curvature)\/$/"
+
   bundle exec htmlproofer "$SITE_DIR" \
     --disable-external \
-    --ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/"
+    --ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/,$_pending"
 }
 
 while (($#)); do
