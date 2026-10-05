@@ -47,9 +47,12 @@ A **sequence** is a function with domain $$\mathbb{N}$$, written $$a_1, a_2, a_3
 Everyone arrives knowing that $$\lim_{n\to\infty} n \sin(1/n) = 1$$ and can say why: as $$n$$ grows, $$n\sin(1/n)$$ gets "arbitrarily close" to $$1$$. The numbers back this up — the gap is about $$1.7 \times 10^{-3}$$ at $$n = 10$$ and about $$1.7 \times 10^{-8}$$ at $$n = 1000$$. But "arbitrarily close" is an invitation to argue. The definition that closes the argument is:
 
 $$
+\begin{aligned}
 \lim_{n\to\infty} a_n = b
 \quad \Longleftrightarrow \quad
-\forall \varepsilon > 0,\ \exists N \ \text{ s.t. } \ \lvert a_n - b\rvert < \varepsilon \ \text{ whenever } n \ge N.
+&\forall \varepsilon > 0,\ \exists N \ \text{ s.t. } \\
+&\lvert a_n - b\rvert < \varepsilon \ \text{ whenever } n \ge N.
+\end{aligned}
 $$
 
 Read it as a two-player game. Your opponent picks a tolerance $$\varepsilon$$, as small as they like. You must produce a cutoff index $$N$$ past which the sequence stays within $$\varepsilon$$ of $$b$$. If you can always answer, the limit is $$b$$.
@@ -132,16 +135,19 @@ Two notes of honesty about the last two examples. First, they silently replace a
 A **series** is the limit of the sequence of partial sums:
 
 $$
-\sum_{n=1}^{\infty} a_n := \lim_{n\to\infty} S_n,
-\qquad S_n = \sum_{k=1}^{n} a_k .
+\begin{aligned}
+\sum_{n=1}^{\infty} a_n &:= \lim_{n\to\infty} S_n, \\
+S_n &= \sum_{k=1}^{n} a_k .
+\end{aligned}
 $$
 
 Every statement about series is therefore a statement about the sequence $$(S_n)$$ in disguise. The basic properties transfer directly:
 
 $$
-\sum_{n=1}^{\infty}(a_n+b_n) = \sum_{n=1}^{\infty}a_n + \sum_{n=1}^{\infty}b_n,
-\qquad
-\sum_{n=1}^{\infty}(ta_n) = t\sum_{n=1}^{\infty}a_n ,
+\begin{aligned}
+\sum_{n=1}^{\infty}(a_n+b_n) &= \sum_{n=1}^{\infty}a_n + \sum_{n=1}^{\infty}b_n, \\
+\sum_{n=1}^{\infty}(ta_n) &= t\sum_{n=1}^{\infty}a_n ,
+\end{aligned}
 $$
 
 the first on the understanding that if two of the three series converge, so does the third.
@@ -167,9 +173,12 @@ Geometric series are the yardstick against which the root and ratio tests measur
 Write $$0.4\overline{27} = 0.4272727\ldots$$ as a fraction. Split off the non-repeating head and treat the tail as geometric with ratio $$r = 10^{-2}$$:
 
 $$
-0.4\overline{27} = \frac{4}{10} + \frac{27}{10^3}\sum_{n=0}^{\infty} 10^{-2n}
-= \frac{4}{10} + \frac{27}{1000}\cdot\frac{1}{1 - 1/100}
-= \frac{2}{5} + \frac{27}{990} = \frac{47}{110}.
+\begin{aligned}
+0.4\overline{27}
+&= \frac{4}{10} + \frac{27}{10^3}\sum_{n=0}^{\infty} 10^{-2n} \\
+&= \frac{4}{10} + \frac{27}{1000}\cdot\frac{1}{1 - 1/100} \\
+&= \frac{2}{5} + \frac{27}{990} = \frac{47}{110}.
+\end{aligned}
 $$
 
 ### The harmonic series diverges
@@ -183,7 +192,8 @@ Group the terms in blocks whose lengths double. Each block sums to at least $$1/
 $$
 \begin{aligned}
 \sum_{n=1}^{\infty}\frac1n
-&= 1 + \frac12 + \left(\frac13+\frac14\right) + \left(\frac15+\cdots+\frac18\right) + \left(\frac19+\cdots+\frac{1}{16}\right)+\cdots\\
+&= 1 + \frac12 + \left(\frac13+\frac14\right) \\
+&\qquad + \left(\frac15+\cdots+\frac18\right) + \left(\frac19+\cdots+\frac{1}{16}\right)+\cdots\\
 &\ge 1 + \frac12 + \frac12 + \frac12 + \frac12 + \cdots = \infty .
 \end{aligned}
 $$
@@ -211,8 +221,10 @@ The converse is false, and the harmonic series is the standing counterexample: $
 A series is **nonnegative** (양항급수) when $$a_n \ge 0$$ for all $$n$$. Its partial sums are increasing, so by completeness exactly two things can happen: they are bounded and the series converges, or they are unbounded and $$S_n \to \infty$$. That dichotomy is what makes the following notation safe:
 
 $$
-\sum_{n=k}^{\infty} a_n < \infty \ \text{ means convergent}, \qquad
-\sum_{n=k}^{\infty} a_n = \infty \ \text{ means divergent}.
+\begin{aligned}
+\sum_{n=k}^{\infty} a_n < \infty &\ \text{ means convergent}, \\
+\sum_{n=k}^{\infty} a_n = \infty &\ \text{ means divergent}.
+\end{aligned}
 $$
 
 > This notation is **only** legitimate for nonnegative series. The alternating series $$1 - \frac12 + \frac13 - \frac14 + \cdots$$ converges, but writing "$$\cdots < \infty$$" for it is meaningless: for a general series, "$$\lim S_n < \infty$$" is not equivalent to "$$S_n$$ converges", since $$S_n$$ might oscillate without having any limit at all. Say "the series converges" instead.
@@ -223,9 +235,10 @@ $$
 **Theorem.** Suppose $$0 \le a_n \le b_n$$ for all $$n \ge k$$. Then
 
 $$
-\sum_{n=k}^{\infty} b_n < \infty \ \Longrightarrow\ \sum_{n=k}^{\infty} a_n < \infty,
-\qquad
-\sum_{n=k}^{\infty} a_n = \infty \ \Longrightarrow\ \sum_{n=k}^{\infty} b_n = \infty .
+\begin{aligned}
+\sum_{n=k}^{\infty} b_n < \infty &\ \Longrightarrow\ \sum_{n=k}^{\infty} a_n < \infty, \\
+\sum_{n=k}^{\infty} a_n = \infty &\ \Longrightarrow\ \sum_{n=k}^{\infty} b_n = \infty .
+\end{aligned}
 $$
 
 *Proof.* The two lines are contrapositives of each other, so one proof suffices. If $$\sum b_n = \ell < \infty$$ then every partial sum of $$\sum a_n$$ satisfies $$\sum_{n=k}^{m} a_n \le \sum_{n=k}^{m} b_n \le \ell$$. An increasing sequence bounded above converges. $$\square$$
@@ -320,7 +333,11 @@ $$\displaystyle\sum_{n=1}^{\infty}\frac{n}{3^n}$$. The ratio is $$\frac{n+1}{n}\
 $$\displaystyle\sum_{n=1}^{\infty}\frac{n^n}{n!}$$. The ratio is
 
 $$
-\frac{(n+1)^{n+1}}{(n+1)!}\cdot\frac{n!}{n^n} = \left(\frac{n+1}{n}\right)^{n} = \left(1+\frac1n\right)^n \to e > 1,
+\begin{aligned}
+\frac{(n+1)^{n+1}}{(n+1)!}\cdot\frac{n!}{n^n}
+&= \left(\frac{n+1}{n}\right)^{n} \\
+&= \left(1+\frac1n\right)^n \to e > 1,
+\end{aligned}
 $$
 
 so the series diverges. (Equivalently, its terms blow up.)
@@ -334,9 +351,10 @@ Rule of thumb: factorials and fixed powers call for the ratio test; $$n$$-th pow
 First, an **improper integral** (특이적분) is one where either the interval is unbounded or the integrand blows up:
 
 $$
-\int_a^{\infty} f(x)\,dx = \lim_{N\to\infty}\int_a^{N}f(x)\,dx,
-\qquad
-\int_a^{b} f(x)\,dx = \lim_{\varepsilon\to 0^+}\int_{a+\varepsilon}^{b}f(x)\,dx .
+\begin{aligned}
+\int_a^{\infty} f(x)\,dx &= \lim_{N\to\infty}\int_a^{N}f(x)\,dx, \\
+\int_a^{b} f(x)\,dx &= \lim_{\varepsilon\to 0^+}\int_{a+\varepsilon}^{b}f(x)\,dx .
+\end{aligned}
 $$
 
 The integral converges when the limit exists. In practice one writes the antiderivative and evaluates at the endpoint formally, e.g. $$\int_1^\infty x^{-2}\,dx = [-1/x]_1^\infty = 1$$. But formality has limits: $$\int_1^\infty \sin x\,dx = [-\cos x]_1^\infty$$ has no value, because $$\cos N$$ oscillates, so that improper integral diverges.
@@ -386,9 +404,10 @@ The function defined by this sum for $$s>1$$ is the **Riemann zeta function** $$
 One more integral-test consequence, just past the $$p$$-series boundary:
 
 $$
-\sum_{n=2}^{\infty}\frac{1}{n\ln n} = \infty,
-\qquad\text{since}\qquad
-\int_2^{\infty}\frac{dx}{x\ln x} = \big[\ln(\ln x)\big]_2^{\infty} = \infty .
+\begin{aligned}
+\sum_{n=2}^{\infty}\frac{1}{n\ln n} &= \infty, \\
+\text{since}\quad \int_2^{\infty}\frac{dx}{x\ln x} &= \big[\ln(\ln x)\big]_2^{\infty} = \infty .
+\end{aligned}
 $$
 
 So $$1/(n\ln n)$$ is small enough that no $$p$$-series comparison resolves it, yet still too large to sum.

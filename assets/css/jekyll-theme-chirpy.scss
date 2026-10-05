@@ -1,0 +1,27 @@
+---
+---
+
+@use 'abstracts/variables' with (
+  $theme: '{{ site.theme_mode }}'
+);
+
+/* prettier-ignore */
+@use 'main
+{%- if jekyll.environment == 'production' -%}
+  .bundle
+{%- endif -%}
+';
+
+/* append your custom style below */
+
+/* Long display equations are split into aligned rows at the source level, but
+   a formula can still be unsplittable or simply wider than a narrow phone.
+   Let such a formula scroll inside its own box rather than widening the whole
+   document, which otherwise gives every page a horizontal scrollbar. */
+mjx-container[display='true'] {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  /* keeps the scrollbar from overlapping descenders */
+  padding-bottom: 0.2rem;
+}
