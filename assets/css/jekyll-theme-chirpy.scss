@@ -177,3 +177,28 @@ mjx-container[display='true'] {
   height: 100%;
   object-fit: cover;
 }
+
+/* ── Profile photo: discourage casual saving ────────────────────────────── */
+
+/* `pointer-events: none` is the useful part. The photo stops being an event
+   target, so a right-click lands on its parent — the sidebar's <a>, or the
+   landing wrapper — and the browser offers link or page options instead of
+   "Save image as…". It also rules out drag-to-desktop. The rest covers the
+   iOS long-press sheet and text selection.
+
+   This is a deterrent, not protection: the file still sits at a public URL,
+   is visible in devtools and view-source, and can be screenshot. Nothing
+   served to a browser can be withheld from it. */
+#avatar img,
+.landing-photo {
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none;
+}
+
+/* The theme zooms the avatar on `#avatar img:hover`, which the rule above
+   would silence, so hang the effect off the parent instead. */
+#avatar:hover img {
+  transform: scale(1.2);
+}
