@@ -157,7 +157,10 @@ pwa:
     deny_paths:
       # - "/example"  # URLs match `<SITE_URL>/example/*` will not be cached by the PWA
 
-paginate: 10
+# `paginate` is intentionally unset. The home page is a landing page rather than
+# a post feed (see _layouts/home.html), and nothing else reads the paginator.
+# Were it left at 10, jekyll-paginate would start emitting /page2/ and onwards as
+# duplicates of the landing page once this site passes ten posts.
 
 # The base URL of your site
 baseurl: ""

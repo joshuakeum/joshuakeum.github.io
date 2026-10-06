@@ -1,4 +1,64 @@
 ---
 layout: home
-# Index page
+# The landing page.
+#
+# Course notes are deliberately not listed here (see the Courses and Archives
+# tabs). The `home` layout is overridden by _layouts/home.html in this repo.
 ---
+
+{%- comment -%}
+  Prefer site.title so the heading matches the name in the sidebar and topbar;
+  site.social.name is the shorter copyright form and would read as a mismatch.
+{%- endcomment -%}
+{% assign name = site.title | default: site.social.name %}
+
+<section class="landing">
+  {%- assign avatar = site.avatar | default: '' -%}
+  {%- if avatar != '' -%}
+    <img class="landing-photo" src="{{ avatar | relative_url }}"
+         alt="Photograph of {{ name }}">
+  {%- else -%}
+    {%- comment -%} First and last word only, so a middle initial does not add a letter. {%- endcomment -%}
+    {%- assign parts = name | split: ' ' -%}
+    <div class="landing-photo landing-photo--empty">
+      <span aria-hidden="true">{{ parts.first | slice: 0 }}{{ parts.last | slice: 0 }}</span>
+    </div>
+  {%- endif -%}
+
+  <div class="landing-body">
+    <h1 class="landing-name">{{ name }}</h1>
+
+    <!-- Replace the paragraph below with your own introduction. -->
+    <p class="landing-lede">
+      Undergraduate at Seoul National University. This site collects summaries of
+      the courses I have taken — what each one covered, the ideas worth keeping,
+      and the parts I found hard.
+    </p>
+
+    <ul class="landing-contact">
+      {%- if site.social.email and site.social.email != '' -%}
+        <li>
+          <i class="fas fa-envelope" aria-hidden="true"></i>
+          <a href="mailto:{{ site.social.email }}">{{ site.social.email }}</a>
+        </li>
+      {%- endif -%}
+      {%- if site.github.username and site.github.username != '' -%}
+        <li>
+          <i class="fab fa-github" aria-hidden="true"></i>
+          <a href="https://github.com/{{ site.github.username }}">
+            github.com/{{ site.github.username }}
+          </a>
+        </li>
+      {%- endif -%}
+    </ul>
+  </div>
+</section>
+
+<section class="landing-next">
+  <h2>Course notes</h2>
+  <p>
+    Write-ups are organised by course on the
+    <a href="{{ '/courses/' | relative_url }}">Courses</a> page, and listed by
+    date under <a href="{{ '/archives/' | relative_url }}">Archives</a>.
+  </p>
+</section>

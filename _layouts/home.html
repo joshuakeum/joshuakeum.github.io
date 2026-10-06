@@ -1,0 +1,38 @@
+---
+layout: default
+---
+
+<!--
+  Overrides the Chirpy theme's `home` layout.
+
+  The theme's version lists paginated post previews. This site's landing page is
+  an introduction instead, so this layout is a passthrough and `index.html`
+  owns the content. The layout name stays `home` on purpose: `_includes/head.html`
+  special-cases it to emit `<title>Joshua D. Keum</title>` rather than
+  "<page title> | <site title>", and declaring `layout: default` here keeps the
+  theme's content refactoring (lazy images, link handling) applied.
+
+  To restore the theme's post feed, delete this file and put `paginate` back in
+  _config.yml.
+-->
+
+{% include lang.html %}
+
+{%- comment -%}
+  `default.html` renders the "Recently Updated" and "Trending Tags" panel beside
+  the main column on every page, which would list the course notes right here on
+  the landing page. The theme offers no switch for it, so the panel is hidden in
+  this layout — used by index.html alone, so every other page keeps it — and the
+  main column is widened to take the freed space. Text keeps a readable measure
+  via the max-width in assets/css/jekyll-theme-chirpy.scss.
+{%- endcomment -%}
+<style>
+  #panel-wrapper { display: none; }
+  @media (min-width: 1200px) {
+    main[aria-label='Main Content'] { width: 100%; max-width: 100%; flex: 0 0 auto; }
+  }
+</style>
+
+<article class="px-1">
+  {{ content }}
+</article>

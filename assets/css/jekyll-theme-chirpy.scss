@@ -25,3 +25,118 @@ mjx-container[display='true'] {
   /* keeps the scrollbar from overlapping descenders */
   padding-bottom: 0.2rem;
 }
+
+/* ── Landing page (index.html) ──────────────────────────────────────────── */
+
+.landing {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.75rem;
+  margin: 0.5rem 0 2.25rem;
+}
+
+.landing-photo {
+  width: 150px;
+  height: 150px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--card-border-color, rgba(128, 128, 128, 0.3));
+}
+
+/* Shown until a photo exists: initials rather than a broken image. Set
+   `avatar:` in _config.yml to the photo's path and it replaces this. */
+.landing-photo--empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--card-bg, rgba(128, 128, 128, 0.08));
+
+  span {
+    font-size: 3rem;
+    font-weight: 300;
+    letter-spacing: 0.04em;
+    color: var(--text-muted-color, #6b7280);
+  }
+}
+
+.landing-body {
+  flex: 1 1 18rem;
+  min-width: 0;
+}
+
+/* The landing page hides the theme's side panel and spans the full width, so
+   cap the prose at a readable measure rather than letting it run the whole way. */
+.landing-body,
+.landing-next {
+  max-width: 46rem;
+}
+
+.landing-name {
+  margin: 0 0 0.5rem;
+  font-size: 1.9rem;
+  line-height: 1.2;
+}
+
+.landing-lede {
+  margin: 0 0 0.9rem;
+  font-size: 1.02rem;
+}
+
+.landing-contact {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.94rem;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    margin-bottom: 0.3rem;
+  }
+
+  i {
+    width: 1.1em;
+    text-align: center;
+    color: var(--text-muted-color, #6b7280);
+  }
+
+  a {
+    overflow-wrap: anywhere;
+  }
+}
+
+.landing-next {
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--card-border-color, rgba(128, 128, 128, 0.25));
+
+  h2 {
+    margin-top: 0;
+    font-size: 1.25rem;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .landing {
+    gap: 1.25rem;
+  }
+
+  .landing-photo {
+    width: 112px;
+    height: 112px;
+  }
+
+  .landing-photo--empty span {
+    font-size: 2.25rem;
+  }
+
+  .landing-name {
+    font-size: 1.6rem;
+  }
+}
