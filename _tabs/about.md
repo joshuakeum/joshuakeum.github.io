@@ -9,10 +9,6 @@ In the Laboratory of Biomolecular Diversity I work on genome mining and
 HMM-based annotation of bacterial natural-product biosynthetic gene clusters.
 This site also collects summaries of the courses I have taken.
 
-> The full CV, including the detail behind each entry below, is available as a
-> PDF: [Curriculum Vitae (PDF)](/assets/cv/joshua-dongmin-keum-cv.pdf).
-{: .prompt-info }
-
 ## Education
 
 **Seoul National University** — Seoul, Republic of Korea<br>
