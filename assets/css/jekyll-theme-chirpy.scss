@@ -45,6 +45,30 @@ mjx-container[display='true'] {
   border: 1px solid var(--card-border-color, rgba(128, 128, 128, 0.3));
 }
 
+/* Because this page uses the `home` layout, refactor-content.html wraps the
+   photo in Chirpy's post-thumbnail wrapper, `<div class="preview-img">`, whose
+   `aspect-ratio: 40/21` and `img { height: 100% }` stretch a square portrait
+   into a tall crop. Size the wrapper instead and let the photo fill it. The
+   rules above still apply when no wrapper is generated. */
+.landing > .preview-img {
+  aspect-ratio: auto;
+  width: 150px;
+  height: 150px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: none;
+}
+
+.landing > .preview-img > img.landing-photo {
+  width: 100%;
+  height: 100%;
+  /* `.preview-img img` in the theme sets a 10px radius, which outranks the
+     50% on .landing-photo. The square border then survives only where it
+     crosses the circular wrapper, leaving stubs at the circle's widest
+     points, so restate the radius at this specificity. */
+  border-radius: 50%;
+}
+
 /* Shown until a photo exists: initials rather than a broken image. Set
    `avatar:` in _config.yml to the photo's path and it replaces this. */
 .landing-photo--empty {
@@ -127,7 +151,8 @@ mjx-container[display='true'] {
     gap: 1.25rem;
   }
 
-  .landing-photo {
+  .landing-photo,
+  .landing > .preview-img {
     width: 112px;
     height: 112px;
   }
@@ -139,4 +164,16 @@ mjx-container[display='true'] {
   .landing-name {
     font-size: 1.6rem;
   }
+}
+
+/* ── Sidebar avatar ─────────────────────────────────────────────────────── */
+
+/* The theme sizes #avatar as a square and gives the <img> fixed 112x112
+   attributes, but sets no object-fit, so a portrait photo is squashed to fit.
+   Fill the circle and crop instead, and track the container across the theme's
+   breakpoints rather than relying on those attributes. */
+#avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

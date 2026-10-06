@@ -15,8 +15,23 @@ layout: home
 <section class="landing">
   {%- assign avatar = site.avatar | default: '' -%}
   {%- if avatar != '' -%}
-    <img class="landing-photo" src="{{ avatar | relative_url }}"
-         alt="Photograph of {{ name }}">
+    {%- comment -%}
+      Two things this one tag has to get right.
+
+      Resolve the path through the theme's own helper rather than
+      `relative_url`: with an empty `baseurl`, `relative_url` on an
+      already-absolute path returns //assets/..., which a browser reads as a
+      host named "assets". media-url.html also applies `site.cdn` if one is
+      ever set.
+
+      And keep the tag on ONE line. `_includes/refactor-content.html` rewrites
+      every img in page content, splitting the attributes on '" ' — a quote
+      followed by a space. Break the tag across lines and that separator
+      becomes a quote followed by a newline, the attributes parse as one blob,
+      and the src comes out as //assets/... again.
+    {%- endcomment -%}
+    {%- capture avatar_url -%}{% include media-url.html src=avatar %}{%- endcapture -%}
+    <img class="landing-photo" src="{{ avatar_url | strip }}" alt="Photograph of {{ name }}">
   {%- else -%}
     {%- comment -%} First and last word only, so a middle initial does not add a letter. {%- endcomment -%}
     {%- assign parts = name | split: ' ' -%}
