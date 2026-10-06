@@ -29,9 +29,14 @@ layout: home
       followed by a space. Break the tag across lines and that separator
       becomes a quote followed by a newline, the attributes parse as one blob,
       and the src comes out as //assets/... again.
+
+      The alt is empty on purpose. The avatar sits directly beside the name in
+      the <h1>, so it carries no information a screen reader needs repeated,
+      and it need not be a likeness — describing it as a photograph would be
+      wrong whenever it is not one.
     {%- endcomment -%}
     {%- capture avatar_url -%}{% include media-url.html src=avatar %}{%- endcapture -%}
-    <img class="landing-photo" src="{{ avatar_url | strip }}" alt="Photograph of {{ name }}">
+    <img class="landing-photo" src="{{ avatar_url | strip }}" alt="">
   {%- else -%}
     {%- comment -%} First and last word only, so a middle initial does not add a letter. {%- endcomment -%}
     {%- assign parts = name | split: ' ' -%}
