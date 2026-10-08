@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 533"
+     width="700" height="533" role="img" aria-labelledby="figTitle figDesc">
+  <title id="figTitle">The osculating plane of a helix at the point where the parameter is zero</title>
+  <desc id="figDesc">A helix winds up the page. At the point r of zero, which is one zero zero, two arrows are drawn: the velocity r prime of zero, equal to zero one one, and the acceleration r double prime of zero, equal to minus one zero zero. A shaded parallelogram is the plane those two arrows span, the osculating plane, and the helix lies in it to second order at that point. The stretch of helix lying behind the plane is drawn underneath it and the stretch in front over it. A dashed grey arrow perpendicular to the parallelogram is the cross product of the two arrows, which is the normal of the plane. For this helix the plane has equation z equals y.</desc>
+  <style>
+    /* Base values are the validated light-mode palette, the one the earlier figures
+       in this series use. Both hues clear 3:1 on the dark surface and the greys stay
+       legible on either, so a viewer whose OS scheme and site theme disagree still
+       gets a readable figure. */
+    svg { --curve:#2a78d6; --vec:#eb6834; --ink:#7a7a74; --axis:#91918a; }
+    @media (prefers-color-scheme: dark) {
+      svg { --curve:#3987e5; --vec:#d95926; --ink:#c3c2b7; --axis:#6f6f68; }
+    }
+    .curve { stroke:var(--curve); stroke-width:3.2; fill:none; stroke-linecap:round; }
+    .thin  { stroke:var(--curve); stroke-width:1.8; fill:none; }
+    .dot   { fill:var(--curve); }
+    .vec   { stroke:var(--vec); stroke-width:3.2; fill:none; stroke-linecap:round; }
+    .vthin { stroke:var(--vec); stroke-width:2.2; fill:none; stroke-linecap:round; }
+    .vdot  { fill:var(--vec); }
+    .vdash { stroke:var(--vec); stroke-width:1.8; fill:none; stroke-dasharray:6 6; }
+    .plane { fill:var(--vec); fill-opacity:0.10; stroke:var(--vec); stroke-width:2; }
+    .ax    { stroke:var(--axis); stroke-width:1.6; fill:none; }
+    .adash { stroke:var(--axis); stroke-width:1.8; fill:none; stroke-dasharray:7 7; }
+    text   { fill:var(--ink); font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+    .lbl   { font-size:22px; font-style:italic; }
+    .key   { font-size:20px; }
+    .sm    { font-size:17px; }
+  </style>
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="8.5" refY="5"
+            markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+      <path d="M 0,0.8 L 9.6,5 L 0,9.2 z" fill="var(--vec)"/>
+    </marker>
+    <marker id="ahc" viewBox="0 0 10 10" refX="8.5" refY="5"
+            markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0,0.8 L 9.6,5 L 0,9.2 z" fill="var(--curve)"/>
+    </marker>
+    <marker id="ahg" viewBox="0 0 10 10" refX="8.5" refY="5"
+            markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0,0.8 L 9.6,5 L 0,9.2 z" fill="var(--axis)"/>
+    </marker>
+  </defs>
+
+  <!-- the part of the helix lying behind the plane -->
+  <path class="curve" d="M 182.57,493.05 L 182.75,492.27 L 182.95,491.48 L 183.15,490.70 L 183.37,489.92 L 183.60,489.13 L 183.84,488.34 L 184.09,487.56 L 184.35,486.77 L 184.62,485.98 L 184.91,485.20 L 185.20,484.41 L 185.51,483.62 L 185.82,482.83 L 186.15,482.03 L 186.49,481.24 L 186.84,480.45 L 187.19,479.65 L 187.56,478.86 L 187.94,478.06 L 188.34,477.27 L 188.74,476.47 L 189.15,475.67 L 189.57,474.87 L 190.01,474.07 L 190.45,473.26 L 190.90,472.46 L 191.37,471.66 L 191.84,470.85 L 192.33,470.04 L 192.82,469.23 L 193.32,468.42 L 193.84,467.61 L 194.36,466.80 L 194.90,465.99 L 195.44,465.17 L 196.00,464.35 L 196.56,463.54 L 197.13,462.72 L 197.72,461.89 L 198.31,461.07 L 198.91,460.25 L 199.52,459.42 L 200.14,458.59 L 200.77,457.76 L 201.41,456.93 L 202.06,456.10 L 202.72,455.27 L 203.39,454.43 L 204.06,453.59 L 204.74,452.75 L 205.44,451.91 L 206.14,451.07 L 206.85,450.22 L 207.57,449.38 L 208.29,448.53 L 209.03,447.68 L 209.77,446.83 L 210.53,445.97 L 211.29,445.12 L 212.05,444.26 L 212.83,443.40 L 213.61,442.53 L 214.40,441.67 L 215.20,440.80 L 216.01,439.93 L 216.83,439.06 L 217.65,438.19 L 218.48,437.32 L 219.31,436.44 L 220.16,435.56 L 221.01,434.68 L 221.86,433.79 L 222.73,432.91 L 223.60,432.02 L 224.48,431.13 L 225.36,430.24 L 226.25,429.34 L 227.15,428.44 L 228.05,427.54 L 228.96,426.64 L 229.88,425.74 L 230.80,424.83 L 231.73,423.92 L 232.66,423.01 L 233.60,422.09 L 234.55,421.18 L 235.50,420.26 L 236.45,419.34 L 237.41,418.41 L 238.38,417.48 L 239.35,416.56 L 240.32,415.62 L 241.30,414.69 L 242.29,413.75 L 243.28,412.81 L 244.27,411.87 L 245.27,410.93 L 246.28,409.98 L 247.28,409.03 L 248.29,408.08 L 249.31,407.12 L 250.33,406.16 L 251.35,405.20 L 252.38,404.24 L 253.41,403.27 L 254.44,402.31 L 255.48,401.33 L 256.52,400.36 L 257.56,399.38 L 258.61,398.40 L 259.66,397.42 L 260.71,396.44 L 261.76,395.45 L 262.82,394.46 L 263.88,393.47 L 264.94,392.47 L 266.00,391.47 L 267.06,390.47 L 268.13,389.47 L 269.20,388.46 L 270.27,387.45 L 271.34,386.44 L 272.42,385.42 L 273.49,384.41 L 274.57,383.38 L 275.64,382.36 L 276.72,381.33 L 277.80,380.31 L 278.88,379.27 L 279.96,378.24 L 281.04,377.20 L 282.12,376.16 L 283.20,375.12 L 284.28,374.07 L 285.36,373.02 L 286.44,371.97 L 287.52,370.92 L 288.60,369.86 L 289.68,368.80 L 290.76,367.73 L 291.84,366.67 L 292.92,365.60 L 293.99,364.53 L 295.07,363.45 L 296.14,362.38 L 297.21,361.30 L 298.29,360.22 L 299.35,359.13 L 300.42,358.04 L 301.49,356.95 L 302.55,355.86 L 303.62,354.76 L 304.68,353.66 L 305.73,352.56 L 306.79,351.45 L 307.84,350.35 L 308.89,349.24 L 309.94,348.12 L 310.99,347.01 L 312.03,345.89 L 313.07,344.77 L 314.10,343.64 L 315.13,342.52 L 316.16,341.39 L 317.19,340.26 L 318.21,339.12 L 319.23,337.98 L 320.24,336.84 L 321.25,335.70 L 322.26,334.56 L 323.26,333.41 L 324.26,332.26 L 325.25,331.11 L 326.24,329.95 L 327.22,328.79 L 328.20,327.63 L 329.18,326.47 L 330.14,325.30 L 331.11,324.13 L 332.07,322.96 L 333.02,321.79 L 333.97,320.61 L 334.91,319.44 L 335.85,318.26 L 336.78,317.07 L 337.71,315.89 L 338.63,314.70 L 339.54,313.51 L 340.45,312.32 L 341.35,311.12 L 342.24,309.92 L 343.13,308.72 L 344.01,307.52 L 344.89,306.32 L 345.76,305.11 L 346.62,303.90 L 347.48,302.69 L 348.32,301.48 L 349.17,300.26 L 350.00,299.05"/>
+
+  <!-- the plane spanned by the velocity and the acceleration -->
+  <path class="plane" d="M 354.29,473.08 L 550.00,185.83 L 345.71,125.01 L 150.00,412.27 Z"/>
+
+  <!-- and the part in front of it -->
+  <path class="curve" d="M 350.00,299.05 L 350.83,297.83 L 351.65,296.60 L 352.46,295.38 L 353.26,294.15 L 354.06,292.93 L 354.85,291.70 L 355.63,290.46 L 356.40,289.23 L 357.17,287.99 L 357.93,286.75 L 358.67,285.51 L 359.42,284.27 L 360.15,283.03 L 360.87,281.78 L 361.59,280.53 L 362.30,279.28 L 362.99,278.03 L 363.68,276.78 L 364.36,275.52 L 365.04,274.27 L 365.70,273.01 L 366.35,271.75 L 367.00,270.48 L 367.64,269.22 L 368.26,267.95 L 368.88,266.69 L 369.49,265.42 L 370.09,264.15 L 370.68,262.88 L 371.26,261.60 L 371.83,260.33 L 372.39,259.05 L 372.94,257.77 L 373.48,256.50 L 374.01,255.22 L 374.53,253.93 L 375.04,252.65 L 375.55,251.37 L 376.04,250.08 L 376.52,248.79 L 376.99,247.50 L 377.45,246.21 L 377.90,244.92 L 378.34,243.63 L 378.77,242.34 L 379.19,241.04 L 379.60,239.75 L 380.00,238.45 L 380.38,237.16 L 380.76,235.86 L 381.13,234.56 L 381.48,233.26 L 381.83,231.96 L 382.16,230.65 L 382.48,229.35 L 382.80,228.05 L 383.10,226.74 L 383.39,225.44 L 383.67,224.13 L 383.94,222.82 L 384.20,221.52 L 384.44,220.21 L 384.68,218.90 L 384.90,217.59 L 385.12,216.28 L 385.32,214.97 L 385.51,213.66 L 385.69,212.35 L 385.86,211.04 L 386.02,209.72 L 386.16,208.41 L 386.30,207.10 L 386.42,205.78 L 386.53,204.47 L 386.64,203.16 L 386.73,201.84 L 386.80,200.53 L 386.87,199.21 L 386.93,197.90 L 386.97,196.58 L 387.01,195.27 L 387.03,193.95 L 387.04,192.64 L 387.04,191.32 L 387.02,190.01 L 387.00,188.69 L 386.97,187.38 L 386.92,186.06 L 386.86,184.75 L 386.79,183.43 L 386.71,182.12 L 386.62,180.80 L 386.52,179.49 L 386.41,178.18 L 386.28,176.86 L 386.14,175.55 L 386.00,174.24 L 385.84,172.93 L 385.67,171.61 L 385.49,170.30 L 385.29,168.99 L 385.09,167.68 L 384.87,166.37 L 384.65,165.06 L 384.41,163.75 L 384.16,162.45 L 383.90,161.14 L 383.63,159.83 L 383.35,158.53 L 383.06,157.22 L 382.76,155.92 L 382.44,154.61 L 382.12,153.31 L 381.78,152.01 L 381.44,150.71 L 381.08,149.41 L 380.71,148.11 L 380.33,146.81 L 379.94,145.51 L 379.54,144.22 L 379.13,142.92 L 378.71,141.63 L 378.28,140.33 L 377.84,139.04 L 377.39,137.75 L 376.93,136.46 L 376.46,135.17 L 375.97,133.89 L 375.48,132.60 L 374.98,131.32 L 374.46,130.03 L 373.94,128.75 L 373.41,127.47 L 372.87,126.19 L 372.32,124.91 L 371.75,123.64 L 371.18,122.36 L 370.60,121.09 L 370.01,119.82 L 369.41,118.55 L 368.80,117.28 L 368.18,116.01 L 367.55,114.75 L 366.92,113.48 L 366.27,112.22 L 365.61,110.96 L 364.95,109.70 L 364.28,108.45 L 363.59,107.19 L 362.90,105.94 L 362.20,104.69 L 361.49,103.44 L 360.78,102.19 L 360.05,100.94 L 359.32,99.70 L 358.58,98.46 L 357.83,97.22 L 357.07,95.98 L 356.30,94.74 L 355.53,93.51 L 354.74,92.28 L 353.95,91.05 L 353.16,89.82 L 352.35,88.59 L 351.54,87.37 L 350.72,86.15 L 349.89,84.93 L 349.06,83.71 L 348.21,82.50 L 347.36,81.28 L 346.51,80.07 L 345.65,78.86 L 344.78,77.66 L 343.90,76.45 L 343.02,75.25 L 342.13,74.05 L 341.23,72.86 L 340.33,71.66 L 339.42,70.47 L 338.51,69.28 L 337.58,68.09 L 336.66,66.91 L 335.73,65.72 L 334.79,64.54 L 333.84,63.36 L 332.90,62.19 L 331.94,61.02 L 330.98,59.85 L 330.02,58.68 L 329.05,57.51 L 328.07,56.35 L 327.09,55.19 L 326.11,54.03 L 325.12,52.88 L 324.13,51.72 L 323.13,50.57 L 322.13,49.43 L 321.12,48.28 L 320.11,47.14 L 319.09,46.00"/>
+
+  <!-- the normal of the plane, which is the cross product of the two arrows -->
+  <path class="adash" d="M 350.00,299.05 L 260.53,204.72" marker-end="url(#ahg)"/>
+  <text class="sm" x="248.5" y="194.7" text-anchor="end">r&#8242; &#215; r&#8243;</text>
+
+  <!-- velocity and acceleration at r(0), drawn at their true lengths -->
+  <path class="vec" d="M 350.00,299.05 L 429.08,182.98" marker-end="url(#ah)"/>
+  <text class="lbl" x="441.1" y="191.0">r&#8242;(0)</text>
+  <path class="vec" d="M 350.00,299.05 L 284.10,279.43" marker-end="url(#ah)"/>
+  <text class="lbl" x="278.1" y="307.4" text-anchor="end">r&#8243;(0)</text>
+
+  <circle class="dot" cx="350.0" cy="299.0" r="9"/>
+  <text class="lbl" x="364.0" y="326.0">r(0)</text>
+
+  <text class="lbl" x="24" y="46">r(t) = (cos t, sin t, t)</text>
+  <text class="key" x="24" y="78">osculating plane at r(0):  z = y</text>
+  <text class="sm" x="676" y="511" text-anchor="end">0 = det(X &#8722; r(0), r&#8242;(0), r&#8243;(0))</text>
+</svg>

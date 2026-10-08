@@ -143,6 +143,8 @@ X(t) &= (t, 1) + \left(\cos\left(-t - \tfrac{\pi}{2}\right),\ \sin\left(-t - \tf
 \end{aligned}
 $$
 
+![One arch of a cycloid traced by a point on the rim of a rolling wheel, with the wheel drawn at one position and arrows showing that the direction of travel is straight up out of the first cusp and straight down into the second](/assets/img/calculus-1/cycloid-arch.svg)
+
 The two phase shifts are what make the parametrization come out this clean, and
 the cycloid is the running example of the entire chapter — it turns up again
 under area, under length, under arc-length parametrization and under curvature,
@@ -418,6 +420,8 @@ $$
 
 The osculating plane is $$z = y$$. It contains the whole $$x$$-direction, since
 the acceleration at $$t=0$$ points along $$-x$$.
+
+![A helix with the plane spanned by its velocity and acceleration vectors at the point where the parameter is zero, drawn as a shaded parallelogram, together with the normal of that plane given by the cross product of the two vectors](/assets/img/calculus-1/osculating-plane.svg)
 
 > The notes stop here with a question to the class — *this felt a bit strange
 > before; what was strange about it?* — and no recorded answer. It is left open.

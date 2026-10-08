@@ -21,6 +21,8 @@ render_with_liquid: false
 
 The course covered Chapters 1 through 9 of the textbook. Chapter appendices were excluded from the examinable scope, with one exception: §7.4.2, on properties of the determinant. Chapter 8 was limited to §8.1, the cross product. These notes follow that scope.
 
+The seven units below group those chapters by subject rather than one to one, so a unit number is not a chapter number — Unit 4 covers Chapters 4 and 5, Unit 5 covers Chapters 6 and 7 with §8.1, and Units 6 and 7 split Chapter 9 between them. Each unit names the chapters it covers.
+
 ## What this course is about
 
 Despite the name, this is not a course about differentiating and integrating functions of one variable — that is assumed. It is a course about three things that turn out to be one thing. The first is **infinite processes**: what it means to add infinitely many numbers, and the discovery that the familiar functions $$e^x$$, $$\sin x$$, and $$\cos x$$ are most honestly *defined* as infinite sums rather than borrowed from geometry. The second is **approximation**: Taylor's theorem, which says that a smooth function near a point is a polynomial plus a controlled error, and which converts analysis into algebra whenever the error is small enough to ignore. The third is **the geometry of space**: vectors, matrices, determinants, and the curves traced out by a point moving through $$\mathbb{R}^3$$.

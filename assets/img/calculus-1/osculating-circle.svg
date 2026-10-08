@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 520"
+     width="700" height="520" role="img" aria-labelledby="figTitle figDesc">
+  <title id="figTitle">The osculating circle of the parabola y equals x squared at the point one half, one quarter</title>
+  <desc id="figDesc">The parabola y equals x squared is drawn, and at the point P with coordinates one half and one quarter a circle touches it. The circle has radius root two, which is one over the curvature there, and its centre O lies up and to the left of P along the unit normal; the radius joining them is marked one over kappa. A dashed grey line through P in the perpendicular direction is the tangent line. Near P the circle and the parabola run together and only separate slowly, because the circle matches the curve in position, in tangent direction and in curvature.</desc>
+  <style>
+    /* Base values are the validated light-mode palette, the one the earlier figures
+       in this series use. Both hues clear 3:1 on the dark surface and the greys stay
+       legible on either, so a viewer whose OS scheme and site theme disagree still
+       gets a readable figure. */
+    svg { --curve:#2a78d6; --vec:#eb6834; --ink:#7a7a74; --axis:#91918a; }
+    @media (prefers-color-scheme: dark) {
+      svg { --curve:#3987e5; --vec:#d95926; --ink:#c3c2b7; --axis:#6f6f68; }
+    }
+    .curve { stroke:var(--curve); stroke-width:3.2; fill:none; stroke-linecap:round; }
+    .thin  { stroke:var(--curve); stroke-width:1.8; fill:none; }
+    .dot   { fill:var(--curve); }
+    .vec   { stroke:var(--vec); stroke-width:3.2; fill:none; stroke-linecap:round; }
+    .vthin { stroke:var(--vec); stroke-width:2.2; fill:none; stroke-linecap:round; }
+    .vdot  { fill:var(--vec); }
+    .vdash { stroke:var(--vec); stroke-width:1.8; fill:none; stroke-dasharray:6 6; }
+    .plane { fill:var(--vec); fill-opacity:0.10; stroke:var(--vec); stroke-width:2; }
+    .ax    { stroke:var(--axis); stroke-width:1.6; fill:none; }
+    .adash { stroke:var(--axis); stroke-width:1.8; fill:none; stroke-dasharray:7 7; }
+    text   { fill:var(--ink); font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+    .lbl   { font-size:22px; font-style:italic; }
+    .key   { font-size:20px; }
+    .sm    { font-size:17px; }
+  </style>
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="8.5" refY="5"
+            markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+      <path d="M 0,0.8 L 9.6,5 L 0,9.2 z" fill="var(--vec)"/>
+    </marker>
+    <marker id="ahc" viewBox="0 0 10 10" refX="8.5" refY="5"
+            markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0,0.8 L 9.6,5 L 0,9.2 z" fill="var(--curve)"/>
+    </marker>
+    <marker id="ahg" viewBox="0 0 10 10" refX="8.5" refY="5"
+            markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0,0.8 L 9.6,5 L 0,9.2 z" fill="var(--axis)"/>
+    </marker>
+  </defs>
+
+  <!-- the osculating circle, and the radius that sets its size -->
+  <circle class="vthin" cx="324.4" cy="266.6" r="181.0" fill="none"/>
+  <path class="vdash" d="M 452.40,394.60 L 324.40,266.60"/>
+  <circle class="vdot" cx="324.4" cy="266.6" r="8"/>
+  <text class="lbl" x="310.4" y="274.6" text-anchor="end">O</text>
+  <text class="key" x="402.4" y="320.6">1/&#954;</text>
+
+  <!-- the tangent line at P -->
+  <path class="adash" d="M 402.90,444.10 L 537.25,309.75"/>
+  <text class="sm" x="545.3" y="301.7">tangent at P</text>
+
+  <!-- the parabola -->
+  <path class="curve" d="M 168.24,47.92 L 169.58,52.52 L 170.92,57.09 L 172.26,61.62 L 173.60,66.14 L 174.94,70.62 L 176.28,75.07 L 177.62,79.50 L 178.96,83.90 L 180.30,88.27 L 181.64,92.61 L 182.98,96.92 L 184.32,101.21 L 185.66,105.47 L 187.00,109.70 L 188.34,113.90 L 189.68,118.07 L 191.02,122.22 L 192.36,126.34 L 193.69,130.43 L 195.03,134.49 L 196.37,138.52 L 197.71,142.53 L 199.05,146.51 L 200.39,150.46 L 201.73,154.38 L 203.07,158.27 L 204.41,162.14 L 205.75,165.97 L 207.09,169.78 L 208.43,173.56 L 209.77,177.32 L 211.11,181.04 L 212.45,184.74 L 213.79,188.41 L 215.13,192.05 L 216.47,195.66 L 217.81,199.25 L 219.15,202.81 L 220.49,206.34 L 221.83,209.84 L 223.17,213.31 L 224.51,216.75 L 225.85,220.17 L 227.19,223.56 L 228.53,226.92 L 229.87,230.25 L 231.21,233.56 L 232.55,236.83 L 233.89,240.08 L 235.23,243.30 L 236.57,246.49 L 237.91,249.66 L 239.25,252.80 L 240.59,255.90 L 241.93,258.98 L 243.27,262.04 L 244.60,265.06 L 245.94,268.06 L 247.28,271.02 L 248.62,273.96 L 249.96,276.88 L 251.30,279.76 L 252.64,282.62 L 253.98,285.44 L 255.32,288.24 L 256.66,291.02 L 258.00,293.76 L 259.34,296.47 L 260.68,299.16 L 262.02,301.82 L 263.36,304.45 L 264.70,307.06 L 266.04,309.63 L 267.38,312.18 L 268.72,314.70 L 270.06,317.19 L 271.40,319.65 L 272.74,322.09 L 274.08,324.50 L 275.42,326.88 L 276.76,329.23 L 278.10,331.55 L 279.44,333.84 L 280.78,336.11 L 282.12,338.35 L 283.46,340.56 L 284.80,342.74 L 286.14,344.90 L 287.48,347.03 L 288.82,349.12 L 290.16,351.19 L 291.50,353.24 L 292.84,355.25 L 294.17,357.24 L 295.51,359.20 L 296.85,361.13 L 298.19,363.03 L 299.53,364.90 L 300.87,366.75 L 302.21,368.57 L 303.55,370.36 L 304.89,372.12 L 306.23,373.85 L 307.57,375.56 L 308.91,377.24 L 310.25,378.89 L 311.59,380.51 L 312.93,382.10 L 314.27,383.67 L 315.61,385.21 L 316.95,386.72 L 318.29,388.20 L 319.63,389.65 L 320.97,391.08 L 322.31,392.48 L 323.65,393.84 L 324.99,395.19 L 326.33,396.50 L 327.67,397.78 L 329.01,399.04 L 330.35,400.27 L 331.69,401.47 L 333.03,402.65 L 334.37,403.79 L 335.71,404.91 L 337.05,406.00 L 338.39,407.06 L 339.73,408.09 L 341.07,409.10 L 342.41,410.07 L 343.75,411.02 L 345.08,411.94 L 346.42,412.83 L 347.76,413.70 L 349.10,414.54 L 350.44,415.34 L 351.78,416.13 L 353.12,416.88 L 354.46,417.60 L 355.80,418.30 L 357.14,418.97 L 358.48,419.61 L 359.82,420.22 L 361.16,420.80 L 362.50,421.36 L 363.84,421.89 L 365.18,422.39 L 366.52,422.86 L 367.86,423.30 L 369.20,423.72 L 370.54,424.11 L 371.88,424.47 L 373.22,424.80 L 374.56,425.10 L 375.90,425.38 L 377.24,425.63 L 378.58,425.85 L 379.92,426.04 L 381.26,426.20 L 382.60,426.34 L 383.94,426.44 L 385.28,426.52 L 386.62,426.58 L 387.96,426.60 L 389.30,426.59 L 390.64,426.56 L 391.98,426.50 L 393.32,426.41 L 394.65,426.29 L 395.99,426.15 L 397.33,425.98 L 398.67,425.78 L 400.01,425.55 L 401.35,425.29 L 402.69,425.00 L 404.03,424.69 L 405.37,424.35 L 406.71,423.98 L 408.05,423.58 L 409.39,423.16 L 410.73,422.70 L 412.07,422.22 L 413.41,421.71 L 414.75,421.18 L 416.09,420.61 L 417.43,420.02 L 418.77,419.39 L 420.11,418.74 L 421.45,418.07 L 422.79,417.36 L 424.13,416.63 L 425.47,415.86 L 426.81,415.07 L 428.15,414.26 L 429.49,413.41 L 430.83,412.54 L 432.17,411.63 L 433.51,410.70 L 434.85,409.75 L 436.19,408.76 L 437.53,407.75 L 438.87,406.70 L 440.21,405.63 L 441.55,404.53 L 442.89,403.41 L 444.23,402.25 L 445.56,401.07 L 446.90,399.86 L 448.24,398.62 L 449.58,397.35 L 450.92,396.06 L 452.26,394.74 L 453.60,393.39 L 454.94,392.01 L 456.28,390.60 L 457.62,389.16 L 458.96,387.70 L 460.30,386.21 L 461.64,384.69 L 462.98,383.14 L 464.32,381.57 L 465.66,379.97 L 467.00,378.33 L 468.34,376.67 L 469.68,374.99 L 471.02,373.27 L 472.36,371.53 L 473.70,369.76 L 475.04,367.96 L 476.38,366.13 L 477.72,364.27 L 479.06,362.39 L 480.40,360.48 L 481.74,358.54 L 483.08,356.57 L 484.42,354.57 L 485.76,352.55 L 487.10,350.50 L 488.44,348.42 L 489.78,346.31 L 491.12,344.17 L 492.46,342.01 L 493.80,339.82 L 495.13,337.60 L 496.47,335.35 L 497.81,333.07 L 499.15,330.77 L 500.49,328.44 L 501.83,326.08 L 503.17,323.69 L 504.51,321.27 L 505.85,318.83 L 507.19,316.35 L 508.53,313.85 L 509.87,311.32 L 511.21,308.77 L 512.55,306.18 L 513.89,303.57 L 515.23,300.93 L 516.57,298.26 L 517.91,295.56 L 519.25,292.84 L 520.59,290.08 L 521.93,287.30 L 523.27,284.49 L 524.61,281.66 L 525.95,278.79 L 527.29,275.90 L 528.63,272.98 L 529.97,270.03 L 531.31,267.05 L 532.65,264.04 L 533.99,261.01 L 535.33,257.95 L 536.67,254.86 L 538.01,251.74 L 539.35,248.59 L 540.69,245.42 L 542.03,242.22 L 543.37,238.99 L 544.71,235.73 L 546.04,232.44 L 547.38,229.13 L 548.72,225.79 L 550.06,222.42 L 551.40,219.02 L 552.74,215.59 L 554.08,212.14 L 555.42,208.66 L 556.76,205.15 L 558.10,201.61 L 559.44,198.04 L 560.78,194.45 L 562.12,190.83 L 563.46,187.17 L 564.80,183.50 L 566.14,179.79 L 567.48,176.05 L 568.82,172.29 L 570.16,168.50"/>
+  <text class="lbl" x="582.2" y="178.5">y = x&#178;</text>
+
+  <circle class="dot" cx="452.4" cy="394.6" r="9"/>
+  <text class="lbl" x="468.4" y="420.6">P</text>
+
+  <text class="sm" x="350" y="502" text-anchor="middle">radius 1/&#954;, centre at P + &#954;/&#954;&#178;: the circle that fits the curve best at P</text>
+</svg>

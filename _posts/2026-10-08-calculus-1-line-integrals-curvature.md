@@ -392,6 +392,8 @@ $$
 X'' = \kappa v^2\,n + v'\,t .
 $$
 
+![A bend with the acceleration at one point drawn as the diagonal of a parallelogram whose sides are the turning component along the unit normal and the speeding-up component along the unit tangent](/assets/img/calculus-1/acceleration-decomposition.svg)
+
 Every driving sensation is in that line. Now cash it out.
 
 Anyone with a little driving experience, taking a short bend, slows down
@@ -518,8 +520,11 @@ P + \frac{\boldsymbol\kappa(P)}{\kappa(P)^2}
  \qquad \left(= P + \frac{1}{\kappa}\,n\right),
 $$
 
-one radius from $$P$$ along the unit normal. **The osculating circle is the
-circle that fits the curve most closely** — it matches position, tangent
+one radius from $$P$$ along the unit normal.
+
+![The parabola y equals x squared with its osculating circle at one point, the radius joining the point to the circle's centre marked as one over the curvature, and the tangent line drawn dashed](/assets/img/calculus-1/osculating-circle.svg)
+
+**The osculating circle is the circle that fits the curve most closely** — it matches position, tangent
 direction and curvature, which is as much as a circle can match.
 
 That is the last definition of the course, and it is a fitting one. Unit 3
