@@ -63,9 +63,6 @@ Textbook §§9.1–9.6. Velocity and acceleration, plane curves in polar form, r
 **[Unit 7 — Line Integrals and Curvature](/posts/calculus-1-line-integrals-curvature/)**
 Textbook §§9.7–9.8. Integration along a curve, and curvature as the measure of how sharply a curve bends.
 
-> Units 2 through 7 are still being written; their links will go live as each is posted.
-{: .prompt-info }
-
 ## Notation conventions
 
 Used consistently across all units of this course.

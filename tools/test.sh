@@ -62,14 +62,13 @@ main() {
 
   # test
   #
-  # Course units that are drafted but not yet posted are linked from the course
-  # overview on purpose. Remove a slug from this list as its post goes live, so
-  # the link check tightens with each unit instead of staying permanently loose.
-  _pending="/^\/posts\/calculus-1-(curves|line-integrals-curvature)\/$/"
+  # Every course unit is now posted, so there is no exemption list. If a future
+  # post links forward to a unit that has not been written yet, add its slug
+  # back here as a regex and drop it again when that post goes live.
 
   bundle exec htmlproofer "$SITE_DIR" \
     --disable-external \
-    --ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/,$_pending"
+    --ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/"
 }
 
 while (($#)); do
