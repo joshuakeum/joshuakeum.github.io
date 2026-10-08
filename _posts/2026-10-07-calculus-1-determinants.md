@@ -894,8 +894,8 @@ it costs $$(n-1)\cdot n!$$ multiplications.
 Suppose a computer performs $$10^{16}$$ multiplications per second — one 경, ten
 quadrillion — and suppose deciding the parity of a permutation and adding are
 both free. How long to evaluate a $$50 \times 50$$ determinant from the
-definition? Within a day? A year? Twelve point seven billion years, the age of
-the universe? That age squared? Cubed? To the fourth power?
+definition? Within a day? A year? 12.7 billion years, roughly the age of the
+universe? That figure squared? Cubed? Raised to the fourth power?
 
 None of them:
 
@@ -907,10 +907,10 @@ $$
 \end{aligned}
 $$
 
-The computation takes about $$182$$ times the age of the universe raised to the
-fourth power, measured in years. *Astronomical time, astronomically many times
-over.* Ignoring the good algebraic properties of the determinant and grinding
-out the definition is, in the lectures' word, very foolish.
+The answer is about $$182$$ times $$(12.7\text{ billion})^{4}$$ years.
+*Astronomical time, astronomically many times over.* Ignoring the good
+algebraic properties of the determinant and grinding out the definition is, in
+the lectures' word, very foolish.
 
 > There is a well-known story about a servant who asks a greedy rich man for one
 > grain of rice on the first square of a chessboard and double on each square
@@ -1154,23 +1154,15 @@ reason it looks the way it does.
 
 ### The determinant form
 
-**Definition 1.1.** For $$a = (a_1,a_2,a_3)$$ and $$b = (b_1,b_2,b_3)$$,
+**Definition 1.1** is Unit 4's componentwise definition again, for
+$$a = (a_1,a_2,a_3)$$ and $$b = (b_1,b_2,b_3)$$. Written in terms of the
+standard unit vectors it reads
 
 $$
 \begin{aligned}
-a \times b := (\,&a_2b_3 - a_3b_2,\ \\
- &a_3b_1 - a_1b_3,\ \\
- &a_1b_2 - a_2b_1\,),
-\end{aligned}
-$$
-
-or, in terms of the standard unit vectors,
-
-$$
-\begin{aligned}
-a \times b = \ &(a_2b_3 - a_3b_2)\,i \\
- + \ &(a_3b_1 - a_1b_3)\,j \\
- + \ &(a_1b_2 - a_2b_1)\,k ,
+a \times b &= (a_2b_3 - a_3b_2)\,i \\
+&\quad + (a_3b_1 - a_1b_3)\,j \\
+&\quad + (a_1b_2 - a_2b_1)\,k ,
 \end{aligned}
 $$
 
@@ -1230,19 +1222,21 @@ For $$a, b, c \in \mathbb{R}^3$$:
 - $$\lvert \det(a,b,c) \rvert$$ is the volume of the parallelepiped
   (평행육면체) spanned by $$a$$, $$b$$ and $$c$$.
 
-The third follows from the second property of the cross product together with
-property 4 of Unit 4. Base times height: $$\lvert b \times c \rvert$$ is the
-area of the parallelogram on $$b$$ and $$c$$, and since $$b \times c$$ is
-perpendicular to that parallelogram, $$\lvert a \cdot (b \times c) \rvert$$
-multiplies the base area by the height of $$a$$ above it.
+The third is the triple product read as base times height. By property 4 of
+Unit 4, $$\lvert b \times c \rvert$$ is the area of the parallelogram on $$b$$
+and $$c$$; by property 3, $$b \times c$$ is perpendicular to it. So in
+$$\lvert a \cdot (b \times c)\rvert$$ the inner product picks out exactly the
+component of $$a$$ standing above that base — the height — and multiplies the
+two together.
 
 Three statements, and between them the whole unit closes:
 
 - **Independence** was Unit 4's unanswered question, and Theorem 2.9 answers it
   in every dimension.
 - **Orientation** is the sign that the skew-symmetry was tracking all along.
-- **Volume** is what $$\det(AB) = \det A \det B$$ was measuring: composing two
-  maps multiplies the factor by which each scales volume.
+- **Volume** is what $$\det(AB) = \det A \det B$$ was measuring all along. A
+  linear map scales volume by its determinant, and composing two maps
+  multiplies the two factors.
 
 In $$\mathbb{R}^n$$ the same reading holds — $$\lvert \det \rvert$$ is the
 volume of the $$n$$-dimensional parallelepiped on the columns — which is why
@@ -1279,8 +1273,9 @@ $$
 The last equality looks like a slip and is not. Since
 $$Q - B = (Q - A) + (A - B)$$, bilinearity splits the cross product into
 $$(Q-A)\times(Q-A)$$, which vanishes, plus $$(Q-A)\times(A-B)$$. The symmetric
-form on the right is usually the easier one to use, because both vectors point
-away from the same point.
+form on the right is usually the easier one to use, since both vectors run from
+a point of the line to $$Q$$ and neither needs the direction vector computed
+first.
 
 ## Common pitfalls
 
