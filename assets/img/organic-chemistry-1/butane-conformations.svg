@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 604"
+     width="700" height="604" role="img" aria-labelledby="figTitle figDesc">
+  <title id="figTitle">Energy of butane against the dihedral angle about the central bond</title>
+  <desc id="figDesc">A potential energy curve for rotation about the C2 to C3 bond of butane, plotted over the first half of the rotation, from a dihedral angle of zero to one hundred and eighty degrees. The curve starts at its highest point, four point nine kilocalories per mole, where the two methyl groups eclipse each other. It falls to a shallow minimum of zero point nine at sixty degrees, the gauche conformation, which is staggered but has the two methyls only sixty degrees apart. It rises again to three point six at one hundred and twenty degrees, where a methyl eclipses a hydrogen, and falls to its global minimum of zero at one hundred and eighty degrees, the anti conformation, with the two methyls as far apart as they can get. Newman projections below the curve show each of the four conformations, with the methyl groups marked as solid dots; the front carbon bonds meet at the centre of the circle and the back carbon bonds emerge from its rim. The remaining half of the rotation mirrors this one.</desc>
+  <style>
+    /* Base values are the validated light-mode palette shared with the figures
+       in the Calculus 1 series. Both hues clear 3:1 on the dark surface and the
+       greys stay legible on either, so a viewer whose OS scheme and site theme
+       disagree still gets a readable figure. */
+    svg { --curve:#2a78d6; --vec:#eb6834; --ink:#7a7a74; --axis:#91918a; }
+    @media (prefers-color-scheme: dark) {
+      svg { --curve:#3987e5; --vec:#d95926; --ink:#c3c2b7; --axis:#6f6f68; }
+    }
+    .curve { stroke:var(--curve); stroke-width:3.2; fill:none; stroke-linecap:round;
+              stroke-linejoin:round; }
+    .thin  { stroke:var(--curve); stroke-width:2; fill:none; stroke-linecap:round; }
+    .dot   { fill:var(--curve); }
+    .vec   { stroke:var(--vec); stroke-width:2.6; fill:none; stroke-linecap:round; }
+    .vdot  { fill:var(--vec); }
+    .vdash { stroke:var(--vec); stroke-width:1.8; fill:none; stroke-dasharray:6 6; }
+    .ax    { stroke:var(--axis); stroke-width:1.6; fill:none; }
+    .adash { stroke:var(--axis); stroke-width:1.6; fill:none; stroke-dasharray:7 7; }
+    text   { fill:var(--ink); font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+    .lbl   { font-size:21px; }
+    .key   { font-size:19px; }
+    .sm    { font-size:16px; }
+    .xs    { font-size:14px; }
+    .hd    { font-size:20px; font-weight:600; }
+    .em    { fill:var(--vec); }
+  </style>
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="8.5" refY="5"
+            markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+      <path d="M 0,0.8 L 9.6,5 L 0,9.2 z" fill="var(--vec)"/>
+    </marker>
+    <marker id="ahg" viewBox="0 0 10 10" refX="8.5" refY="5"
+            markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0,0.8 L 9.6,5 L 0,9.2 z" fill="var(--axis)"/>
+    </marker>
+  </defs>
+  <path class="ax" marker-end="url(#ahg)" d="M 72,300.0 L 72,44"/>
+  <path class="ax" d="M 72,300.0 L 652,300.0"/>
+  <path class="ax" d="M 66,254.0 L 72,254.0"/>
+  <text x="60.0" y="259.0" class="xs" text-anchor="end">0</text>
+  <path class="ax" d="M 66,216.0 L 72,216.0"/>
+  <text x="60.0" y="221.0" class="xs" text-anchor="end">1</text>
+  <path class="ax" d="M 66,178.0 L 72,178.0"/>
+  <text x="60.0" y="183.0" class="xs" text-anchor="end">2</text>
+  <path class="ax" d="M 66,140.0 L 72,140.0"/>
+  <text x="60.0" y="145.0" class="xs" text-anchor="end">3</text>
+  <path class="ax" d="M 66,102.0 L 72,102.0"/>
+  <text x="60.0" y="107.0" class="xs" text-anchor="end">4</text>
+  <path class="ax" d="M 66,64.0 L 72,64.0"/>
+  <text x="60.0" y="69.0" class="xs" text-anchor="end">5</text>
+  <text x="30.0" y="170.0" class="lbl" text-anchor="middle" font-style="italic">E</text>
+  <text x="30.0" y="192.0" class="xs" text-anchor="middle">kcal</text>
+  <text x="30.0" y="208.0" class="xs" text-anchor="middle">mol⁻¹</text>
+  <path class="adash" d="M 84,254.0 L 644,254.0"/>
+  <path class="curve" d="M 100.0,67.8 L 103.6,68.0 L 107.2,68.5 L 110.8,69.3 L 114.4,70.4 L 118.1,71.8 L 121.7,73.6 L 125.3,75.6 L 128.9,78.0 L 132.5,80.6 L 136.1,83.5 L 139.7,86.7 L 143.3,90.1 L 146.9,93.7 L 150.6,97.5 L 154.2,101.6 L 157.8,105.8 L 161.4,110.2 L 165.0,114.7 L 168.6,119.4 L 172.2,124.1 L 175.8,129.0 L 179.4,133.9 L 183.1,138.8 L 186.7,143.8 L 190.3,148.8 L 193.9,153.7 L 197.5,158.6 L 201.1,163.5 L 204.7,168.2 L 208.3,172.9 L 211.9,177.4 L 215.6,181.8 L 219.2,186.0 L 222.8,190.1 L 226.4,193.9 L 230.0,197.5 L 233.6,200.9 L 237.2,204.1 L 240.8,207.0 L 244.4,209.6 L 248.1,212.0 L 251.7,214.0 L 255.3,215.8 L 258.9,217.2 L 262.5,218.3 L 266.1,219.1 L 269.7,219.6 L 273.3,219.8 L 276.9,219.7 L 280.6,219.4 L 284.2,218.8 L 287.8,218.1 L 291.4,217.1 L 295.0,215.9 L 298.6,214.5 L 302.2,212.9 L 305.8,211.2 L 309.4,209.2 L 313.1,207.1 L 316.7,204.8 L 320.3,202.3 L 323.9,199.7 L 327.5,197.0 L 331.1,194.2 L 334.7,191.2 L 338.3,188.1 L 341.9,185.0 L 345.6,181.8 L 349.2,178.5 L 352.8,175.2 L 356.4,171.9 L 360.0,168.5 L 363.6,165.1 L 367.2,161.8 L 370.8,158.5 L 374.4,155.2 L 378.1,152.0 L 381.7,148.9 L 385.3,145.8 L 388.9,142.9 L 392.5,140.0 L 396.1,137.3 L 399.7,134.7 L 403.3,132.2 L 406.9,129.9 L 410.6,127.8 L 414.2,125.8 L 417.8,124.1 L 421.4,122.5 L 425.0,121.1 L 428.6,119.9 L 432.2,118.9 L 435.8,118.2 L 439.4,117.6 L 443.1,117.3 L 446.7,117.2 L 450.3,117.3 L 453.9,117.8 L 457.5,118.5 L 461.1,119.5 L 464.7,120.8 L 468.3,122.4 L 471.9,124.3 L 475.6,126.4 L 479.2,128.7 L 482.8,131.3 L 486.4,134.2 L 490.0,137.2 L 493.6,140.5 L 497.2,144.0 L 500.8,147.6 L 504.4,151.4 L 508.1,155.3 L 511.7,159.4 L 515.3,163.6 L 518.9,167.9 L 522.5,172.3 L 526.1,176.7 L 529.7,181.1 L 533.3,185.6 L 536.9,190.1 L 540.6,194.5 L 544.2,198.9 L 547.8,203.3 L 551.4,207.6 L 555.0,211.8 L 558.6,215.9 L 562.2,219.8 L 565.8,223.6 L 569.4,227.2 L 573.1,230.7 L 576.7,234.0 L 580.3,237.0 L 583.9,239.9 L 587.5,242.5 L 591.1,244.8 L 594.7,246.9 L 598.3,248.8 L 601.9,250.4 L 605.6,251.7 L 609.2,252.7 L 612.8,253.4 L 616.4,253.9 L 620.0,254.0"/>
+  <path class="ax" d="M 100.0,300.0 L 100.0,306.0"/>
+  <text x="100.0" y="326.0" class="sm" text-anchor="middle">0°</text>
+  <path class="ax" d="M 273.3,300.0 L 273.3,306.0"/>
+  <text x="273.3" y="326.0" class="sm" text-anchor="middle">60°</text>
+  <path class="ax" d="M 446.7,300.0 L 446.7,306.0"/>
+  <text x="446.7" y="326.0" class="sm" text-anchor="middle">120°</text>
+  <path class="ax" d="M 620.0,300.0 L 620.0,306.0"/>
+  <text x="620.0" y="326.0" class="sm" text-anchor="middle">180°</text>
+  <text x="360.0" y="354.0" class="sm" text-anchor="middle">dihedral angle CH₃–C–C–CH₃</text>
+  <text x="110.0" y="52.8" class="sm" text-anchor="start">CH₃,CH₃ eclipsed — 4.9</text>
+  <text x="446.7" y="100.2" class="sm" text-anchor="middle">CH₃,H eclipsed — 3.6</text>
+  <text x="273.3" y="246.8" class="sm" text-anchor="middle">gauche — 0.9</text>
+  <text x="620.0" y="282.0" class="sm" text-anchor="middle">anti — 0</text>
+  <g>
+    <circle cx="100.0" cy="430.0" r="36.0" class="thin"/>
+    <path class="curve" d="M 100.0,430.0 L 100.0,372.0"/>
+    <circle cx="100.0" cy="372.0" r="6.5" class="dot"/>
+    <path class="curve" d="M 100.0,430.0 L 49.8,459.0"/>
+    <path class="curve" d="M 100.0,430.0 L 150.2,459.0"/>
+    <path class="vec" d="M 108.7,395.1 L 114.0,373.7"/>
+    <circle cx="114.0" cy="373.7" r="6.5" class="vdot"/>
+    <path class="vec" d="M 65.4,439.9 L 44.2,446.0"/>
+    <path class="vec" d="M 125.9,455.0 L 141.7,470.3"/>
+    <circle cx="100.0" cy="430.0" r="4" class="dot"/>
+  </g>
+  <text x="100.0" y="522.0" class="key" text-anchor="middle">eclipsed</text>
+  <text x="100.0" y="542.0" class="sm" text-anchor="middle">CH₃ on CH₃</text>
+  <g>
+    <circle cx="273.3" cy="430.0" r="36.0" class="thin"/>
+    <path class="curve" d="M 273.3,430.0 L 273.3,372.0"/>
+    <circle cx="273.3" cy="372.0" r="6.5" class="dot"/>
+    <path class="curve" d="M 273.3,430.0 L 223.1,459.0"/>
+    <path class="curve" d="M 273.3,430.0 L 323.6,459.0"/>
+    <path class="vec" d="M 304.5,412.0 L 323.6,401.0"/>
+    <circle cx="323.6" cy="401.0" r="6.5" class="vdot"/>
+    <path class="vec" d="M 242.2,412.0 L 223.1,401.0"/>
+    <path class="vec" d="M 273.3,466.0 L 273.3,488.0"/>
+    <circle cx="273.3" cy="430.0" r="4" class="dot"/>
+  </g>
+  <text x="273.3" y="522.0" class="key" text-anchor="middle">gauche</text>
+  <text x="273.3" y="542.0" class="sm" text-anchor="middle">staggered</text>
+  <g>
+    <circle cx="446.7" cy="430.0" r="36.0" class="thin"/>
+    <path class="curve" d="M 446.7,430.0 L 446.7,372.0"/>
+    <circle cx="446.7" cy="372.0" r="6.5" class="dot"/>
+    <path class="curve" d="M 446.7,430.0 L 396.4,459.0"/>
+    <path class="curve" d="M 446.7,430.0 L 496.9,459.0"/>
+    <path class="vec" d="M 472.6,455.0 L 488.4,470.3"/>
+    <circle cx="488.4" cy="470.3" r="6.5" class="vdot"/>
+    <path class="vec" d="M 455.4,395.1 L 460.7,373.7"/>
+    <path class="vec" d="M 412.1,439.9 L 390.9,446.0"/>
+    <circle cx="446.7" cy="430.0" r="4" class="dot"/>
+  </g>
+  <text x="446.7" y="522.0" class="key" text-anchor="middle">eclipsed</text>
+  <text x="446.7" y="542.0" class="sm" text-anchor="middle">CH₃ on H</text>
+  <g>
+    <circle cx="620.0" cy="430.0" r="36.0" class="thin"/>
+    <path class="curve" d="M 620.0,430.0 L 620.0,372.0"/>
+    <circle cx="620.0" cy="372.0" r="6.5" class="dot"/>
+    <path class="curve" d="M 620.0,430.0 L 569.8,459.0"/>
+    <path class="curve" d="M 620.0,430.0 L 670.2,459.0"/>
+    <path class="vec" d="M 620.0,466.0 L 620.0,488.0"/>
+    <circle cx="620.0" cy="488.0" r="6.5" class="vdot"/>
+    <path class="vec" d="M 651.2,412.0 L 670.2,401.0"/>
+    <path class="vec" d="M 588.8,412.0 L 569.8,401.0"/>
+    <circle cx="620.0" cy="430.0" r="4" class="dot"/>
+  </g>
+  <text x="620.0" y="522.0" class="key" text-anchor="middle">anti</text>
+  <text x="620.0" y="542.0" class="sm" text-anchor="middle">staggered</text>
+  <text x="360.0" y="570.0" class="xs" text-anchor="middle">front carbon in blue, back carbon in orange; ● marks a methyl group</text>
+  <text x="360.0" y="590.0" class="xs" text-anchor="middle">the other half of the rotation, 180° to 360°, mirrors this one</text>
+</svg>
