@@ -1315,31 +1315,6 @@ first.
   $$v / \lvert v \rvert$$, not $$v$$. With $$v$$ unnormalised the answer is the
   distance times $$\lvert v \rvert$$.
 
-## Connections
-
-- **Backward.** The projection and the cross product come from
-  [Unit 4](/posts/calculus-1-coordinates-vectors/) and reappear here as
-  matrices, which is a fair summary of what Chapter 6 does to the previous
-  chapter. Unit 4's dependence criteria — $$ad - bc$$ for two vectors, six
-  terms for three — are the $$2$$- and $$3$$-forms of Part 2, and its unanswered
-  question about four vectors in $$\mathbb{R}^4$$ is answered by Theorem 2.9.
-- **Within the unit.** Part 1 asks what the matrix product is for and finds
-  composition; Part 2 asks when a composition can be undone and finds the
-  determinant; Part 3 asks what the determinant *is* and finds signed volume.
-  Each answer is forced rather than chosen, which is the characteristic shape of
-  this material.
-- **Forward.** The Jacobian that closes Chapter 7 is a determinant measuring how
-  a change of coordinates scales volume, and it is the engine of multivariable
-  integration in Mathematics 2. Nearer at hand, the cross product in determinant
-  form is what [Unit 6](/posts/calculus-1-curves/) needs for the moving frame of
-  a space curve, and curvature and torsion in
-  [Unit 7](/posts/calculus-1-line-integrals-curvature/) are built from it.
-- **Outward.** That rotation matrices compose to give the angle addition
-  formulas is the first case of a general principle: a group of symmetries
-  becomes a set of matrices, and composing symmetries becomes multiplying them.
-  Determinant $$1$$ picks out the rotations among them, and the sign of the
-  determinant is what distinguishes a rotation from a reflection.
-
 ## Summary
 
 **Part 1 — matrices and linear maps**
@@ -1382,7 +1357,3 @@ first.
 
 - Hong Jong Kim, *Calculus 1+* (미적분학 1+), 2nd revised edition, Seoul National University Press — Chapters 6, 7 and §8.1.
 - Mathematics 1 (수학 1, L0442.000100), Seoul National University, Spring 2022. Instructor: Choi Hyung Gyu (최형규). Lecture notes for Chapter 6 dated 24 April 2022; Chapters 7 and 8 dated 28 April 2022.
-- The rotation example in Part 1 is from the handwritten additions to those notes; the printed text ends at the cross-product matrix.
-- Inverses by elementary row operations and Gauss–Jordan elimination were explicitly left outside the first-year syllabus.
-- Cofactor expansion (Theorems 2.13–2.14) and the inverse formula (Theorem 2.15) were marked 교과과정 외, outside the examinable scope. §7.4.2, on properties of the determinant, was the one appendix the course did examine.
-- The fifteen-puzzle argument in the sidebar is the standard parity solution to the exercise the notes set; the notes posed the question and left the answer to the reader.

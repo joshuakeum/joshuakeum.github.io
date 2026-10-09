@@ -510,12 +510,6 @@ Also worth knowing, though beyond the course statement: the root and ratio tests
 
 <!-- TODO: verify whether the course ever stated the limsup form of the root test, or only the lim form. The lecture notes use lim only. -->
 
-## Connections
-
-- **Forward, within the course.** [Power series](/posts/calculus-1-power-series/) are series whose terms contain a variable; the ratio and root tests, applied for each fixed $$x$$, produce the radius of convergence. The definitions of $$e^x$$, $$\sin x$$, $$\cos x$$, and the hyperbolic functions all rest on convergence results proved here. [Taylor's theorem](/posts/calculus-1-taylor/) answers the question these tests cannot: not *whether* a series converges, but *to what*.
-- **Backward, to the real numbers.** Every convergence theorem in this unit traces back to one fact — an increasing sequence bounded above converges — which is completeness in disguise.
-- **To other courses.** The Basel problem $$\sum 1/n^2 = \pi^2/6$$ is stated here and proved in later coursework via Fourier series; the zeta function is the gateway to analytic number theory. Improper integrals and their convergence reappear throughout Calculus 2.
-
 A caution the lecture was explicit about: **we only ever ask whether a series converges, not what it converges to.** Cases where the value is computable — geometric series, telescoping sums, a handful of famous examples — are rare.
 
 ## Summary
@@ -546,4 +540,3 @@ Reference series to compare against:
 
 - Hong Jong Kim, *Calculus 1+* (미적분학 1+), 2nd revised edition, Seoul National University Press — Chapter 1.
 - Mathematics 1 (수학 1, L0442.000100), Seoul National University, Spring 2022. Instructor: Choi Hyung Gyu (최형규).
-- Chapter 1 covers §1.1 through §1.7; the chapter appendix was outside the examinable scope.

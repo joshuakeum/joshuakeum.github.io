@@ -1042,24 +1042,6 @@ a finite rate.
 - **Expecting to parametrize by arc length.** You will get as far as $$s(t)$$
   and stop at the inverse. That is the normal outcome, not a failure.
 
-## Connections
-
-- **Backward.** The cross product and its area interpretation from
-  [Unit 4](/posts/calculus-1-coordinates-vectors/) become angular momentum and
-  swept area; the determinant from
-  [Unit 5](/posts/calculus-1-determinants/) writes the osculating plane in one
-  line. Polar coordinates from Unit 4 return as a parametrization, and the
-  conic sections from the same unit are what Kepler's first law is about.
-- **Forward.** Everything here is setup for
-  [Unit 7](/posts/calculus-1-line-integrals-curvature/). The line integral is
-  $$\lvert X'\rvert\,\mathrm{d}t$$ with a weight; curvature is the second
-  derivative of the arc-length parametrization; the osculating plane is where
-  the osculating circle lives; and the derivative-of-a-length formula from
-  Theorem 1.1 is the computation that makes curvature calculable.
-- **Outward.** Inertial navigation is Theorem 2.1 with hardware. Kepler's second
-  law is the product rule. Road design is the gap between $$C^1$$ and $$C^2$$.
-  This is the chapter where the course's machinery starts paying rent.
-
 ## Summary
 
 - **Parametrized curve** — $$X(t) = (x_1(t), \ldots, x_n(t))$$; a motion, not a
@@ -1087,5 +1069,3 @@ a finite rate.
 - Mathematics 1 (수학 1, L0442.000100), Seoul National University, Spring 2022. Instructor: Choi Hyung Gyu (최형규). Lecture notes for Chapter 9 dated 28 April 2022.
 - Hyounggyu Choi (2020), *Invariance of the Length and the Area of Cycloids*, The American Mathematical Monthly **127**:6, 537–544 — the lecturer's own paper, cited in the notes as the explanation of the 16.
 - Hyounggyu Choi (2022), *Invariance of the Area and the Volume of Cycloid Surfaces and Trochoid Surfaces*, The American Mathematical Monthly, to appear.
-- Two computations were redone rather than copied. In the second solution for the cycloid's area the notes factor the cross product as $$2\sin\frac t2(t\cos\frac t2 - 2)$$; the correct factorisation is $$2\sin\frac t2(t\cos\frac t2 - 2\sin\frac t2)$$, which is what gives $$3\pi$$. In the parabola's arc-length substitution the factor $$\frac12$$ from $$2\,\mathrm dt = \cosh u\,\mathrm du$$ is carried here; the notes drop it, which does not affect the conclusion that the inverse is intractable.
-- The limiting unit tangent at the cycloid's cusp is computed here as $$(\sin\frac t2, \cos\frac t2) \to (0,1)$$; the notes' intermediate expression is garbled in the scan, but the stated limit agrees.

@@ -1084,25 +1084,6 @@ flowchart TD
 - **Forgetting the zero vector in a dependence question.** Any collection
   containing it is dependent immediately.
 
-## Connections
-
-- **Backward.** Very little, deliberately. This unit restarts from the
-  definition of distance, and the one borrowed technique is the single-variable
-  minimisation in the projection proof. The discriminant argument in
-  Cauchy–Schwarz is the same move used throughout
-  [Unit 1](/posts/calculus-1-series/) — bound a thing you cannot compute by a
-  quantity you can.
-- **Forward.** The determinant question that closes Part 2 is answered in
-  [Unit 5](/posts/calculus-1-determinants/), which also treats matrices as
-  linear maps and returns to the cross product as a determinant. The
-  parametrised line $$X(t) = P + tv$$ is the first instance of the curves in
-  [Unit 6](/posts/calculus-1-curves/), where $$v$$ becomes a velocity.
-- **Outward.** The polar form of a conic is the standard route to showing
-  planetary orbits are conics. Torque and angular velocity are the cross
-  product's first appearance in mechanics. And the centre of mass, with its
-  isometry-invariance, is the first example in this course of a quantity defined
-  by the properties it must satisfy rather than by a formula.
-
 ## Summary
 
 Coordinate systems, as conversions to rectangular:

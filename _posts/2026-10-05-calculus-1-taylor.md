@@ -507,12 +507,6 @@ The practical point is the same one the fourth-root example made: **expand about
 - **Dropping the hypotheses of Rolle.** Continuity is needed on the *closed* interval, differentiability on the *open* one. The function $$\lvert x\rvert$$ on $$[-1,1]$$ shows what happens when the second fails.
 - **Reaching for Taylor's theorem when an alternating-series bound is at hand.** It is more work for a weaker bound.
 
-## Connections
-
-- **Backward.** The coefficient formula is the one from [Unit 2](/posts/calculus-1-power-series/); this unit explains what it means for functions that are not already series. The alternating-series bound from [Unit 1](/posts/calculus-1-series/) is the competing error estimate.
-- **Forward.** Second-order approximation is the whole content of curvature in [Unit 7](/posts/calculus-1-line-integrals-curvature/): the curvature of a curve measures the quadratic term that the tangent line misses. In multivariable calculus the same theorem reappears with a Hessian in place of $$f''$$.
-- **Outward.** Every numerical method you will meet — Newton's method, Runge–Kutta, finite differences — is Taylor's theorem with the remainder bounded. The error analysis *is* the method.
-
 ## Summary
 
 | Theorem | Hypotheses | Conclusion |
