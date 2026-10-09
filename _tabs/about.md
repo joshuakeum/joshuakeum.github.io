@@ -73,12 +73,8 @@ University · *November 2023 – October 2024*
 **Peer Tutor**, Basic Calculus I (F31.101) — Seoul National University ·
 *Spring 2023, Fall 2023, Spring 2025*
 
-## Other activities
-
-**Member, RxN Journal Club** (Undergraduate Chemistry Research Society) —
-Department of Chemistry, Seoul National University · *Spring 2024, Spring 2025*
-
 ## Contact
 
 - <joshuakeum@snu.ac.kr>
 - <joshuakeum818@gmail.com>
+- <https://github.com/joshuakeum>
