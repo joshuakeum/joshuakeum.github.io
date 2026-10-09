@@ -584,15 +584,8 @@ Each term now carries an extra factor of $$1/3$$, so accuracy arrives geometrica
 - **Quoting an approximation with no error bound.** The bound is the content, not a decoration.
 - **Mixing up circular and hyperbolic sign patterns.** $$\cos^2+\sin^2=1$$ but $$\cosh^2-\sinh^2=1$$; $$(\cos)'=-\sin$$ but $$(\cosh)'=+\sinh$$.
 
-## Connections
-
-- **Backward.** Every convergence claim here is an application of Unit 1: the ratio and root tests give the radius, the alternating test handles endpoints and error bounds, absolute convergence is what the dichotomy theorem actually delivers.
-- **Forward.** [Taylor's theorem](/posts/calculus-1-taylor/) takes up the question this unit leaves open: for a function that is *not* given as a series, when does its Taylor series converge back to it, and how large is the error after finitely many terms? The coefficient formula $$a_n = f^{(n)}(0)/n!$$ is the shared hinge.
-- **Outward.** The complex exponential is the foundation of Fourier analysis; the catenary is a standard first example in the calculus of variations; the identification of a function with the solution of an initial value problem is the central technique of differential equations.
 
 ## Summary
-
-Series to know cold:
 
 | Function | Series | Interval |
 |---|---|---|

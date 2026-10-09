@@ -82,29 +82,11 @@ Used consistently across all units of this course.
 | $$\det A$$ or $$\lvert A \rvert$$ | determinant of a square matrix $$A$$ |
 | $$\boldsymbol{\gamma}(t)$$ | a parametrized curve; $$s$$ denotes arc length |
 
-Two conventions inherited from the textbook are worth flagging, because they differ from what you may see elsewhere. First, $$\log$$ always means the natural logarithm — never base 10, never base 2. I write $$\ln$$ throughout these notes to remove the ambiguity. Second, "sequence" (수열) means an infinite sequence by definition; finite lists are never called sequences.
+Also, $$\log$$ always means the natural logarithm — never base 10, never base 2. I write $$\ln$$ throughout these notes to remove the ambiguity. Second, "sequence" (수열) means an infinite sequence by definition; finite lists are never called sequences.
 
 <!-- TODO: verify the textbook's own notation for vectors (boldface vs. arrow accent) and for the norm, and reconcile if it differs from the boldface used here. -->
 
-## Key takeaways
-
-**Completeness is the foundation of everything.** Every convergence theorem in the first half of the course reduces to a single fact: an increasing sequence bounded above converges. That fact is the least upper bound axiom in disguise, and it is the one property that separates $$\mathbb{R}$$ from $$\mathbb{Q}$$. Density is not enough; $$\mathbb{Q}$$ is dense and still full of holes.
-
-**Convergence before value.** Deciding that a series converges and computing its sum are different problems of wildly different difficulty. The course teaches the first and largely abandons the second. Learn to recognize which question you are being asked.
-
-**The elementary functions are series.** Defining $$e^x$$ by $$\sum x^n/n!$$ rather than by exponent rules, and $$\sin x$$ by its series rather than by a triangle, is not pedantry. It is what makes the derivatives, the identities, and the extension to complex arguments all fall out of one computation each.
-
-**Approximation is a theorem, not a fudge.** Taylor's theorem does not merely assert that a function resembles a polynomial; it bounds the discrepancy. The bound is what licenses every later use of a linearization.
-
-**Inequalities are a skill.** Nearly every proof in the first half turns on choosing a good inequality and discarding the right terms. This is harder than it looks and improves only with practice.
-
-**Linear algebra is geometry.** A matrix is a linear map; a determinant is a signed volume; a cross product is a determinant. Treating these as computational recipes works for exams and fails for understanding.
-
 ## Further resources
-
-**Textbooks.** Stewart's *Calculus* and Thomas' *Calculus* are the standard companions for the computational side and have far more exercises than the course textbook. For the analysis that this course deliberately keeps informal — the $$\varepsilon$$–$$\delta$$ definition of a function limit, rigorous treatment of rearrangements, completeness in full — Spivak's *Calculus* is the gentlest serious option, Apostol's *Calculus* Vol. I the most systematic, and Rudin's *Principles of Mathematical Analysis* the destination. For the linear algebra half, Strang's *Introduction to Linear Algebra* complements Chapters 6 and 7 well, and Friedberg, Insel and Spence is the more abstract alternative.
-
-**Video.** The lectures explicitly recommended 3Blue1Brown and Numberphile on YouTube. 3Blue1Brown's *Essence of Linear Algebra* and *Essence of Calculus* series are unusually good at the geometric intuition that slides compress away. MIT OpenCourseWare 18.01 and 18.02 cover roughly this material in English.
 
 **Past exams.** The SNU liberal-arts mathematics TA office maintains an archive of past 수학 1 examinations at [taoffice.math.snu.ac.kr](https://taoffice.math.snu.ac.kr/board/index.php?mid=board_L01). These are the best calibration for what the course actually expects.
 

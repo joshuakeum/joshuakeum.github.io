@@ -554,26 +554,6 @@ its derivatives. Same idea, different category.
 - **Expecting $$C^1$$ to be enough for a smooth ride.** Curvature is a second
   derivative. Two circular arcs joined tangentially are $$C^1$$ and still jolt.
 
-## Connections
-
-- **Backward.** The line integral is [Unit 6](/posts/calculus-1-curves/)'s arc
-  length with a weight attached, and the centre of mass is
-  [Unit 4](/posts/calculus-1-coordinates-vectors/)'s centroid with the sum
-  replaced by an integral. Curvature is defined through Unit 6's arc-length
-  parametrization and computed through Unit 6's derivative-of-a-length formula;
-  the usable formula is the Lagrange identity of Unit 4, which
-  [Unit 5](/posts/calculus-1-determinants/) turned into a determinant.
-- **Across the course.** The osculating circle is Taylor's theorem of
-  [Unit 3](/posts/calculus-1-taylor/) for curves: match as many derivatives as
-  the approximating object has freedom for. The tangent line matches one, the
-  osculating circle matches two.
-- **Forward.** $$\mathrm{d}s = \lvert X'\rvert\,\mathrm{d}t$$ becomes
-  $$\mathrm{d}A$$ and $$\mathrm{d}V$$ in Mathematics 2, where the Jacobian that
-  closed [Unit 5](/posts/calculus-1-determinants/) supplies the factor. The
-  moving frame $$(t, n)$$ gains a third vector, the binormal, and the
-  Frenet–Serret formulas add torsion to curvature — at which point a space
-  curve is determined, up to rigid motion, by two functions of arc length.
-
 ## Summary
 
 **Line integrals**
@@ -603,6 +583,3 @@ its derivatives. Same idea, different category.
 
 - Hong Jong Kim, *Calculus 1+* (미적분학 1+), 2nd revised edition, Seoul National University Press — §§9.7–9.8.
 - Mathematics 1 (수학 1, L0442.000100), Seoul National University, Spring 2022. Instructor: Choi Hyung Gyu (최형규). Lecture notes for Chapter 9 dated 28 April 2022.
-- The answer to the open question in worked example 3 is supplied here; the notes pose it and leave it to the reader. The observation about the cycloid's infinite curvature is likewise added, and is explicitly not the explanation the notes were looking for.
-- Curvature results for the graph, catenary, ellipse and polar cases are standard and are supplied here; the notes list those four as headings with no worked answer, as exercises.
-- Two transcription slips in the notes are corrected silently in the derivations above: the tangential force in the slow-in-quick-out argument is $$-mv't$$, not $$-m\kappa v't$$; and the cycloid's curvature radicand is $$1 - 2\cos t + \cos^2 t$$, which is $$(1-\cos t)^2$$ as the next line of the notes states.
