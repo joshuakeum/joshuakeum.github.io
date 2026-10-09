@@ -637,7 +637,7 @@ $$-1$$ and $$1$$ while everything else converges. $$\square$$
 ## References
 
 - Manfred Stoll, *Introduction to Real Analysis*, 2nd edition — Chapter 5. The suggested exercise numbers are Stoll's.
-- Introduction to Mathematical Analysis, Spring 2023. Instructor: Ja A Jeong. Typed lecture notes, Chapter V.
+- Introduction to Mathematical Analysis (881.008), Spring 2023. Instructor: Ja A Jeong (정자아). Typed lecture notes, Chapter V.
 - All proofs and all exercise solutions are mine; the notes leave every one blank.
 - §5.1 contains **no theory in the notes** — only the three exercises. The definition of the derivative, differentiability implying continuity, the algebra of derivatives and the chain rule are supplied here from the textbook's standard treatment so the chapter is self-contained.
 - The notes mark the first derivative test, the inverse function theorem and L'Hospital's rule as *"you know it"* and state nothing further. They are stated here, with a proof sketch for L'Hospital since the Cauchy mean value theorem exists precisely to prove it.

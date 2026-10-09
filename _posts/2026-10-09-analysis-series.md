@@ -696,7 +696,7 @@ power**, which is the comparison to reach for whenever one appears.
 ## References
 
 - Manfred Stoll, *Introduction to Real Analysis*, 2nd edition — Chapter 7. The suggested exercise numbers are Stoll's.
-- Introduction to Mathematical Analysis, Spring 2023. Instructor: Ja A Jeong. Typed lecture notes, Chapter VII.
+- Introduction to Mathematical Analysis (881.008), Spring 2023. Instructor: Ja A Jeong (정자아). Typed lecture notes, Chapter VII.
 - All proofs and all exercise solutions are mine; the notes leave every one blank. Written out in full are the ratio and root tests, Abel summation, the Dirichlet test and its alternating-series corollary, absolute convergence implying convergence, CBS and Minkowski. The comparison between the four ratio and root limits, the absolute-convergence rearrangement theorem and Riemann's rearrangement theorem are stated with a proof idea rather than in full, following the course's weighting.
 - One correction. The notes state the root test with "$$\alpha < 1 \Rightarrow \sum a_k < \infty$$" twice; the second clause should be $$\alpha > 1 \Rightarrow$$ divergence.
 - The identification of exercise 21 as a Raabe-type problem, the remark that non-negative series are rearrangement-invariant because their sum is a supremum over finite subsets, and the note on $$\ell^2$$ as the first Hilbert space are added here.

@@ -500,7 +500,7 @@ makes explicit with "$$\forall m,n \ge n_0$$" and which is easy to misread.
 ## References
 
 - Manfred Stoll, *Introduction to Real Analysis*, 2nd edition — the chapter on sequences of real numbers.
-- Introduction to Mathematical Analysis, Spring 2023. Instructor: Ja A Jeong. Handwritten summary notes for Chapters 1 to 3.
+- Introduction to Mathematical Analysis (881.008), Spring 2023. Instructor: Ja A Jeong (정자아). Handwritten summary notes for Chapters 1 to 3.
 - §§3.1 and 3.2 follow the notes, which give the definitions and the statements of the uniqueness, boundedness, limit-point, algebra-of-limits, bounded-times-null and squeeze theorems, with every proof left blank. Those proofs are mine.
 - §§3.3 to 3.6 are **not in the notes**: the handwritten summary ends at §3.2. They are reconstructed from the textbook's standard treatment because Chapters 4 to 8 use them throughout — the ratio and root tests need $$\limsup$$, and the Cauchy criterion is the form of completeness those chapters actually invoke. If the course covered them differently, this is the place where these write-ups part company with it.
 - All worked examples are mine; the handwritten notes carry no exercises.

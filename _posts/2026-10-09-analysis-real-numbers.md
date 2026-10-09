@@ -887,7 +887,7 @@ stop commuting with everything.
 ## References
 
 - Manfred Stoll, *Introduction to Real Analysis*, 2nd edition — Chapter 1, §§1.1–1.5 and §1.7.
-- Introduction to Mathematical Analysis, Spring 2023. Instructor: Ja A Jeong. Handwritten summary notes for Chapters 1 to 3.
+- Introduction to Mathematical Analysis (881.008), Spring 2023. Instructor: Ja A Jeong (정자아). Handwritten summary notes for Chapters 1 to 3.
 - The notes give definitions and theorem statements and leave every proof as a blank `pf>`. All proofs above are mine. Where a proof is long or routine — the ordered-field properties (a), (b), (c), (e), the distributive laws (a), (b), (c), the existence of $$n$$-th roots, and the family versions of the De Morgan and image laws — it is sketched or stated rather than written out, following the course's own weighting.
 - The worked examples are mine; the handwritten notes for Chapters 1 to 3 carry no exercises.
 - Two corrections. The notes state Bernoulli's inequality without the hypothesis $$h \ge -1$$, which the induction step needs. And remark ③ under *Intervals* reads "all intervals are bounded subsets of $$\mathbb{R}$$", which contradicts remark ① on the same page listing $$(a,\infty)$$ and $$\mathbb{R}$$ as intervals; the intended claim is presumably that intervals with two real endpoints are bounded.

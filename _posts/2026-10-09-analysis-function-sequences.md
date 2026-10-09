@@ -385,6 +385,6 @@ it is the natural endpoint of the course.
 ## References
 
 - Manfred Stoll, *Introduction to Real Analysis*, 2nd edition — Chapter 8.
-- Introduction to Mathematical Analysis, Spring 2023. Instructor: Ja A Jeong. Typed lecture notes, Chapter VIII.
+- Introduction to Mathematical Analysis (881.008), Spring 2023. Instructor: Ja A Jeong (정자아). Typed lecture notes, Chapter VIII.
 - §8.1 follows the notes, which give the definition of pointwise convergence, pose the three interchange questions as exercises with blank space, and list two suggested exercises. The counterexamples and the exercise solutions are mine.
 - **The notes end at §8.1.** Part 2 — uniform convergence, the Cauchy criterion, the continuity, integration and differentiation theorems, the Weierstrass M-test and the power series corollary — is reconstructed from the textbook's standard treatment. It is included because §8.1 is entirely questions, and uniform convergence is their answer; without it the chapter has no content. If the course covered this material differently, or did not reach it, this is where these write-ups part company with it.

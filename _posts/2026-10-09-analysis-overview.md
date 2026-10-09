@@ -15,7 +15,7 @@ render_with_liquid: false
 |---|---|
 | Course | Introduction to Mathematical Analysis, 881.008 |
 | Semester | Spring 2023 |
-| Instructor | Ja A Jeong |
+| Instructor | Ja A Jeong (정자아) |
 | Textbook | Manfred Stoll, *Introduction to Real Analysis*, 2nd edition |
 
 The course covered Chapters 1 through 8, numbered as the lecture notes number

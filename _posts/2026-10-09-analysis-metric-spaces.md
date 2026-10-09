@@ -730,7 +730,7 @@ opposite extreme: closed with empty interior and *not* dense.
 ## References
 
 - Manfred Stoll, *Introduction to Real Analysis*, 2nd edition — the metric space and point-set material, §§2.1–2.5 in this course's numbering.
-- Introduction to Mathematical Analysis, Spring 2023. Instructor: Ja A Jeong. Handwritten summary notes for Chapters 1 to 3.
+- Introduction to Mathematical Analysis (881.008), Spring 2023. Instructor: Ja A Jeong (정자아). Handwritten summary notes for Chapters 1 to 3.
 - As in [Chapter 1](/posts/analysis-real-numbers/), the notes give definitions and theorem statements and leave every proof blank. All proofs above are mine. The characterisation of open subsets of $$\mathbb{R}$$ and the $$\mathbb{R}^n$$ form of Heine–Borel are sketched rather than written out; everything else that the notes marked as a theorem is proved.
 - The worked examples, the discrete-metric counterexample and the remarks on what compactness is *for* are mine; the handwritten notes carry no exercises.
 - The notes write the open and closed set definitions for subsets of $$\mathbb{R}$$ specifically, then use them for general metric spaces throughout. They are stated here for a general $$(X,d)$$ from the start, which is how they are used.
