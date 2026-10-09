@@ -19,6 +19,7 @@
 #   summary     Optional. One or two sentences on what the course covered.
 #
 - term: 2023 Spring
+  code: "881.008"
   title: Introduction to Mathematical Analysis
   subject: Mathematics
   category: Mathematical Analysis
