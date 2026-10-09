@@ -18,6 +18,17 @@
 #   instructor  Optional.
 #   summary     Optional. One or two sentences on what the course covered.
 #
+- term: 2023 Spring
+  title: Introduction to Mathematical Analysis
+  subject: Mathematics
+  category: Mathematical Analysis
+  instructor: Ja A Jeong
+  summary: >-
+    A first rigorous course in real analysis. The completeness of the
+    real line and what follows from it, the topology of metric spaces,
+    sequences, limits and continuity, differentiation, the Riemann and
+    Riemann-Stieltjes integrals, series, and sequences of functions.
+
 - term: 2022 Spring
   code: L0442.000100
   title: Calculus 1

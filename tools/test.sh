@@ -62,13 +62,15 @@ main() {
 
   # test
   #
-  # Every course unit is now posted, so there is no exemption list. If a future
-  # post links forward to a unit that has not been written yet, add its slug
-  # back here as a regex and drop it again when that post goes live.
+  # Course chapters that are linked from an overview but not yet posted go in
+  # this list. Remove a slug as its post goes live, so the link check tightens
+  # with each chapter instead of staying permanently loose. Empty the list and
+  # drop the ",$_pending" below once nothing is outstanding.
+  _pending="/^\/posts\/analysis-(metric-spaces|sequences|continuity|differentiation|integration|series|function-sequences)\/$/"
 
   bundle exec htmlproofer "$SITE_DIR" \
     --disable-external \
-    --ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/"
+    --ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/,$_pending"
 }
 
 while (($#)); do
