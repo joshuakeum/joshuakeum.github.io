@@ -1,6 +1,6 @@
 ---
 title: "Mathematical Analysis: Metric Spaces and the Structure of Point Sets"
-date: 2026-10-09 11:00:00 +0900
+date: 2026-10-09 09:00:00 +0900
 categories: [Course Notes, Mathematical Analysis]
 tags: [metric spaces, open sets, compactness, heine-borel, connectedness, cantor set]
 description: Distance as an axiom, then open and closed sets, limit points and closure, the relative topology, connectedness, compactness and Heine-Borel, and the Cantor set. Chapter 2 of Introduction to Mathematical Analysis.

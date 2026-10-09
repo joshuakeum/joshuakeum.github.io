@@ -66,7 +66,7 @@ main() {
   # this list. Remove a slug as its post goes live, so the link check tightens
   # with each chapter instead of staying permanently loose. Empty the list and
   # drop the ",$_pending" below once nothing is outstanding.
-  _pending="/^\/posts\/analysis-(continuity|differentiation|integration|series|function-sequences)\/$/"
+  _pending="/^\/posts\/analysis-(differentiation|integration|series|function-sequences)\/$/"
 
   bundle exec htmlproofer "$SITE_DIR" \
     --disable-external \
