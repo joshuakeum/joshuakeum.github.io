@@ -89,5 +89,3 @@ Also, $$\log$$ always means the natural logarithm — never base 10, never base 
 ## Further resources
 
 **Past exams.** The SNU liberal-arts mathematics TA office maintains an archive of past 수학 1 examinations at [taoffice.math.snu.ac.kr](https://taoffice.math.snu.ac.kr/board/index.php?mid=board_L01). These are the best calibration for what the course actually expects.
-
-A word of caution the course itself offered about video resources: their strength is that any one explanation can be excellent, and their weakness is that the explanations do not connect. A lecture course maintains a planned thread across a semester. Use the videos to unstick yourself, not to replace the thread.
