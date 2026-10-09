@@ -13,8 +13,6 @@ This site also collects summaries of the courses I have taken.
 
 **Seoul National University** — Seoul, Republic of Korea<br>
 B.Sc., Chemistry; Minor, Statistics · *August 2028 (expected)*<br>
-GPA 4.07 / 4.3 overall; 4.15 / 4.3 in Chemistry<br>
-Leave of absence for mandatory military service: October 2025 – June 2027
 
 ## Research experience
 
