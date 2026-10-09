@@ -118,10 +118,6 @@ Pointwise convergence and the interchange of limits, uniform convergence, and
 what uniform convergence buys you for continuity, integration and
 differentiation.
 
-> Chapters 2 through 8 are still being written; their links will go live as
-> each is posted.
-{: .prompt-info }
-
 ## Notation conventions
 
 Used consistently across all chapters of this course.

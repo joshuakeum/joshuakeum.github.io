@@ -62,15 +62,13 @@ main() {
 
   # test
   #
-  # Course chapters that are linked from an overview but not yet posted go in
-  # this list. Remove a slug as its post goes live, so the link check tightens
-  # with each chapter instead of staying permanently loose. Empty the list and
-  # drop the ",$_pending" below once nothing is outstanding.
-  _pending="/^\/posts\/analysis-(integration|series|function-sequences)\/$/"
-
+  # Every course chapter is posted, so there is no exemption list. If a future
+  # post links forward to one that has not been written yet, reinstate a
+  # _pending="<regex>" here and append ",$_pending" to --ignore-urls, then drop
+  # it again as each post goes live.
   bundle exec htmlproofer "$SITE_DIR" \
     --disable-external \
-    --ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/,$_pending"
+    --ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/"
 }
 
 while (($#)); do
