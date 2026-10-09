@@ -14,6 +14,7 @@ render_with_liquid: false
 | Item | Detail |
 |---|---|
 | Course | Introduction to Mathematical Analysis, 881.008 |
+| Institution | Seoul National University |
 | Semester | Spring 2023 |
 | Instructor | Ja A Jeong (정자아) |
 | Textbook | Manfred Stoll, *Introduction to Real Analysis*, 2nd edition |

@@ -862,6 +862,6 @@ $$\alpha$$ is.
 ## References
 
 - Manfred Stoll, *Introduction to Real Analysis*, 2nd edition — Chapter 6. The suggested exercise numbers are Stoll's.
-- Introduction to Mathematical Analysis (881.008), Spring 2023. Instructor: Ja A Jeong (정자아). Typed lecture notes, Chapter VI.
+- Introduction to Mathematical Analysis (881.008), Seoul National University, Spring 2023. Instructor: Ja A Jeong (정자아). Typed lecture notes, Chapter VI.
 - All proofs and all exercise solutions are mine; the notes leave every one blank. Written out in full are the refinement lemma, Riemann's criterion, integrability of continuous and of monotone functions, the fundamental theorem, and the step-function Stieltjes computation, because each carries a technique. The composition theorem, the additivity of the integral over subintervals, Lebesgue's criterion and the equivalence of the Darboux and Riemann definitions are stated and used but not proved, following the course's own weighting.
 - The remark that a countable union of measure-zero sets has measure zero, and the observation that $$f$$ and $$\alpha$$ cannot share a discontinuity, are added here; the notes state neither.

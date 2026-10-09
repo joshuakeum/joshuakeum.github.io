@@ -1047,7 +1047,7 @@ does.
 ## References
 
 - Manfred Stoll, *Introduction to Real Analysis*, 2nd edition — Chapter 4. The suggested exercise numbers are Stoll's.
-- Introduction to Mathematical Analysis (881.008), Spring 2023. Instructor: Ja A Jeong (정자아). Typed lecture notes, Chapter IV.
+- Introduction to Mathematical Analysis (881.008), Seoul National University, Spring 2023. Instructor: Ja A Jeong (정자아). Typed lecture notes, Chapter IV.
 - The notes give definitions, theorem statements and the exercise list, with every proof and every solution left as blank space. All proofs and all exercise solutions above are mine. Proofs are written out where the argument carries a technique worth keeping — the sequential criterion, the topological characterisation, compactness and connectedness under continuous maps, the halving argument for uniform continuity, and the countability of the discontinuities of a monotone function — and compressed elsewhere.
 - Two notes on the source. §4.2 is headed "Limit of a Function" in the notes, repeating §4.1's title; its content is continuity. And exercise 12 of §4.3 omits the continuity hypothesis that part (b) requires; it is assumed here, with the gap flagged in place.
 - The example showing that a continuous image of a relatively open set need not be relatively open, Thomae's function, and the counterexamples for products of uniformly continuous functions are mine; the notes mark these as exercises without giving them.
