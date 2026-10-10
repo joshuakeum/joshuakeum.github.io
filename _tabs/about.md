@@ -7,7 +7,6 @@ order: 1
 Chemistry undergraduate at Seoul National University, with a minor in statistics.
 In the Laboratory of Biomolecular Diversity I work on genome mining and
 systematic annotation of bacterial natural-product biosynthetic gene clusters.
-This site also collects summaries of the courses I have taken.
 
 ## Education
 
