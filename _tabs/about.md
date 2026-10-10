@@ -1,13 +1,12 @@
 ---
 # the default layout is 'page'
 icon: fas fa-info-circle
-order: 5
+order: 1
 ---
 
 Chemistry undergraduate at Seoul National University, with a minor in statistics.
 In the Laboratory of Biomolecular Diversity I work on genome mining and
-statistical/systematic annotation of bacterial natural-product biosynthetic
-gene clusters.
+systematic annotation of bacterial natural-product biosynthetic gene clusters.
 This site also collects summaries of the courses I have taken.
 
 ## Education
@@ -52,3 +51,4 @@ University · *November 2023 – October 2024*
 - <joshuakeum@snu.ac.kr>
 - <joshuakeum818@gmail.com>
 - <https://github.com/joshuakeum>
+- <https://orcid.org/0009-0000-5544-0642>
