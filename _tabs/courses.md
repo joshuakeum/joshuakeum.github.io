@@ -2,7 +2,7 @@
 layout: page
 title: Courses
 icon: fas fa-graduation-cap
-order: 1
+order: 2
 ---
 
 An index of the undergraduate courses I have written up here. Each entry links

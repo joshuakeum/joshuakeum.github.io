@@ -16,10 +16,10 @@ timezone: Asia/Seoul
 
 title: Joshua D. Keum # the main title
 
-tagline: Blog Posts # it will display as the subtitle
+tagline: Chemical Biology · Hypothesis-driven Bioinformatics # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
-  Summaries and notes from my undergraduate coursework.
+  Chemical Biology · Hypothesis-driven Bioinformatics
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
@@ -61,7 +61,7 @@ analytics:
   google:
     id: # fill in your Google Analytics ID
   goatcounter:
-    id: # fill in your GoatCounter ID
+    id: joshuakeum # fill in your GoatCounter ID
   umami:
     id: # fill in your Umami ID
     domain: # fill in your Umami domain
