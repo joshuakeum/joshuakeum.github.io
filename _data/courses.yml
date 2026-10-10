@@ -18,6 +18,19 @@
 #   instructor  Optional.
 #   summary     Optional. One or two sentences on what the course covered.
 #
+- term: 2023 Fall
+  code: "881.007"
+  title: Linear Algebra
+  subject: Mathematics
+  category: Linear Algebra
+  instructor: Jin Hong (홍진)
+  summary: >-
+    A theory-centred linear algebra course at Seoul National University,
+    following Friedberg, Insel and Spence. Vector spaces, linear
+    transformations and matrices, determinants, diagonalization, and inner
+    product spaces. The write-ups list definitions and theorems with proofs
+    and solve the course problem sheets.
+
 - term: 2023 Spring
   code: "881.008"
   title: Introduction to Mathematical Analysis
