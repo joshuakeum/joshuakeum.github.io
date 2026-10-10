@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 340"
+     width="700" height="340" role="img" aria-labelledby="figTitle figDesc">
+  <title id="figTitle">Two commutative diagrams for maps induced on a quotient space</title>
+  <desc id="figDesc">On the left, a triangle. An arrow labelled T runs from V across to
+the image of T. An arrow labelled pi runs from V down to the quotient V over ker T. A
+third arrow, labelled T bar and marked as an isomorphism, runs from V over ker T up to
+the image of T. Going across by T is the same as going down by pi and then along T bar.
+On the right, a square. T runs along the top from V to V, pi runs down each side from V
+to V over W, and T bar runs along the bottom from V over W to V over W. Going across
+and then down is the same as going down and then across.</desc>
+  <style>
+    /* Base values are the validated light-mode palette the figures on this site use;
+       the hue also clears 3:1 on the dark surface and the greys stay legible on
+       either, so a viewer whose OS scheme and site theme disagree still gets a
+       readable figure. */
+    svg { --curve:#2a78d6; --vec:#eb6834; --ink:#7a7a74; }
+    @media (prefers-color-scheme: dark) {
+      svg { --curve:#3987e5; --vec:#d95926; --ink:#c3c2b7; }
+    }
+    .map   { stroke:var(--ink); stroke-width:2.2; fill:none; stroke-linecap:round; }
+    .ind   { stroke:var(--vec); stroke-width:2.8; fill:none; stroke-linecap:round; }
+    .bar   { stroke:var(--ink); stroke-width:1.8; fill:none; stroke-linecap:round; }
+    text   { fill:var(--ink); font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+    .obj   { font-size:24px; }
+    .lbl   { font-size:22px; font-style:italic; }
+    .sm    { font-size:17px; }
+  </style>
+  <defs>
+    <marker id="ahg" viewBox="0 0 10 10" refX="8.5" refY="5"
+            markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+      <path d="M 0,0.8 L 9.6,5 L 0,9.2 z" fill="var(--ink)"/>
+    </marker>
+    <marker id="ah" viewBox="0 0 10 10" refX="8.5" refY="5"
+            markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+      <path d="M 0,0.8 L 9.6,5 L 0,9.2 z" fill="var(--vec)"/>
+    </marker>
+  </defs>
+
+  <!-- left: the triangle of the first isomorphism theorem -->
+  <text class="obj" x="60"  y="78"  text-anchor="middle">V</text>
+  <text class="obj" x="270" y="78"  text-anchor="middle">im T</text>
+  <text class="obj" x="60"  y="282" text-anchor="middle">V / ker T</text>
+  <line class="map" x1="84"  y1="70"  x2="228" y2="70"  marker-end="url(#ahg)"/>
+  <line class="map" x1="60"  y1="94"  x2="60"  y2="250" marker-end="url(#ahg)"/>
+  <line class="ind" x1="96"  y1="252" x2="250" y2="96"  marker-end="url(#ah)"/>
+  <text class="lbl" x="156" y="56" text-anchor="middle">T</text>
+  <text class="lbl" x="40"  y="178" text-anchor="end">&#960;</text>
+  <text class="lbl" x="192" y="196">T</text>
+  <line class="bar" x1="191" y1="174" x2="207" y2="174"/>
+  <text class="sm"  x="214" y="216">isomorphism</text>
+  <text class="sm"  x="60"  y="322" text-anchor="middle">T = T&#773; &#8728; &#960;</text>
+
+  <!-- right: the square for a T-invariant subspace -->
+  <text class="obj" x="440" y="78"  text-anchor="middle">V</text>
+  <text class="obj" x="640" y="78"  text-anchor="middle">V</text>
+  <text class="obj" x="440" y="282" text-anchor="middle">V / W</text>
+  <text class="obj" x="640" y="282" text-anchor="middle">V / W</text>
+  <line class="map" x1="464" y1="70"  x2="614" y2="70"  marker-end="url(#ahg)"/>
+  <line class="map" x1="440" y1="94"  x2="440" y2="250" marker-end="url(#ahg)"/>
+  <line class="map" x1="640" y1="94"  x2="640" y2="250" marker-end="url(#ahg)"/>
+  <line class="ind" x1="482" y1="274" x2="596" y2="274" marker-end="url(#ah)"/>
+  <text class="lbl" x="540" y="56" text-anchor="middle">T</text>
+  <text class="lbl" x="420" y="178" text-anchor="end">&#960;</text>
+  <text class="lbl" x="660" y="178">&#960;</text>
+  <text class="lbl" x="534" y="262" text-anchor="middle">T</text>
+  <line class="bar" x1="526" y1="240" x2="542" y2="240"/>
+  <text class="sm"  x="540" y="322" text-anchor="middle">&#960; &#8728; T = T&#773; &#8728; &#960;</text>
+</svg>

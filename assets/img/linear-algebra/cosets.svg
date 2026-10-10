@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 378"
+     width="700" height="378" role="img" aria-labelledby="figTitle figDesc">
+  <title id="figTitle">Cosets of a line through the origin are the lines parallel to it</title>
+  <desc id="figDesc">The plane R squared with a subspace W drawn as a line through the
+origin. Above it runs a parallel line, the coset v plus W, and an arrow from the origin
+to a point of that line is the vector v. Below W runs a second parallel line. Two
+arrows from the origin, v1 and v2, end at different points of this one line, so both
+name the same coset: v1 plus W equals v2 plus W. A third arrow joins the tip of v2 to
+the tip of v1 along the line; it is the difference v1 minus v2, and it is parallel to
+W, which is to say it lies in W.</desc>
+  <style>
+    /* Base values are the validated light-mode palette the figures on this site use;
+       both hues also clear 3:1 on the dark surface and the greys stay legible on
+       either, so a viewer whose OS scheme and site theme disagree still gets a
+       readable figure. */
+    svg { --curve:#2a78d6; --vec:#eb6834; --ink:#7a7a74; }
+    @media (prefers-color-scheme: dark) {
+      svg { --curve:#3987e5; --vec:#d95926; --ink:#c3c2b7; }
+    }
+    .sub   { stroke:var(--curve); stroke-width:3.4; fill:none; stroke-linecap:round; }
+    .coset { stroke:var(--curve); stroke-width:2; fill:none; stroke-linecap:round; }
+    .vec   { stroke:var(--vec); stroke-width:2.6; fill:none; stroke-linecap:round; }
+    .diff  { stroke:var(--vec); stroke-width:4; fill:none; stroke-linecap:round; }
+    .dot   { fill:var(--ink); }
+    text   { fill:var(--ink); font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+    .lbl   { font-size:22px; font-style:italic; }
+    .key   { font-size:20px; }
+  </style>
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="8.5" refY="5"
+            markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+      <path d="M 0,0.8 L 9.6,5 L 0,9.2 z" fill="var(--vec)"/>
+    </marker>
+    <marker id="ahd" viewBox="0 0 10 10" refX="8.5" refY="5"
+            markerWidth="4.6" markerHeight="4.6" orient="auto-start-reverse">
+      <path d="M 0,0.8 L 9.6,5 L 0,9.2 z" fill="var(--vec)"/>
+    </marker>
+  </defs>
+
+  <text class="key" x="26" y="44">V = &#8477;&#178;</text>
+
+  <!-- the subspace, and two of its cosets -->
+  <line class="sub"   x1="61.7"  y1="344.2" x2="625.1" y2="62.4"/>
+  <line class="coset" x1="66.2"  y1="241.3" x2="495.5" y2="26.7"/>
+  <line class="coset" x1="213.8" y1="357.5" x2="625.1" y2="151.9"/>
+  <text class="lbl" x="636" y="66">W</text>
+  <text class="lbl" x="506" y="32">v + W</text>
+  <text class="lbl" x="690" y="230" text-anchor="end">v&#8321; + W = v&#8322; + W</text>
+
+  <!-- a representative of the upper coset -->
+  <line class="vec" x1="330" y1="210" x2="343.5" y2="102.7" marker-end="url(#ah)"/>
+  <text class="lbl" x="350" y="160">v</text>
+
+  <!-- two representatives of the lower coset, and their difference -->
+  <line class="diff" x1="312.1" y1="308.3" x2="464.2" y2="232.3" marker-end="url(#ahd)"/>
+  <line class="vec" x1="330" y1="210" x2="464.2" y2="232.3" marker-end="url(#ah)"/>
+  <line class="vec" x1="330" y1="210" x2="312.1" y2="308.3" marker-end="url(#ah)"/>
+  <text class="lbl" x="412" y="212">v&#8321;</text>
+  <text class="lbl" x="288" y="268">v&#8322;</text>
+  <text class="lbl" x="392" y="304">v&#8321; &#8722; v&#8322; &#8712; W</text>
+
+  <circle class="dot" cx="330" cy="210" r="6"/>
+  <text class="key" x="306" y="204" text-anchor="end">0</text>
+</svg>
