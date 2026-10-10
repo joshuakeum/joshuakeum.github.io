@@ -67,7 +67,7 @@ written up yet.
 - Quotient Spaces (lectured from separate slides; placed at the end of
   Chapter 1)
 
-**Chapter 2 — Linear Transformations and Matrices**
+**[Chapter 2 — Linear Transformations and Matrices](/posts/linear-algebra-linear-transformations/)**
 
 - §2.1 Linear Transformations, Null Spaces, and Ranges
 - §2.2 The Matrix Representation of a Linear Transformation
@@ -75,6 +75,8 @@ written up yet.
 - §2.4 Invertibility and Isomorphisms
 - §2.5 The Change of Coordinate Matrix
 - §2.6 Dual Spaces
+- Direct sums, projections and invariant subspaces (lectured at the end of
+  the chapter; placed in §2.1 to §2.3)
 
 **Chapter 3 — Elementary Matrix Operations and Systems of Linear Equations**
 
@@ -86,7 +88,7 @@ written up yet.
 
 ## Notation
 
-Used in Chapter 1. The table will grow as later chapters are added.
+Used in Chapters 1 and 2. The table will grow as later chapters are added.
 
 | Symbol | Meaning |
 |---|---|
@@ -110,4 +112,19 @@ Used in Chapter 1. The table will grow as later chapters are added.
 | $$v + W$$ | the coset of $$W$$ containing $$v$$ |
 | $$V/W$$ | the quotient space of $$V$$ modulo $$W$$ |
 | $$\ker T$$, $$\operatorname{im} T$$ | kernel and image of a linear map $$T$$ (also written $$N(T)$$, $$R(T)$$) |
+| $$\mathrm{id}_V$$, $$T_0$$ | the identity map of $$V$$; the zero map |
+| $$\operatorname{rank}(T)$$, $$\operatorname{nullity}(T)$$ | $$\dim \operatorname{im} T$$ and $$\dim \ker T$$ |
+| $$T_W$$ | the restriction of $$T$$ to a $$T$$-invariant subspace $$W$$ |
+| $$\mathcal{L}(V, W)$$, $$\mathcal{L}(V)$$ | the linear maps $$V \to W$$; the linear operators on $$V$$ |
+| $$\varepsilon_n$$ | the standard ordered basis of $$\mathbb{F}^n$$ |
+| $$[T]_\beta^\gamma$$, $$[T]_\beta$$ | the matrix of $$T$$ in the ordered bases $$\beta$$, $$\gamma$$; the case $$\beta = \gamma$$ |
+| $$L_A$$ | left multiplication by the matrix $$A$$ |
+| $$A^t$$, $$I_n$$, $$\delta_{ij}$$ | transpose, identity matrix, Kronecker delta |
+| $$V \approx W$$ | $$V$$ is isomorphic to $$W$$ |
+| $$\phi_\beta$$ | the standard representation $$v \mapsto [v]_\beta$$ |
+| $$A \sim B$$ | $$A$$ and $$B$$ are similar matrices |
+| $$V^*$$, $$V^{**}$$ | the dual space $$\mathcal{L}(V, \mathbb{F})$$; the double dual |
+| $$\beta^* = \{v_1^*, \dots, v_n^*\}$$ | the dual basis of $$\beta$$ |
+| $$T^t$$ | the transpose $$f \mapsto fT$$ of a linear map $$T$$ |
+| $$\hat{x}$$ | evaluation at $$x$$, an element of $$V^{**}$$ |
 | $$\square$$ | end of a proof or solution |

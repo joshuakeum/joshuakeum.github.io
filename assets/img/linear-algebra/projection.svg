@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 378"
+     width="700" height="378" role="img" aria-labelledby="figTitle figDesc">
+  <title id="figTitle">The projection on W1 along W2, and how it changes with W2</title>
+  <desc id="figDesc">Two lines through the origin of the plane: W1, nearly horizontal,
+and W2, steep. An arrow from the origin is the vector x. A dashed parallelogram with
+sides parallel to the two lines splits x into x1 on W1 and x2 on W2, and the projection
+on W1 along W2 sends x to x1. A third line through the origin, W2 prime, leans the
+other way. Sliding x parallel to W2 prime, along a second dashed segment, lands at a
+different point of W1, marked by an open circle: the projection on W1 along W2 prime
+sends the same x to a different vector.</desc>
+  <style>
+    /* Base values are the validated light-mode palette the figures on this site use;
+       both hues also clear 3:1 on the dark surface and the greys stay legible on
+       either, so a viewer whose OS scheme and site theme disagree still gets a
+       readable figure. */
+    svg { --curve:#2a78d6; --vec:#eb6834; --ink:#7a7a74; }
+    @media (prefers-color-scheme: dark) {
+      svg { --curve:#3987e5; --vec:#d95926; --ink:#c3c2b7; }
+    }
+    .sub   { stroke:var(--curve); stroke-width:3.2; fill:none; stroke-linecap:round; }
+    .comp  { stroke:var(--curve); stroke-width:2; fill:none; stroke-linecap:round; }
+    .other { stroke:var(--ink); stroke-width:1.8; fill:none; stroke-linecap:round; }
+    .vec   { stroke:var(--vec); stroke-width:2.6; fill:none; stroke-linecap:round; }
+    .big   { stroke:var(--vec); stroke-width:3.6; fill:none; stroke-linecap:round; }
+    .vdash { stroke:var(--vec); stroke-width:1.8; fill:none; stroke-dasharray:6 6; }
+    .odash { stroke:var(--ink); stroke-width:1.8; fill:none; stroke-dasharray:3 6; }
+    .alt   { fill:none; stroke:var(--ink); stroke-width:2.6; }
+    .dot   { fill:var(--ink); }
+    text   { fill:var(--ink); font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+    .lbl   { font-size:22px; font-style:italic; }
+    .key   { font-size:20px; }
+  </style>
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="8.5" refY="5"
+            markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+      <path d="M 0,0.8 L 9.6,5 L 0,9.2 z" fill="var(--vec)"/>
+    </marker>
+  </defs>
+
+  <!-- the subspace projected onto, its complement, and a second complement -->
+  <line class="sub"   x1="60"    y1="286" x2="670" y2="194.5"/>
+  <line class="comp"  x1="261.5" y1="360" x2="377" y2="30"/>
+  <line class="other" x1="350"   y1="350" x2="185" y2="20"/>
+  <text class="lbl" x="644" y="184">W&#8321;</text>
+  <text class="lbl" x="388" y="38">W&#8322;</text>
+  <text class="lbl" x="132" y="40">W&#8322;&#8242;</text>
+
+  <!-- x and its decomposition along W1 and W2 -->
+  <line class="vdash" x1="552.5" y1="70" x2="500"   y2="220"/>
+  <line class="vdash" x1="552.5" y1="70" x2="352.5" y2="100"/>
+  <line class="vec" x1="300" y1="250" x2="352.5" y2="100" marker-end="url(#ah)"/>
+  <line class="big" x1="300" y1="250" x2="500"   y2="220" marker-end="url(#ah)"/>
+  <line class="vec" x1="300" y1="250" x2="552.5" y2="70"  marker-end="url(#ah)"/>
+  <text class="lbl" x="562" y="62">x</text>
+  <text class="lbl" x="334" y="122" text-anchor="end">x&#8322;</text>
+  <text class="lbl" x="420" y="262">x&#8321; = T(x)</text>
+
+  <!-- the same x projected along the other complement -->
+  <line class="odash" x1="552.5" y1="70" x2="618.6" y2="202.2"/>
+  <circle class="alt" cx="618.6" cy="202.2" r="7"/>
+  <text class="key" x="560" y="238">along W&#8322;&#8242;</text>
+
+  <circle class="dot" cx="300" cy="250" r="6"/>
+  <text class="key" x="284" y="280" text-anchor="end">0</text>
+</svg>
