@@ -117,15 +117,64 @@ _**Fig 6**. [Zhu, Marahiel et al., <i>J. Biol. Chem.</i>, **2016**](https://doi.
 ### Ideation
 
 Now, we want to obtain PadeK homologues from the vast genome and protein
-databases. There are several ways to achieve that goal. I intentionally
-omitted the mathematical background behind them. Look for these keywords —
-hidden Markov models, stochastic processes, and E-values.
+databases. There are several ways to achieve that goal. Look for these
+keywords for further mathematical and statistical background — hidden Markov
+models, stochastic processes, and E-values.
 
 ### Methods
 
 #### BLAST
 
+- The **basic local alignment search tool (BLAST)** is a heuristic algorithm
+  that compares nucleotide or protein sequences within a library or database.
+  The user of the algorithm must provide a subject nucleotide or protein
+  sequence (which is called a query), and BLAST returns sequences that
+  resemble the query above a certain threshold.
+- Basically, BLAST for a protein query uses the BLOSUM62 matrix (or other
+  established matrices), which indicates the similarity or uniqueness of each
+  amino acid.
+- Position-specific iterated BLAST (PSI-BLAST) changes its position matrix
+  throughout the iterations, so that the matrix is calibrated for the query
+  protein and its homologs.
+
+Note: The first iteration of PSI-BLAST uses the BLOSUM62 matrix.
+
+##### Application to PadeK
+
+![Line plot of the BLASTP hits of PadeK against the clustered nr database: 5,000 accessions ranked by pE, with pE on an inverted vertical axis. The top hit sits at the pE 320 floor. The curve then declines gently from about 100 to about 75 over the first 700 accessions, drops to about 40 by accession 1,000, and flattens into a long tail that ends at 14.4](/assets/img/bioinformatics-walkthrough/blastp-padek.png){: w="1860" h="1274" }
+_**Fig 7**. BLASTP result of PadeK._
+
+- With PadeK's protein sequence as the query, the BLASTP result shows a stair
+  curve. The E-value is the robust alternative to the p-value, and here, let's
+  define pE = −log(E-value).
+- Accessions inside each step, where the slope becomes gentler, have a higher
+  chance of being homologous to each other, as their pEs to the query are
+  similar.
+
+Note: It is not true that the accessions in the same step have the same
+enzyme chemistry or biochemical function. The second bullet considers the
+"possibility" of being similar, not the similarity itself.
+
+![Line plot of four PSI-BLAST cycles of PadeK against the clustered nr database, each with 5,000 accessions ranked by pE, and a dashed line at the inclusion threshold, pE 60. Cycle 0 is the BLASTP curve. In cycles 1 to 3 the hits score higher: between 179 and 254 of them sit at the pE 320 floor, the curves then decline from about 180 to about 120 and drop steeply near accession 850, and the three curves nearly coincide. The number of hits at or above the threshold is 820, 1,259, 1,090 and 1,066 in cycles 0 to 3](/assets/img/bioinformatics-walkthrough/psi-blast-padek.png){: w="1860" h="1309" }
+_**Fig 8**. PSI-BLAST result of PadeK._
+
+- One can control the E-value threshold for PSSM inclusion of the next
+  iteration in PSI-BLAST.
+- I recommend setting the threshold in between different steps, so that the
+  step(s) of interest get included.
+- Also, iterate the process until the next accessions under the inclusion
+  threshold are all in the previous iteration, or simply, until the accessions
+  converge.
+- Make sure that the query does not get lost during the iterations. If there
+  are too many irrelevant protein sequences, the PSSM may be corrupted, and
+  therefore the process may result in a distorted set of proteins.
+
 #### Fetch from Databases
+
+<https://www.ebi.ac.uk/interpro/entry/pfam/PF07475/>
+
+- If you aim to efficiently obtain a larger scope of homologous proteins, it
+  is possible to fetch enzyme accessions from databases.
 
 ## Clustering and Classification of Homologous Proteins
 
@@ -137,4 +186,40 @@ hidden Markov models, stochastic processes, and E-values.
 
 #### Sequence Similarity Networks
 
+#### MMseqs2
+
 ## Pangenomic Analysis
+
+## Further Analysis
+
+### Domain Architecture Predictions
+
+#### HHsuite
+
+#### HMMER
+
+### Structural Analysis
+
+#### ML/DL-based Structure Prediction Tools
+
+##### AlphaFold
+
+##### RoseTTAFold
+
+##### ESMFold
+
+#### Structure-based Search Tools
+
+##### FoldSeek
+
+##### Folddisco
+
+#### Molecular Visualization Tools
+
+##### PyMOL
+
+##### ChimeraX
+
+#### Structural Feature Prediction Tools
+
+##### DeepTMHMM
