@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 330"
+     width="700" height="330" role="img" aria-labelledby="figTitle figDesc">
+  <title id="figTitle">A right-handed and a left-handed ordered basis of the plane</title>
+  <desc id="figDesc">Two panels, each showing two arrows u and v from the origin and the
+shaded parallelogram they determine. In the left panel a curved arrow turns
+counterclockwise from u to v through less than a half turn: the ordered basis u, v is
+right-handed, its orientation is plus one and the determinant is positive. In the right
+panel the labels u and v are exchanged, the curved arrow from u to v turns clockwise,
+and the ordered basis is left-handed: the orientation is minus one and the determinant
+is negative. The parallelogram, and so the area, is the same in both panels.</desc>
+  <style>
+    /* Base values are the validated light-mode palette the figures on this site use;
+       both hues also clear 3:1 on the dark surface and the greys stay legible on
+       either, so a viewer whose OS scheme and site theme disagree still gets a
+       readable figure. */
+    svg { --curve:#2a78d6; --vec:#eb6834; --ink:#7a7a74; }
+    @media (prefers-color-scheme: dark) {
+      svg { --curve:#3987e5; --vec:#d95926; --ink:#c3c2b7; }
+    }
+    .area  { fill:var(--curve); fill-opacity:0.14; stroke:none; }
+    .edge  { stroke:var(--curve); stroke-width:1.8; fill:none; stroke-dasharray:6 6; }
+    .vec   { stroke:var(--vec); stroke-width:3; fill:none; stroke-linecap:round; }
+    .turn  { stroke:var(--ink); stroke-width:2; fill:none; stroke-linecap:round; }
+    .dot   { fill:var(--ink); }
+    text   { fill:var(--ink); font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+    .lbl   { font-size:22px; font-style:italic; }
+    .key   { font-size:19px; }
+  </style>
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="8.5" refY="5"
+            markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+      <path d="M 0,0.8 L 9.6,5 L 0,9.2 z" fill="var(--vec)"/>
+    </marker>
+    <marker id="at" viewBox="0 0 10 10" refX="8" refY="5"
+            markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0,1 L 9.4,5 L 0,9 z" fill="var(--ink)"/>
+    </marker>
+  </defs>
+
+  <!-- left panel: right-handed. origin (70,235), u = (200,-40), v = (60,-150) -->
+  <polygon class="area" points="70,235 270,195 330,45 130,85"/>
+  <line class="edge" x1="270" y1="195" x2="330" y2="45"/>
+  <line class="edge" x1="130" y1="85"  x2="330" y2="45"/>
+  <line class="vec" x1="70" y1="235" x2="270" y2="195" marker-end="url(#ah)"/>
+  <line class="vec" x1="70" y1="235" x2="130" y2="85"  marker-end="url(#ah)"/>
+  <path class="turn" d="M 133.7,222.3 A 65,65 0 0 0 94.1,174.6" marker-end="url(#at)"/>
+  <circle class="dot" cx="70" cy="235" r="5"/>
+  <text class="lbl" x="280" y="212">u</text>
+  <text class="lbl" x="104" y="80">v</text>
+  <text class="key" x="190" y="282" text-anchor="middle">right-handed: orientation +1</text>
+  <text class="key" x="190" y="310" text-anchor="middle">det &gt; 0</text>
+
+  <!-- right panel: left-handed. origin (420,235), u = (60,-150), v = (200,-40) -->
+  <polygon class="area" points="420,235 620,195 680,45 480,85"/>
+  <line class="edge" x1="620" y1="195" x2="680" y2="45"/>
+  <line class="edge" x1="480" y1="85"  x2="680" y2="45"/>
+  <line class="vec" x1="420" y1="235" x2="620" y2="195" marker-end="url(#ah)"/>
+  <line class="vec" x1="420" y1="235" x2="480" y2="85"  marker-end="url(#ah)"/>
+  <path class="turn" d="M 444.1,174.6 A 65,65 0 0 1 483.7,222.3" marker-end="url(#at)"/>
+  <circle class="dot" cx="420" cy="235" r="5"/>
+  <text class="lbl" x="630" y="212">v</text>
+  <text class="lbl" x="454" y="80">u</text>
+  <text class="key" x="540" y="282" text-anchor="middle">left-handed: orientation −1</text>
+  <text class="key" x="540" y="310" text-anchor="middle">det &lt; 0</text>
+</svg>
