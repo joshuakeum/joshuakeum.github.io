@@ -4,10 +4,10 @@
   <desc id="figDesc">Panel A: five genes drawn as arrows on a line of DNA and bracketed as one gene
 cluster. The first three follow one promoter and are transcribed into one mRNA, operon 1. The last
 two follow a second promoter and are transcribed into another mRNA, operon 2. Panel B: two rows, each
-with a donor genome on the left and a recipient genome on the right. In the first row the genes A, B
-and C sit next to each other, one transferred DNA segment contains all three, and the recipient
-receives the complete pathway. In the second row A, B and C are far apart, a segment of the same
-length contains only B, and the recipient receives an incomplete pathway.</desc>
+with a donor genome on the left and a recipient genome on the right. In the first row the genes X, Y
+and Z sit next to each other, one transferred DNA segment contains all three, and the recipient
+receives the complete pathway. In the second row X, Y and Z are far apart, a segment of the same
+length contains only Y, and the recipient receives an incomplete pathway.</desc>
   <style>
     /* Same palette and dark-mode handling as the other figures on this site. */
     svg { --curve:#2a78d6; --vec:#eb6834; --ink:#7a7a74; }
@@ -61,34 +61,34 @@ length contains only B, and the recipient receives an incomplete pathway.</desc>
   <text class="em" x="50" y="282">clustered genes</text>
   <path class="dna" d="M50,314 H330"/>
   <polygon class="g1" points="126,300 155,300 166,314 155,328 126,328"/>
-  <text class="in" x="143.25" y="319" text-anchor="middle">A</text>
+  <text class="in" x="143.25" y="319" text-anchor="middle">X</text>
   <polygon class="g1" points="170,300 199,300 210,314 199,328 170,328"/>
-  <text class="in" x="187.25" y="319" text-anchor="middle">B</text>
+  <text class="in" x="187.25" y="319" text-anchor="middle">Y</text>
   <polygon class="g1" points="214,300 243,300 254,314 243,328 214,328"/>
-  <text class="in" x="231.25" y="319" text-anchor="middle">C</text>
+  <text class="in" x="231.25" y="319" text-anchor="middle">Z</text>
   <rect class="seg" x="116" y="292" width="148" height="44" rx="5"/>
   <path class="move" d="M344,314 H390" marker-end="url(#aho)"/>
   <path class="dna" d="M400,314 H680"/>
   <polygon class="g1" points="476,300 505,300 516,314 505,328 476,328"/>
-  <text class="in" x="493.25" y="319" text-anchor="middle">A</text>
+  <text class="in" x="493.25" y="319" text-anchor="middle">X</text>
   <polygon class="g1" points="520,300 549,300 560,314 549,328 520,328"/>
-  <text class="in" x="537.25" y="319" text-anchor="middle">B</text>
+  <text class="in" x="537.25" y="319" text-anchor="middle">Y</text>
   <polygon class="g1" points="564,300 593,300 604,314 593,328 564,328"/>
-  <text class="in" x="581.25" y="319" text-anchor="middle">C</text>
+  <text class="in" x="581.25" y="319" text-anchor="middle">Z</text>
   <text x="540" y="356" text-anchor="middle">all three arrive: complete pathway</text>
   <text x="190" y="356" text-anchor="middle">one transferred segment</text>
   <text class="em" x="50" y="398">scattered genes</text>
   <path class="dna" d="M50,430 H330"/>
   <polygon class="g1" points="58,416 87,416 98,430 87,444 58,444"/>
-  <text class="in" x="75.25" y="435" text-anchor="middle">A</text>
+  <text class="in" x="75.25" y="435" text-anchor="middle">X</text>
   <polygon class="g1" points="170,416 199,416 210,430 199,444 170,444"/>
-  <text class="in" x="187.25" y="435" text-anchor="middle">B</text>
+  <text class="in" x="187.25" y="435" text-anchor="middle">Y</text>
   <polygon class="g1" points="282,416 311,416 322,430 311,444 282,444"/>
-  <text class="in" x="299.25" y="435" text-anchor="middle">C</text>
+  <text class="in" x="299.25" y="435" text-anchor="middle">Z</text>
   <rect class="seg" x="116" y="408" width="148" height="44" rx="5"/>
   <path class="move" d="M344,430 H390" marker-end="url(#aho)"/>
   <path class="dna" d="M400,430 H680"/>
   <polygon class="g1" points="520,416 549,416 560,430 549,444 520,444"/>
-  <text class="in" x="537.25" y="435" text-anchor="middle">B</text>
-  <text x="540" y="472" text-anchor="middle">only B arrives: incomplete pathway</text>
+  <text class="in" x="537.25" y="435" text-anchor="middle">Y</text>
+  <text x="540" y="472" text-anchor="middle">only Y arrives: incomplete pathway</text>
 </svg>
