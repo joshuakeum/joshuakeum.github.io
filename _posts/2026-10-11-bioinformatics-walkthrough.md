@@ -28,7 +28,7 @@ _**Fig 1**. [Shafee & Lowe, <i>WikiJournal of Medicine</i>, **2017**](https://do
 
 ### Gene Clusters
 
-![Panel A shows five genes on a line of DNA, bracketed as one gene cluster. The first three follow one promoter and give one mRNA, and the last two follow a second promoter and give another mRNA. Panel B compares two donor genomes. Where the genes A, B and C are adjacent, one transferred DNA segment carries all three into the recipient genome. Where they are far apart, a segment of the same length carries only B](/assets/img/bioinformatics-walkthrough/gene-clusters.svg){: w="720" h="486" }
+![Panel A shows five genes on a line of DNA, bracketed as one gene cluster. The first three follow one promoter and give one mRNA, and the last two follow a second promoter and give another mRNA. Panel B compares two donor genomes. Where the genes X, Y and Z are adjacent, one transferred DNA segment carries all three into the recipient genome. Where they are far apart, a segment of the same length carries only Y](/assets/img/bioinformatics-walkthrough/gene-clusters.svg){: w="720" h="486" }
 _**Fig 2**. (A) A gene cluster that spans two operons. (B) Horizontal transfer of clustered genes and of scattered genes._
 
 - It is common in microbial genomes for genes that cooperate with each other
