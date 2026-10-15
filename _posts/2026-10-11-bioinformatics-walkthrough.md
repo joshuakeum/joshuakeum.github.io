@@ -141,7 +141,7 @@ Note: The first iteration of PSI-BLAST uses the BLOSUM62 matrix.
 
 ##### Application to PadeK
 
-![Line plot of the BLASTP hits of PadeK against the clustered nr database: 5,000 accessions ranked by pE, with pE on an inverted vertical axis. The top hit sits at the pE 320 floor. The curve then declines gently from about 100 to about 75 over the first 700 accessions, drops to about 40 by accession 1,000, and flattens into a long tail that ends at 14.4](/assets/img/bioinformatics-walkthrough/blastp-padek.png){: w="1860" h="1274" }
+![Line plot of the BLASTP hits of PadeK against the clustered nr database: 5,000 accessions ranked by pE, with a dashed line at pE 60. The top hit has E = 0 and sits in a band above pE 180, the reporting limit of NCBI BLAST. The curve then declines gently from about 100 to about 75 over the first 700 accessions, drops to about 40 by accession 1,000, and flattens into a long tail that ends near 14; 820 hits are at or above pE 60](/assets/img/bioinformatics-walkthrough/blastp-padek.png){: w="2400" h="1480" }
 _**Fig 7**. BLASTP result of PadeK._
 
 - With PadeK's protein sequence as the query, the BLASTP result shows a stair
