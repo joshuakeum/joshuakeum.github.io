@@ -56,7 +56,7 @@ _**Fig 4**. Biosynthesis of RiPPs_
 - Most precursors have an N-terminal leader (or occasionally a C-terminal follower) peptide that the modification enzymes recognize through protein-protein interaction.
 - The leader (or follower) peptide is usually cleaved by a peptidase after the modification (**Fig 4**).
 - Also, some RiPP modification enzymes have a **RiPP recognition element** (RRE) domain, which interacts with the leader (or follower) peptide to “recognize” the precursor.
-- Such products have various biological functions, including microbial weaponry ([Li, Tao et al., *Nat. Commun.*, **2026**](https://www.nature.com/articles/s41467-026-70567-0)), quorum sensing ([Hirooka et al., *Biosci. Biotechnol. Biochem.*, **2020**](https://doi.org/10.1080/09168451.2019.1685371)), enzyme cofactors ([Zhu & Klinman, *Curr. Opin. Chem. Biol.*, **2020**](https://pmc.ncbi.nlm.nih.gov/articles/PMC7736144/)), and more.
+- Such products have various biological functions, including microbial weaponry ([Li, Tao et al., *Nat. Commun.*, **2026**](https://www.nature.com/articles/s41467-026-70567-0)), quorum sensing ([Hirooka et al., *Biosci. Biotechnol. Biochem.*, **2020**](https://doi.org/10.1080/09168451.2019.1685371)), enzyme cofactors ([Zhu & Klinman, *Curr. Opin. Chem. Biol.*, **2020**](https://doi.org/10.1016/j.cbpa.2020.05.001)), and more.
 
 ---
 
@@ -67,15 +67,15 @@ _**Fig 4**. Biosynthesis of RiPPs_
 ![Structures of three lasso peptides, the gene clusters that encode them, and a scheme in which the B and C enzymes cleave off the leader peptide and close the ring](/assets/img/bioinformatics-walkthrough/lasso-biosynthesis.jpg){: w="956" h="1280" }
 _**Fig 5**. [Zhu, Marahiel et al., <i>J. Biol. Chem.</i>, **2016**](https://doi.org/10.1074/jbc.M116.722108)_
 
-- Lasso peptides are a class of RiPP products with a unique topology in which the C-terminus is threaded through a macrolactam ring formed between the core peptide’s N-terminus and the D/E side chain at position 7, 8, or 9 of the core.
-- The B function has two parts: an RRE (B1) that binds the leader, and a cysteine protease with a transglutaminase-like fold (B2). They are either fused in one protein or encoded separately. After B2 removes the leader, LasC, an asparagine synthetase-like enzyme, uses ATP to activate the Asp/Glu side chain, and the new N-terminal amine attacks it to close the ring.
+- Lasso peptides are a class of RiPP products with a unique topology in which the C-terminus is threaded through a macrolactam ring formed between the core peptide’s N-terminus and the D/E side chain at position 7, 8, or 9 of the core (**Fig 5A-C**).
+- The B function has two parts: an RRE (B1) that binds the leader, and a cysteine protease with a transglutaminase-like fold (B2). They are either fused in one protein or encoded separately (**Fig 5D, E**). After B2 removes the leader, LasC, an asparagine synthetase-like enzyme, uses ATP to activate the Asp/Glu side chain, and the new N-terminal amine attacks it to close the ring (**Fig 5E**).
 
 ### PadeK, a Lasso Tailoring Kinase
 
 ![Lasso peptide gene clusters containing a kinase gene in four bacterial strains, an alignment of their precursor peptides, the map of the expression plasmid, and chromatograms showing the lasso peptide and its phosphorylated form](/assets/img/bioinformatics-walkthrough/padek.jpg){: w="1098" h="1280" }
 _**Fig 6**. [Zhu, Marahiel et al., <i>J. Biol. Chem.</i>, **2016**](https://doi.org/10.1074/jbc.M116.722108)_
 
-- [Zhu et al.](https://doi.org/10.1074/jbc.M116.722108) reported an HprK kinase homolog inside the lasso peptide BGC, and concluded that its role is the (multi)-phosphorylation of the product, paeninodin.
+- [Zhu et al.](https://doi.org/10.1074/jbc.M116.722108) reported an HPrK kinase homolog inside the lasso peptide BGC, and concluded that its role is the (multi)-phosphorylation of the product, paeninodin (**Fig 6A, D**).
 - Here, let’s expand the PadeK ([WP_006678397.1](https://www.ncbi.nlm.nih.gov/protein/WP_006678397.1)) chemistry and search for novel combinations between PadeK and other RiPP enzymes.
 
 ---
@@ -84,7 +84,7 @@ _**Fig 6**. [Zhu, Marahiel et al., <i>J. Biol. Chem.</i>, **2016**](https://doi.
 
 ### Ideation
 
-Now, we want to obtain PadeK homologues from the vast genome and protein databases. Here, I present the bottom-up sequence search methods (BLASTP and PSI-BLAST) that start from a single query protein and the top-down method (database fetch) that start from a large set of protein accessions.
+Now, we want to obtain PadeK homologs from the vast genome and protein databases. Here, I present the bottom-up sequence search methods (BLASTP and PSI-BLAST) that start from a single query protein and the top-down method (database fetch) that start from a large set of protein accessions.
 
 ### Methods
 
@@ -106,25 +106,29 @@ _**Fig 7**. BLASTP result of PadeK against the clustered\_nr database. In cluste
   - Let’s define $$pE = −\log{E}$$ ($$\log$$ is the base-10 logarithm).
   - Because $$E$$ grows with database size, $$pE$$ values compare hits within one search, not across databases.
 - Hits within one step may belong to the same subfamily, and a cliff may mark a subfamily boundary.
-  - PadeK BLASTP shows a major cliff at rank ~820, where $$pE$$ falls from ~75 to ~45.
+  - PadeK BLASTP shows a major cliff at rank ~820, where $$pE$$ falls from ~75 to ~45 (**Fig 7**).
 
 Note: It is not true that the accessions in the same step have the same enzyme chemistry or biochemical function. The third bullet considers the “possibility” of being similar, not the similarity itself.
 
 ![Two panels. Panel A is a line plot of four PSI-BLAST cycles of PadeK against the clustered nr database, each with 5,000 accessions ranked by pE, and a dashed line at the inclusion threshold, pE 60. Hits with E = 0 sit in a band above pE 180, the reporting limit of NCBI BLAST: 1 in cycle 0, 254 in cycle 1, 208 in cycle 2 and 179 in cycle 3. Cycle 0 is the BLASTP curve. In cycles 1 to 3 the curves fall from 180 to about 120, drop steeply near accession 850, and nearly coincide. Panel B shows heatmaps of the 1,259 accessions that reach pE 60 in at least one cycle, in four groups: 820 at or above 60 in every cycle, 246 below 60 only in cycle 0, 24 at or above 60 only in cycles 1 and 2, and 169 at or above 60 only in cycle 1. The upper heatmap gives pE in each cycle, with E = 0 hits counted as pE 180, and the lower one the change from the previous cycle: nearly every accession rises from cycle 0 to cycle 1, and later cycles change little](/assets/img/bioinformatics-walkthrough/psi-blast-padek.png){: w="2400" h="2718" }
 _**Fig 8**. PSI-BLAST result of PadeK. (A) pE of the hits in each cycle, ranked; the dashed line is the inclusion threshold. (B) The 1,259 accessions with pE ≥ 60 in at least one cycle: pE in each cycle (top) and its change from the previous cycle (bottom)._
 
-- One can control the E-value threshold for PSSM inclusion of the next iteration in PSI-BLAST.
-- I recommend setting the threshold in between different steps, so that the step(s) of interest get included.
-- The cliffs — the vertical gaps in the score distribution — are useful, as they likely represent subfamily boundaries of enzyme homologs.
-- Also, iterate the process until the next accessions under the inclusion threshold are all in the previous iteration, or simply, until the accessions converge.
-- Make sure that the query does not get lost during the iterations. If there are too many irrelevant protein sequences, the PSSM may be corrupted, and therefore the process may result in a distorted set of proteins.
+- One can control the E-value threshold for PSSM inclusion of the next iteration in PSI-BLAST (`-inclusion_ethresh` parameter in BLAST+).
+- I recommend setting the threshold in between different steps at the first iteration, so that the step(s) of interest get included.
+  - In this case, I set it at 1e-60 (pE 60), inside the cliff of Fig. 7.
+- The cliffs — the vertical gaps in the score distribution — are useful, as they may represent subfamily boundaries of enzyme homologs.
+- Also, iterate the process until the next accessions with E-values below the inclusion threshold are all in the previous iteration (no new accessions although some may drop out).
+  - Here, the 1,066 accessions (820 + 246) that pass in every one of cycles 1–3 are a stable core.
+- Make sure that the query does not get lost during the iterations. If there are too many irrelevant protein sequences, the PSSM may be corrupted, and therefore the process may result in a distorted set of proteins, which is called the profile drift.
 
 #### Fetch from Databases
 
 <https://www.ebi.ac.uk/interpro/entry/pfam/PF07475/>
 
 - If you aim to efficiently obtain a larger scope of homologous proteins, it is possible to fetch enzyme accessions from databases.
-- Conserved domain analysis suggested that the domain of PadeK is an HPrK-related kinase domain.
+- According to [the journal article](https://doi.org/10.1074/jbc.M116.722108), conserved domain analysis suggested that PadeK's kinase domain is related to the HPrK C-terminal kinase domain.
+
+Note: Most PF07475 members are the housekeeping HPr kinase/phosphorylase (HPrK/P). A whole-family fetch will be dominated by those, so you have to filter by genomic context, keeping kinases with lasso B/C genes nearby.
 
 ## Clustering and Classification of Homologous Proteins
 
