@@ -1,0 +1,91 @@
+name: "Sync walkthrough from Notion"
+# Every 15 minutes, pull the Bioinformatics Walkthrough page from Notion and,
+# if it changed, commit the post to main and develop and redeploy the site.
+# Needs the repository secrets NOTION_TOKEN and NOTION_PAGE_ID, and does
+# nothing until "Seed Notion with the walkthrough" has been run once.
+# Run it by hand with "force" to accept a post that shrinks by more than half.
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Accept the result even if the post loses more than half its text"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: notion-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    env:
+      NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+      NOTION_PAGE_ID: ${{ secrets.NOTION_PAGE_ID }}
+      PATHS: _posts/2026-10-11-bioinformatics-walkthrough.md assets/img/bioinformatics-walkthrough .github/notion-sync/images.json
+    steps:
+      - name: Check setup
+        id: setup
+        run: |
+          if [ -n "$NOTION_TOKEN" ] && [ -n "$NOTION_PAGE_ID" ]; then
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "NOTION_TOKEN or NOTION_PAGE_ID is not set; skipping."
+          fi
+
+      - name: Checkout
+        if: steps.setup.outputs.ready == 'true'
+        uses: actions/checkout@v7
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Install Pillow
+        if: steps.setup.outputs.ready == 'true'
+        run: |
+          python3 -m venv "$RUNNER_TEMP/venv"
+          "$RUNNER_TEMP/venv/bin/pip" install --quiet pillow==11.3.0
+
+      - name: Pull the page from Notion
+        if: steps.setup.outputs.ready == 'true'
+        run: |
+          "$RUNNER_TEMP/venv/bin/python" .github/notion-sync/sync.py \
+            ${{ inputs.force && '--force' || '' }}
+
+      - name: Commit to main and develop
+        id: commit
+        if: steps.setup.outputs.ready == 'true'
+        run: |
+          if [ -z "$(git status --porcelain -- $PATHS)" ]; then
+            echo "Nothing changed."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A -- $PATHS
+          git commit -q -m "Sync the Bioinformatics Walkthrough from Notion"
+          git push origin HEAD:main
+          # Give develop the same files, so later merges of develop stay clean.
+          git fetch -q origin develop
+          git checkout -q -B develop origin/develop
+          git checkout -q --no-overlay main -- $PATHS
+          if [ -n "$(git status --porcelain -- $PATHS)" ]; then
+            git add -A -- $PATHS
+            git commit -q -m "Sync the Bioinformatics Walkthrough from Notion"
+            git push origin develop
+          fi
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      # Pushes made with the workflow's own token do not start other workflows,
+      # so start the deploy explicitly.
+      - name: Deploy
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run pages-deploy.yml --ref main
