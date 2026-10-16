@@ -4,6 +4,7 @@ date: 2026-10-11 13:00:00 +0900
 categories: [Personal Projects]
 tags: [bioinformatics, genome mining, RiPPs]
 description: A walkthrough of a basic bioinformatic workflow, using PadeK as the example.
+math: true
 ---
 
 ## Goal
@@ -37,8 +38,8 @@ _**Fig 2**. (A) A gene cluster that spans two operons. (B) Horizontal transfer o
 - A gene cluster is not the same thing as an operon: a cluster may be a single
   operon, but it may also span several operons (**Fig 2A**).
 - Two explanations are usually given for why cooperating genes cluster.
-  - **Co-regulation**: genes in the same operon share one promoter, so they
-    are switched on and off together.
+  - **Co-regulation**: genes in the same operon share the same promoter, so
+    they are switched on and off together.
   - **Horizontal gene transfer** (HGT): bacteria acquire DNA from other cells,
     and that DNA arrives as one continuous segment. Genes that sit next to
     each other are transferred together, so a whole cluster can move into a
@@ -117,9 +118,7 @@ _**Fig 6**. [Zhu, Marahiel et al., <i>J. Biol. Chem.</i>, **2016**](https://doi.
 ### Ideation
 
 Now, we want to obtain PadeK homologues from the vast genome and protein
-databases. There are several ways to achieve that goal. Look for these
-keywords for further mathematical and statistical background — hidden Markov
-models, stochastic processes, and E-values.
+databases. There are several ways to achieve that goal.
 
 ### Methods
 
@@ -127,12 +126,12 @@ models, stochastic processes, and E-values.
 
 - The **basic local alignment search tool (BLAST)** is a heuristic algorithm
   that compares nucleotide or protein sequences within a library or database.
-  The user of the algorithm must provide a subject nucleotide or protein
-  sequence (which is called a query), and BLAST returns sequences that
-  resemble the query above a certain threshold.
+  The user of the algorithm must provide a query nucleotide or protein
+  sequence and BLAST returns sequences that resemble the query above a certain
+  threshold.
 - Basically, BLAST for a protein query uses the BLOSUM62 matrix (or other
-  established matrices), which indicates the similarity or uniqueness of each
-  amino acid.
+  established matrices), which indicates the log-odds score of the alignment
+  of every amino acid pair by chance.
 - Position-specific iterated BLAST (PSI-BLAST) changes its position matrix
   throughout the iterations, so that the matrix is calibrated for the query
   protein and its homologs.
@@ -145,14 +144,19 @@ Note: The first iteration of PSI-BLAST uses the BLOSUM62 matrix.
 _**Fig 7**. BLASTP result of PadeK._
 
 - With PadeK's protein sequence as the query, the BLASTP result shows a stair
-  curve. The E-value is the robust alternative to the p-value, and here, let's
-  define pE = −log(E-value).
+  curve. The E-value, in this situation, shows the number of alignments
+  scoring at least $$S$$ that one would expect by chance from a search of a
+  certain size.
+- E-values can serve as a robust alternative to p-values as they can cope
+  with *optional continuation*: the e-values of sequential experiments may be
+  simply multiplied to provide the evidence of the joint experiment.
+- Let's define pE = −log(E-value). (log is the natural logarithm.)
 - Accessions inside each step, where the slope becomes gentler, have a higher
   chance of being homologous to each other, as their pEs to the query are
   similar.
 
 Note: It is not true that the accessions in the same step have the same
-enzyme chemistry or biochemical function. The second bullet considers the
+enzyme chemistry or biochemical function. The fourth bullet considers the
 "possibility" of being similar, not the similarity itself.
 
 ![Two panels. Panel A is a line plot of four PSI-BLAST cycles of PadeK against the clustered nr database, each with 5,000 accessions ranked by pE, and a dashed line at the inclusion threshold, pE 60. Hits with E = 0 sit in a band above pE 180, the reporting limit of NCBI BLAST: 1 in cycle 0, 254 in cycle 1, 208 in cycle 2 and 179 in cycle 3. Cycle 0 is the BLASTP curve. In cycles 1 to 3 the curves fall from 180 to about 120, drop steeply near accession 850, and nearly coincide. Panel B shows heatmaps of the 1,259 accessions that reach pE 60 in at least one cycle, in four groups: 820 at or above 60 in every cycle, 246 below 60 only in cycle 0, 24 at or above 60 only in cycles 1 and 2, and 169 at or above 60 only in cycle 1. The upper heatmap gives pE in each cycle, with E = 0 hits counted as pE 180, and the lower one the change from the previous cycle: nearly every accession rises from cycle 0 to cycle 1, and later cycles change little](/assets/img/bioinformatics-walkthrough/psi-blast-padek.png){: w="2400" h="2718" }
@@ -162,6 +166,8 @@ _**Fig 8**. PSI-BLAST result of PadeK. (A) pE of the hits in each cycle, ranked;
   iteration in PSI-BLAST.
 - I recommend setting the threshold in between different steps, so that the
   step(s) of interest get included.
+- The cliffs --- the vertical gaps in the score distribution --- are useful,
+  as they likely represent subfamily boundaries of enzyme homologs.
 - Also, iterate the process until the next accessions under the inclusion
   threshold are all in the previous iteration, or simply, until the accessions
   converge.
@@ -175,6 +181,8 @@ _**Fig 8**. PSI-BLAST result of PadeK. (A) pE of the hits in each cycle, ranked;
 
 - If you aim to efficiently obtain a larger scope of homologous proteins, it
   is possible to fetch enzyme accessions from databases.
+- Conserved domain analysis suggested that the domain of PadeK is an
+  HPrK-related kinase domain.
 
 ## Clustering and Classification of Homologous Proteins
 
