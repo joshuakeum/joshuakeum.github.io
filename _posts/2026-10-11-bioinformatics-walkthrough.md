@@ -130,8 +130,9 @@ databases. There are several ways to achieve that goal.
   sequence and BLAST returns sequences that resemble the query above a certain
   threshold.
 - Basically, BLAST for a protein query uses the BLOSUM62 matrix (or other
-  established matrices), which indicates the log-odds score of the alignment
-  of every amino acid pair by chance.
+  established matrices), which gives, for every amino acid pair, the log-odds
+  of the pair being aligned in related proteins versus being aligned by
+  chance.
 - Position-specific iterated BLAST (PSI-BLAST) changes its position matrix
   throughout the iterations, so that the matrix is calibrated for the query
   protein and its homologs.
@@ -147,16 +148,13 @@ _**Fig 7**. BLASTP result of PadeK._
   curve. The E-value, in this situation, shows the number of alignments
   scoring at least $$S$$ that one would expect by chance from a search of a
   certain size.
-- E-values can serve as a robust alternative to p-values as they can cope
-  with *optional continuation*: the e-values of sequential experiments may be
-  simply multiplied to provide the evidence of the joint experiment.
-- Let's define pE = −log(E-value). (log is the natural logarithm.)
+- Let's define pE = −log(E-value). (log is the common, base-10 logarithm.)
 - Accessions inside each step, where the slope becomes gentler, have a higher
   chance of being homologous to each other, as their pEs to the query are
   similar.
 
 Note: It is not true that the accessions in the same step have the same
-enzyme chemistry or biochemical function. The fourth bullet considers the
+enzyme chemistry or biochemical function. The third bullet considers the
 "possibility" of being similar, not the similarity itself.
 
 ![Two panels. Panel A is a line plot of four PSI-BLAST cycles of PadeK against the clustered nr database, each with 5,000 accessions ranked by pE, and a dashed line at the inclusion threshold, pE 60. Hits with E = 0 sit in a band above pE 180, the reporting limit of NCBI BLAST: 1 in cycle 0, 254 in cycle 1, 208 in cycle 2 and 179 in cycle 3. Cycle 0 is the BLASTP curve. In cycles 1 to 3 the curves fall from 180 to about 120, drop steeply near accession 850, and nearly coincide. Panel B shows heatmaps of the 1,259 accessions that reach pE 60 in at least one cycle, in four groups: 820 at or above 60 in every cycle, 246 below 60 only in cycle 0, 24 at or above 60 only in cycles 1 and 2, and 169 at or above 60 only in cycle 1. The upper heatmap gives pE in each cycle, with E = 0 hits counted as pE 180, and the lower one the change from the previous cycle: nearly every accession rises from cycle 0 to cycle 1, and later cycles change little](/assets/img/bioinformatics-walkthrough/psi-blast-padek.png){: w="2400" h="2718" }
