@@ -32,7 +32,7 @@ _**Fig 2**. (A) A gene cluster that spans two operons. (B) Horizontal transfer o
 - It is common in microbial genomes for genes that cooperate with each other to sit in the same neighborhood. Such sets of nearby genes are called **gene clusters**.
 - A gene cluster is not the same thing as an operon: a cluster may be a single operon, but it may also span several operons (**Fig 2A**).
 - Two explanations are usually given for why cooperating genes cluster.
-  - **Co-regulation**: genes in the same operon share the same promoter, so they are switched on and off together.
+  - **Co-regulation**: genes in the same operon share the same promoter, so they are switched on and off together. Several operons of one cluster are often controlled together by a regulator encoded in the cluster.
   - **Horizontal gene transfer** (HGT): bacteria acquire DNA from other cells, and that DNA arrives as one continuous segment. Genes that sit next to each other are transferred together, so a whole cluster can move into a new genome and bring a complete function with it. Genes scattered across the genome would arrive one at a time, and each is of little use without the others (**Fig 2B**, [Lawrence & Roth, *Genetics*, **1996**](https://doi.org/10.1093/genetics/143.4.1843)).
 - Genome mining needs only this premise: functionally linked genes sit close together, so the genomic context of a gene predicts its function ([Overbeek, Maltsev et al., *PNAS*, **1999**](https://doi.org/10.1073/pnas.96.6.2896)).
 
@@ -41,7 +41,7 @@ _**Fig 2**. (A) A gene cluster that spans two operons. (B) Horizontal transfer o
 ![Panel A shows the structures of five families of bacterial quorum-sensing signals. Panel B shows the agr locus of Paenibacillus, with the genes agrB, agrD, agrC, agrA and agrE drawn as arrows, and how the AgrD precursor peptide is processed into an autoinducing peptide that regulates antibiotic production](/assets/img/bioinformatics-walkthrough/agr-gene-cluster.jpg){: w="1650" h="1472" }
 _**Fig 3**. [Chen, Li et al., <i>Sci. Adv.</i>, **2025**](https://doi.org/10.1126/sciadv.adw5076)_
 
-- If the purpose of the gene clusters is the biosynthesis of metabolites, they are called **biosynthetic gene clusters** (BGCs, **Fig 3B**).
+- Gene clusters that encode the biosynthesis of a specialized metabolite are called **biosynthetic gene clusters** (BGCs, **Fig 3B**).
 - Like other gene clusters, many BGCs span several operons.
 
 ---
@@ -53,9 +53,10 @@ _**Fig 4**. Biosynthesis of RiPPs_
 
 - **Ribosomally synthesized and post-translationally modified peptides** (RiPPs) are a large category of peptide natural products.
 - RiPPs are produced by diverse post-translational modifications (PTMs) on the core of the ribosomal precursor peptide (**Fig 4**).
-- Most precursors have an N-terminal leader (or occasionally a C-terminal follower) domain that the modification enzymes recognize through protein-protein interaction.
-- The leader domain is usually cleaved by a peptidase after the modification (**Fig 4**).
-- Such products have various biological functions, including microbial weaponry ([Li, Tao et al., *Nat. Comm.*, **2026**](https://www.nature.com/articles/s41467-026-70567-0)), quorum sensing ([Hirooka et al., *Biosci. Biotechnol. Biochem.*, **2020**](https://doi.org/10.1080/09168451.2019.1685371)), enzyme cofactors ([Zhu & Klinman, *Curr. Opin. Chem. Biol.*, **2020**](https://pmc.ncbi.nlm.nih.gov/articles/PMC7736144/)), and more.
+- Most precursors have an N-terminal leader (or occasionally a C-terminal follower) peptide that the modification enzymes recognize through protein-protein interaction.
+- The leader (or follower) peptide is usually cleaved by a peptidase after the modification (**Fig 4**).
+- Also, some RiPP modification enzymes have a **RiPP recognition element** (RRE) domain, which interacts with the leader (or follower) peptide to “recognize” the precursor.
+- Such products have various biological functions, including microbial weaponry ([Li, Tao et al., *Nat. Commun.*, **2026**](https://www.nature.com/articles/s41467-026-70567-0)), quorum sensing ([Hirooka et al., *Biosci. Biotechnol. Biochem.*, **2020**](https://doi.org/10.1080/09168451.2019.1685371)), enzyme cofactors ([Zhu & Klinman, *Curr. Opin. Chem. Biol.*, **2020**](https://pmc.ncbi.nlm.nih.gov/articles/PMC7736144/)), and more.
 
 ---
 
@@ -66,15 +67,15 @@ _**Fig 4**. Biosynthesis of RiPPs_
 ![Structures of three lasso peptides, the gene clusters that encode them, and a scheme in which the B and C enzymes cleave off the leader peptide and close the ring](/assets/img/bioinformatics-walkthrough/lasso-biosynthesis.jpg){: w="956" h="1280" }
 _**Fig 5**. [Zhu, Marahiel et al., <i>J. Biol. Chem.</i>, **2016**](https://doi.org/10.1074/jbc.M116.722108)_
 
-- Lasso peptides are a class of RiPP products with a unique topology in which the C-terminus penetrates through a macrolactam ring formed between the core peptide’s N-terminus and the D/E side chain.
-- Either fused or split, the LasB protein consists of two domains: one RiPP recognition element that binds with the leader, and one peptidase with a transglutaminase fold. The LasB protein first cleaves the leader, and the new N-terminus constructs a macrolactam ring with the side chain via the Asn synthase-like LasC enzyme.
+- Lasso peptides are a class of RiPP products with a unique topology in which the C-terminus is threaded through a macrolactam ring formed between the core peptide’s N-terminus and the D/E side chain at position 7, 8, or 9 of the core.
+- The B function has two parts: an RRE (B1) that binds the leader, and a cysteine protease with a transglutaminase-like fold (B2). They are either fused in one protein or encoded separately. After B2 removes the leader, LasC, an asparagine synthetase-like enzyme, uses ATP to activate the Asp/Glu side chain, and the new N-terminal amine attacks it to close the ring.
 
 ### PadeK, a Lasso Tailoring Kinase
 
 ![Lasso peptide gene clusters containing a kinase gene in four bacterial strains, an alignment of their precursor peptides, the map of the expression plasmid, and chromatograms showing the lasso peptide and its phosphorylated form](/assets/img/bioinformatics-walkthrough/padek.jpg){: w="1098" h="1280" }
 _**Fig 6**. [Zhu, Marahiel et al., <i>J. Biol. Chem.</i>, **2016**](https://doi.org/10.1074/jbc.M116.722108)_
 
-- [Zhu and Marahiel et al.](https://doi.org/10.1074/jbc.M116.722108) reported an HprK kinase homolog near a lasso peptide BGC, and concluded that its role is the (multi)-phosphorylation of the products.
+- [Zhu et al.](https://doi.org/10.1074/jbc.M116.722108) reported an HprK kinase homolog inside the lasso peptide BGC, and concluded that its role is the (multi)-phosphorylation of the product, paeninodin.
 - Here, let’s expand the PadeK ([WP_006678397.1](https://www.ncbi.nlm.nih.gov/protein/WP_006678397.1)) chemistry and search for novel combinations between PadeK and other RiPP enzymes.
 
 ---
@@ -83,26 +84,29 @@ _**Fig 6**. [Zhu, Marahiel et al., <i>J. Biol. Chem.</i>, **2016**](https://doi.
 
 ### Ideation
 
-Now, we want to obtain PadeK homologues from the vast genome and protein databases. There are several ways to achieve that goal.
+Now, we want to obtain PadeK homologues from the vast genome and protein databases. Here, I present the bottom-up sequence search methods (BLASTP and PSI-BLAST) that start from a single query protein and the top-down method (database fetch) that start from a large set of protein accessions.
 
 ### Methods
 
 #### BLAST
 
-- The **basic local alignment search tool (BLAST)** is a heuristic algorithm that compares nucleotide or protein sequences within a library or database. The user of the algorithm must provide a query nucleotide or protein sequence and BLAST returns sequences that resemble the query above a certain threshold.
-- Basically, BLAST for a protein query uses the BLOSUM62 matrix (or other established matrices), which gives, for every amino acid pair, the log-odds of the pair being aligned in related proteins versus being aligned by chance.
+- The **basic local alignment search tool (BLAST)** is a heuristic *local* alignment algorithm that compares nucleotide or protein sequences within a library or database. The user of the algorithm must provide a query nucleotide or protein sequence and BLAST returns sequences that resemble the query below a certain cutoff.
+- BLAST for a protein query uses the BLOSUM62 matrix (or other established matrices), which gives, for every amino acid pair, the log-odds of the pair being aligned in related proteins versus being aligned by chance.
 - Position-specific iterated BLAST (PSI-BLAST) changes its position matrix throughout the iterations, so that the matrix is calibrated for the query protein and its homologs.
+- After each round, PSI-BLAST builds a position-specific scoring matrix (PSSM) from the hits that pass the inclusion threshold and searches again with it. The PSSM replaces BLOSUM62 with scores tuned to each position of PadeK and its homologs.
 
 Note: The first iteration of PSI-BLAST uses the BLOSUM62 matrix.
 
 ##### Application to PadeK
 
 ![Line plot of the BLASTP hits of PadeK against the clustered nr database: 5,000 accessions ranked by pE, with a dashed line at pE 60. The top hit has E = 0 and sits in a band above pE 180, the reporting limit of NCBI BLAST. The curve then declines gently from about 100 to about 75 over the first 700 accessions, drops to about 40 by accession 1,000, and flattens into a long tail that ends near 14; 820 hits are at or above pE 60](/assets/img/bioinformatics-walkthrough/blastp-padek.png){: w="2400" h="1480" }
-_**Fig 7**. BLASTP result of PadeK._
+_**Fig 7**. BLASTP result of PadeK against the clustered\_nr database. In clustered\_nr, each hit stands for a cluster of near-identical sequences: 90% identity and 90% length is the clustering cutoff of this database._
 
-- With PadeK’s protein sequence as the query, the BLASTP result shows a stair curve. The E-value, in this situation, shows the number of alignments scoring at least $$S$$ that one would expect by chance from a search of a certain size.
-- Let’s define pE = −log(E-value). (log is the common, base-10 logarithm.)
-- Accessions inside each step, where the slope becomes gentler, have a higher chance of being homologous to each other, as their pEs to the query are similar.
+- With PadeK’s protein sequence as the query, the BLASTP result shows a stair curve. The E-value, in this situation, shows the number of alignments scoring at least $$S$$ that one would expect by chance from a search of a certain size: $$E=kmne^{-\lambda S}$$, where $$S$$ is the alignment score, $$m$$ and $$n$$ are the query and database lengths, and $$k$$ and $$\lambda$$ depend on the scoring system.
+  - Let’s define $$pE = −\log{E}$$ ($$\log$$ is the base-10 logarithm).
+  - Because $$E$$ grows with database size, $$pE$$ values compare hits within one search, not across databases.
+- Hits within one step may belong to the same subfamily, and a cliff may mark a subfamily boundary.
+  - PadeK BLASTP shows a major cliff at rank ~820, where $$pE$$ falls from ~75 to ~45.
 
 Note: It is not true that the accessions in the same step have the same enzyme chemistry or biochemical function. The third bullet considers the “possibility” of being similar, not the similarity itself.
 
