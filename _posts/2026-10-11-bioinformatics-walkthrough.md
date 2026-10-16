@@ -68,32 +68,31 @@ _**Fig 4**. Biosynthesis of RiPPs_
 _**Fig 5**. [Zhu, Marahiel et al., <i>J. Biol. Chem.</i>, **2016**](https://doi.org/10.1074/jbc.M116.722108)_
 
 - Lasso peptides are a class of RiPP products with a unique topology in which the C-terminus is threaded through a macrolactam ring formed between the core peptide’s N-terminus and the D/E side chain at position 7, 8, or 9 of the core (**Fig 5A-C**).
-- The B function has two parts: an RRE (B1) that binds the leader, and a cysteine protease with a transglutaminase-like fold (B2). They are either fused in one protein or encoded separately (**Fig 5D, E**). After B2 removes the leader, LasC, an asparagine synthetase-like enzyme, uses ATP to activate the Asp/Glu side chain, and the new N-terminal amine attacks it to close the ring (**Fig 5E**).
+- The LasB function has two parts: an RRE (LasB1) that binds the leader, and a cysteine protease with a transglutaminase-like fold (LasB2). They are either fused in one protein or encoded separately (**Fig 5D, E**). After LasB2 removes the leader, LasC, an asparagine synthetase-like enzyme, uses ATP to activate the Asp/Glu side chain, and the new N-terminal amine attacks it to close the ring (**Fig 5E**).
 
 ### PadeK, a Lasso Tailoring Kinase
 
 ![Lasso peptide gene clusters containing a kinase gene in four bacterial strains, an alignment of their precursor peptides, the map of the expression plasmid, and chromatograms showing the lasso peptide and its phosphorylated form](/assets/img/bioinformatics-walkthrough/padek.jpg){: w="1098" h="1280" }
 _**Fig 6**. [Zhu, Marahiel et al., <i>J. Biol. Chem.</i>, **2016**](https://doi.org/10.1074/jbc.M116.722108)_
 
-- [Zhu et al.](https://doi.org/10.1074/jbc.M116.722108) reported an HPrK kinase homolog inside the lasso peptide BGC, and concluded that its role is the (multi)-phosphorylation of the product, paeninodin (**Fig 6A, D**).
+- [Zhu et al.](https://doi.org/10.1074/jbc.M116.722108) reported an HPr kinase (HPrK) homolog inside the lasso peptide BGC, and concluded that its role is the (multi)-phosphorylation of the product, paeninodin (**Fig 6A, D**).
 - Here, let’s expand the PadeK ([WP_006678397.1](https://www.ncbi.nlm.nih.gov/protein/WP_006678397.1)) chemistry and search for novel combinations between PadeK and other RiPP enzymes.
 
 ---
 
 ## Homologous Protein Search
 
-### Ideation
+### Idea
 
-Now, we want to obtain PadeK homologs from the vast genome and protein databases. Here, I present the bottom-up sequence search methods (BLASTP and PSI-BLAST) that start from a single query protein and the top-down method (database fetch) that start from a large set of protein accessions.
+Now, we want to obtain PadeK homologs from the vast genome and protein databases. Here, I present bottom-up sequence search methods (BLASTP and PSI-BLAST) that start from a single query protein and a top-down method (database fetch) that starts from a large set of protein accessions.
 
 ### Methods
 
 #### BLAST
 
-- The **basic local alignment search tool (BLAST)** is a heuristic *local* alignment algorithm that compares nucleotide or protein sequences within a library or database. The user of the algorithm must provide a query nucleotide or protein sequence and BLAST returns sequences that resemble the query below a certain cutoff.
+- The **basic local alignment search tool (BLAST)** is a heuristic *local* alignment algorithm that searches a database for sequences that align locally with a query. The user of the algorithm must provide a query nucleotide or protein sequence and BLAST returns sequences that resemble the query below a certain cutoff.
 - BLAST for a protein query uses the BLOSUM62 matrix (or other established matrices), which gives, for every amino acid pair, the log-odds of the pair being aligned in related proteins versus being aligned by chance.
-- Position-specific iterated BLAST (PSI-BLAST) changes its position matrix throughout the iterations, so that the matrix is calibrated for the query protein and its homologs.
-- After each round, PSI-BLAST builds a position-specific scoring matrix (PSSM) from the hits that pass the inclusion threshold and searches again with it. The PSSM replaces BLOSUM62 with scores tuned to each position of PadeK and its homologs.
+- Position-specific iterated BLAST (PSI-BLAST) changes its position matrix throughout the iterations, so that the matrix is calibrated for the query protein and its homologs. The PSSM replaces BLOSUM62 with scores tuned to each position of PadeK and its homologs.
 
 Note: The first iteration of PSI-BLAST uses the BLOSUM62 matrix.
 
@@ -102,41 +101,47 @@ Note: The first iteration of PSI-BLAST uses the BLOSUM62 matrix.
 ![Line plot of the BLASTP hits of PadeK against the clustered nr database: 5,000 accessions ranked by pE, with a dashed line at pE 60. The top hit has E = 0 and sits in a band above pE 180, the reporting limit of NCBI BLAST. The curve then declines gently from about 100 to about 75 over the first 700 accessions, drops to about 40 by accession 1,000, and flattens into a long tail that ends near 14; 820 hits are at or above pE 60](/assets/img/bioinformatics-walkthrough/blastp-padek.png){: w="2400" h="1480" }
 _**Fig 7**. BLASTP result of PadeK against the clustered\_nr database. In clustered\_nr, each hit stands for a cluster of near-identical sequences: 90% identity and 90% length is the clustering cutoff of this database._
 
-- With PadeK’s protein sequence as the query, the BLASTP result shows a stair curve. The E-value, in this situation, shows the number of alignments scoring at least $$S$$ that one would expect by chance from a search of a certain size: $$E=kmne^{-\lambda S}$$, where $$S$$ is the alignment score, $$m$$ and $$n$$ are the query and database lengths, and $$k$$ and $$\lambda$$ depend on the scoring system.
+- With PadeK’s protein sequence as the query, the BLASTP result shows a stair curve. The E-value shows the number of alignments scoring at least $$S$$ that one would expect by chance from a search of a certain size: $$E=Kmne^{-\lambda S}$$, where $$S$$ is the alignment score, $$m$$ and $$n$$ are the query and database lengths, and $$K$$ and $$\lambda$$ depend on the scoring system.
   - Let’s define $$pE = −\log{E}$$ ($$\log$$ is the base-10 logarithm).
   - Because $$E$$ grows with database size, $$pE$$ values compare hits within one search, not across databases.
 - Hits within one step may belong to the same subfamily, and a cliff may mark a subfamily boundary.
   - PadeK BLASTP shows a major cliff at rank ~820, where $$pE$$ falls from ~75 to ~45 (**Fig 7**).
 
-Note: It is not true that the accessions in the same step have the same enzyme chemistry or biochemical function. The third bullet considers the “possibility” of being similar, not the similarity itself.
+Note: It does not follow that the accessions in the same step have the same enzyme chemistry or biochemical function. The bullet above considers the “possibility” of being similar, not the similarity itself.
 
 ![Two panels. Panel A is a line plot of four PSI-BLAST cycles of PadeK against the clustered nr database, each with 5,000 accessions ranked by pE, and a dashed line at the inclusion threshold, pE 60. Hits with E = 0 sit in a band above pE 180, the reporting limit of NCBI BLAST: 1 in cycle 0, 254 in cycle 1, 208 in cycle 2 and 179 in cycle 3. Cycle 0 is the BLASTP curve. In cycles 1 to 3 the curves fall from 180 to about 120, drop steeply near accession 850, and nearly coincide. Panel B shows heatmaps of the 1,259 accessions that reach pE 60 in at least one cycle, in four groups: 820 at or above 60 in every cycle, 246 below 60 only in cycle 0, 24 at or above 60 only in cycles 1 and 2, and 169 at or above 60 only in cycle 1. The upper heatmap gives pE in each cycle, with E = 0 hits counted as pE 180, and the lower one the change from the previous cycle: nearly every accession rises from cycle 0 to cycle 1, and later cycles change little](/assets/img/bioinformatics-walkthrough/psi-blast-padek.png){: w="2400" h="2718" }
 _**Fig 8**. PSI-BLAST result of PadeK. (A) pE of the hits in each cycle, ranked; the dashed line is the inclusion threshold. (B) The 1,259 accessions with pE ≥ 60 in at least one cycle: pE in each cycle (top) and its change from the previous cycle (bottom)._
 
 - One can control the E-value threshold for PSSM inclusion of the next iteration in PSI-BLAST (`-inclusion_ethresh` parameter in BLAST+).
 - I recommend setting the threshold in between different steps at the first iteration, so that the step(s) of interest get included.
-  - In this case, I set it at 1e-60 (pE 60), inside the cliff of Fig. 7.
-- The cliffs — the vertical gaps in the score distribution — are useful, as they may represent subfamily boundaries of enzyme homologs.
+  - In this case, I set it at 1e-60 (pE 60), inside the cliff of **Fig 7**.
 - Also, iterate the process until the next accessions with E-values below the inclusion threshold are all in the previous iteration (no new accessions although some may drop out).
-  - Here, the 1,066 accessions (820 + 246) that pass in every one of cycles 1–3 are a stable core.
-- Make sure that the query does not get lost during the iterations. If there are too many irrelevant protein sequences, the PSSM may be corrupted, and therefore the process may result in a distorted set of proteins, which is called the profile drift.
+  - After cycle 1, the cliff moved up to pE ~80–110, so pE 60 now cuts the sloping tail (**Fig 8A**).
+  - Here, the 1,066 accessions (820 + 246) that pass in every one of cycles 1–3 are a stable core (**Fig 8B**).
+- Make sure that the query does not get lost during the iterations. If there are too many irrelevant protein sequences, the PSSM may be corrupted, and therefore the process may result in a distorted set of proteins. This failure is called the profile drift.
 
 #### Fetch from Databases
 
-<https://www.ebi.ac.uk/interpro/entry/pfam/PF07475/>
+[**Pfam PF07475 (Hpr_kinase_C)**](https://www.ebi.ac.uk/interpro/entry/pfam/PF07475/)
 
+- According to the journal article, conserved domain analysis suggested that PadeK's kinase domain is related to the HPrK C-terminal kinase domain.
 - If you aim to efficiently obtain a larger scope of homologous proteins, it is possible to fetch enzyme accessions from databases.
-- According to [the journal article](https://doi.org/10.1074/jbc.M116.722108), conserved domain analysis suggested that PadeK's kinase domain is related to the HPrK C-terminal kinase domain.
 
-Note: Most PF07475 members are the housekeeping HPr kinase/phosphorylase (HPrK/P). A whole-family fetch will be dominated by those, so you have to filter by genomic context, keeping kinases with lasso B/C genes nearby.
+Note: Most PF07475 members are the housekeeping HPrKs. A whole-family fetch will be dominated by those, so you have to filter by genomic context, keeping kinases with lasso B/C genes nearby.
 
-## Clustering and Classification of Homologous Proteins
+## Clustering of Homologous Proteins into Subfamilies
 
-### Ideation
+### Idea
+
+After obtaining a set of homologous genes, we need to dissect it into subfamilies for analysis. By this clustering, we want the genes to be placed in similar genomic context inside each subfamily.
 
 ### Methods
 
 #### Multiple Sequence Alignment and Phylogenetic Trees
+
+- **Multiple sequence alignment** (MSA) refers to the process or the result of sequence alignment of three or more biological sequences.
+  - MSA can be used to infer evolutionary relationships by creating a phylogenetic tree out of the alignment.
+  - 
 
 #### Sequence Similarity Networks
 
