@@ -1,0 +1,60 @@
+name: "Seed Notion with the walkthrough"
+# Run once, by hand: writes the published Bioinformatics Walkthrough into an
+# empty Notion page, then marks it seeded so the 15-minute sync starts.
+# Needs the repository secrets NOTION_TOKEN and NOTION_PAGE_ID. Refuses to run
+# if the page has content or was seeded before.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: notion-sync
+  cancel-in-progress: false
+
+jobs:
+  seed:
+    runs-on: ubuntu-latest
+    env:
+      NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+      NOTION_PAGE_ID: ${{ secrets.NOTION_PAGE_ID }}
+    steps:
+      - name: Check setup
+        run: |
+          if [ -z "$NOTION_TOKEN" ] || [ -z "$NOTION_PAGE_ID" ]; then
+            echo "::error::Add the repository secrets NOTION_TOKEN and NOTION_PAGE_ID first."
+            exit 1
+          fi
+
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          ref: main
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.4
+          bundler-cache: true
+
+      - name: Render the post
+        run: bundle exec ruby .github/notion-sync/render.rb _posts/2026-10-11-bioinformatics-walkthrough.md > "$RUNNER_TEMP/post.html"
+
+      - name: Write it into Notion
+        run: python3 .github/notion-sync/seed.py "$RUNNER_TEMP/post.html"
+
+      - name: Mark the page as seeded on main and develop
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          cp .github/notion-sync/state.json "$RUNNER_TEMP/state.json"
+          git add .github/notion-sync/state.json
+          git commit -q -m "Mark the Notion page as seeded"
+          git push origin HEAD:main
+          git fetch -q origin develop
+          git checkout -q -B develop origin/develop
+          cp "$RUNNER_TEMP/state.json" .github/notion-sync/state.json
+          git add .github/notion-sync/state.json
+          git commit -q -m "Mark the Notion page as seeded"
+          git push origin develop
