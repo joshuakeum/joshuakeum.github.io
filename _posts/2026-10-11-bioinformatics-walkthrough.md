@@ -140,8 +140,8 @@ After obtaining a set of homologous genes, we need to dissect it into subfamilie
 #### Multiple Sequence Alignment and Phylogenetic Trees
 
 - **Multiple sequence alignment** (MSA) refers to the process or the result of sequence alignment of three or more biological sequences.
+  - Such alignment highlights homologous features, poont/insertion/deletion mutations, domain conservation or excision throughout sequences.
   - MSA can be used to infer evolutionary relationships by creating a phylogenetic tree out of the alignment.
-  - 
 
 #### Sequence Similarity Networks
 
