@@ -371,8 +371,7 @@ $$\square$$
 > $$
 {: .definition #def-characteristic-function }
 
-**Example.** Suppose $$(X, \mathcal{S})$$ is a measurable space with
-$$\mathcal{S}$$ the collection of Borel subsets of $$\mathbb{R}$$. Also,
+**Example.** Suppose $$(X, \mathcal{S})$$ is a measurable space. Also,
 suppose $$E \subseteq X$$ and $$B \subseteq \mathbb{R}$$. Then,
 
 $$
