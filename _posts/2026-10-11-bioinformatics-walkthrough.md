@@ -34,7 +34,7 @@ _**Fig 2**. (A) A gene cluster that spans two operons. (B) Horizontal transfer o
 - Two explanations are usually given for why cooperating genes cluster.
   - **Co-regulation**: genes in the same operon share the same promoter, so they are switched on and off together. Several operons of one cluster are often controlled together by a regulator encoded in the cluster.
   - **Horizontal gene transfer** (HGT): bacteria acquire DNA from other cells, and that DNA arrives as one continuous segment. Genes that sit next to each other are transferred together, so a whole cluster can move into a new genome and bring a complete function with it. Genes scattered across the genome would arrive one at a time, and each is of little use without the others (**Fig 2B**, [Lawrence & Roth, *Genetics*, **1996**](https://doi.org/10.1093/genetics/143.4.1843)).
-- Genome mining needs only this premise: functionally linked genes sit close together, so the genomic context of a gene predicts its function ([Overbeek, Maltsev et al., *PNAS*, **1999**](https://doi.org/10.1073/pnas.96.6.2896)).
+- Genome mining needs this premise: functionally linked genes sit close together, so the genomic context of a gene predicts its function ([Overbeek, Maltsev et al., *PNAS*, **1999**](https://doi.org/10.1073/pnas.96.6.2896)).
 
 ### Biosynthetic Gene Clusters
 
@@ -125,7 +125,7 @@ _**Fig 8**. PSI-BLAST result of PadeK. (A) pE of the hits in each cycle, ranked;
 [**Pfam PF07475 (Hpr_kinase_C)**](https://www.ebi.ac.uk/interpro/entry/pfam/PF07475/)
 
 - According to the journal article, conserved domain analysis suggested that PadeK's kinase domain is related to the HPrK C-terminal kinase domain.
-- If you aim to efficiently obtain a larger scope of homologous proteins, it is possible to fetch enzyme accessions from databases.
+- If you aim to rapidly obtain a larger scope of homologous proteins, it is possible to fetch enzyme accessions from databases.
 
 Note: Most PF07475 members are the housekeeping HPrKs. A whole-family fetch will be dominated by those, so you have to filter by genomic context, keeping kinases with lasso B/C genes nearby.
 
@@ -133,15 +133,28 @@ Note: Most PF07475 members are the housekeeping HPrKs. A whole-family fetch will
 
 ### Idea
 
-After obtaining a set of homologous genes, we need to dissect it into subfamilies for analysis. By this clustering, we want the genes to be placed in similar genomic context inside each subfamily.
+After obtaining a set of homologous genes, we need to dissect it into subfamilies for analysis. By this clustering, we want the genes to be placed in similar genomic context inside each subfamily. (**Divide and Conquer!**)
 
 ### Methods
 
 #### Multiple Sequence Alignment and Phylogenetic Trees
 
 - **Multiple sequence alignment** (MSA) refers to the process or the result of sequence alignment of three or more biological sequences.
-  - Such alignment highlights homologous features, poont/insertion/deletion mutations, domain conservation or excision throughout sequences.
+  - Such alignment highlights homologous features, point/insertion/deletion mutations, domain conservation or excision throughout sequences.
+  - They can also be used to identify functionally important sites, such as binding sites, active sites, or sites corresponding to other key functions, by locating conserved domains.
   - MSA can be used to infer evolutionary relationships by creating a phylogenetic tree out of the alignment.
+- **Phylogenetic tree** is a graphical representation which shows the evolutionary history between a set of species, taxa, protein, genome, etc.
+  - One can anticipate similar enzymatic activity of enzyme accessions nearby the query in the phylogenetic tree due to the similarity in enzyme sequences.
+  - Combined with the concept of BGCs, closely related biosynthetic enzymes are more highly likely to serve similar roles in the contexts of BGCs.
+  - Below is the **MSA-based phylogenetic tree of the PadeK-homologues retrieved by PSI-BLAST**.
+
+![Phylogenetic tree of the core 1,066 PadeK homologues retrieved by PSI-BLAST.  L-INS-i of the MAFFT package was used for MSA construction, FastTree 2 was used to build the phylogenetic tree, and ETE 3 was used to visualize the tree. The right color box shows the phylum taxonomy of each homologue. (Note: The tree is not rooted but I drew it as if it is rooted for visual purposes.)](/assets/img/bioinformatics-walkthrough/notion-41851c3c9b49.svg){: w="2082" h="4340" }
+_**Fig 9.** Phylogenetic tree of the core 1,066 PadeK homologues retrieved by PSI-BLAST.  L-INS-i of the MAFFT package was used for MSA construction, FastTree 2 was used to build the phylogenetic tree, and ETE 3 was used to visualize the tree. The right color box shows the phylum taxonomy of each homologue. (Note: The tree is not rooted but I drew it as if it is rooted for visual purposes.)_
+
+- **Tools**
+  - **MSA Construction**: [**MAFFT**](https://github.com/GSLBiotech/mafft) ([Katoh et al., *Brief. Bioinform.*, **2019**](https://academic.oup.com/bib/article/20/4/1160/4106928?login=false)), [**Clustal Omega**](https://github.com/GSLBiotech/clustal-omega) ([Sievers et al., *Mol. Syst. Biol.*, **2011**](https://doi.org/10.1038/msb.2011.75))
+  - **Phylogenetic Tree Construction**: [**FastTree 2**](https://github.com/morgannprice/fasttree) ([Price et al., *PLoS One*, **2010**](https://doi.org/10.1371/journal.pone.0009490)), [**VeryFastTree**](https://github.com/citiususc/veryfasttree) ([Piñeiro et al., *Bioinformatics*, **2020**](https://doi.org/10.1093/bioinformatics/btaa582)), [**IQ-TREE 3**](https://iqtree.github.io/) ([Wong et al., *Mol. Biol. Evol.*, **2026**](https://doi.org/10.1093/molbev/msag117))
+  - **Phylogenetic Tree Visualization**: [**ETE 3**](https://etetoolkit.org/) ([Huerta-Cepas et al., *Mol. Biol. Evol.*, **2016**](https://doi.org/10.1093/molbev/msw046))
 
 #### Sequence Similarity Networks
 
