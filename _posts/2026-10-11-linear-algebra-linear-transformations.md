@@ -1,7 +1,7 @@
 ---
 title: "Linear Algebra: Linear Transformations and Matrices (Part 1)"
 date: 2026-10-11 01:00:00 +0900
-categories: [Course Notes, Linear Algebra]
+categories: [Study Notes, Linear Algebra]
 tags: [linear transformations, kernel, image, rank-nullity, matrix representation]
 description: Definitions, theorems with proofs, and solved problems for Chapter 2 of Linear Algebra, §2.1 to §2.3 — linear transformations, kernel and image, the dimension theorem, matrix representations, and composition and matrix multiplication.
 math: true

@@ -1,7 +1,7 @@
 ---
 title: "Mathematical Analysis: Sequences of Real Numbers"
 date: 2026-10-09 09:30:00 +0900
-categories: [Course Notes, Mathematical Analysis]
+categories: [Study Notes, Mathematical Analysis]
 tags: [sequences, convergence, monotone, bolzano-weierstrass, limsup, cauchy sequences]
 description: Convergence in a metric space, the algebra of limits, monotone sequences, subsequences and Bolzano-Weierstrass, limit superior and inferior, and Cauchy sequences. Chapter 3 of Introduction to Mathematical Analysis.
 math: true

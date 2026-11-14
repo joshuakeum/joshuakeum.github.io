@@ -1,7 +1,7 @@
 ---
 title: "Linear Algebra: Elementary Matrix Operations and Systems of Linear Equations (Part 1)"
 date: 2026-10-11 01:30:00 +0900
-categories: [Course Notes, Linear Algebra]
+categories: [Study Notes, Linear Algebra]
 tags: [elementary matrices, rank, matrix inverse]
 description: Definitions, theorems with proofs, and solved problems for Chapter 3 of Linear Algebra, §3.1 and §3.2 — elementary row and column operations, elementary matrices, the rank of a matrix, and the computation of matrix inverses.
 math: true

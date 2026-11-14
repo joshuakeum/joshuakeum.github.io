@@ -1,7 +1,7 @@
 ---
 title: "Mathematical Analysis: Integration"
 date: 2026-10-09 11:00:00 +0900
-categories: [Course Notes, Mathematical Analysis]
+categories: [Study Notes, Mathematical Analysis]
 tags: [riemann integral, darboux, measure zero, lebesgue criterion, fundamental theorem, riemann-stieltjes]
 description: The Darboux construction of the Riemann integral, Riemann's criterion, Lebesgue's characterization by measure zero, the fundamental theorem of calculus, improper integrals, and Riemann-Stieltjes integration. Chapter 6 of Introduction to Mathematical Analysis.
 math: true

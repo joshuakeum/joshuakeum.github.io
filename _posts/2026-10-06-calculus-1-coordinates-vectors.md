@@ -1,7 +1,7 @@
 ---
 title: "Calculus 1: Coordinate Systems and Vectors in Space"
 date: 2026-10-06 09:00:00 +0900
-categories: [Course Notes, Calculus 1]
+categories: [Study Notes, Calculus 1]
 tags: [coordinates, polar coordinates, vectors, inner product, cross product, linear independence]
 description: Coordinate space as a geometric object, the polar, cylindrical and spherical systems, then vectors — inner and cross products, hyperplanes and lines, centre of mass, and linear independence. Unit 4 of Calculus 1.
 math: true

@@ -1,7 +1,7 @@
 ---
 title: "Calculus 1: Matrices, Linear Maps, and Determinants"
 date: 2026-10-07 09:00:00 +0900
-categories: [Course Notes, Calculus 1]
+categories: [Study Notes, Calculus 1]
 tags: [matrices, linear maps, determinant, inverse matrix, permutations, cross product]
 description: The matrix product as composition of linear maps; inverses, permutations, and the determinant as the unique alternating multi-linear form; and the cross product read off a determinant. Unit 5 of Calculus 1.
 math: true

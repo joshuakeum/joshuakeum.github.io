@@ -1,7 +1,7 @@
 ---
 title: "Mathematical Analysis: Differentiation"
 date: 2026-10-09 10:30:00 +0900
-categories: [Course Notes, Mathematical Analysis]
+categories: [Study Notes, Mathematical Analysis]
 tags: [derivative, mean value theorem, rolle, darboux, lhospital, second derivative test]
 description: The derivative, the mean value theorems of Rolle, Lagrange and Cauchy, Darboux's theorem on the intermediate value property of derivatives, and L'Hospital's rule. Chapter 5 of Introduction to Mathematical Analysis.
 math: true

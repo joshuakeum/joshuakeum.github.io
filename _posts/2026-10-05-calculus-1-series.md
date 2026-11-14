@@ -1,7 +1,7 @@
 ---
 title: "Calculus 1: Sequences, Series, and Convergence Tests"
 date: 2026-10-05 10:00:00 +0900
-categories: [Course Notes, Calculus 1]
+categories: [Study Notes, Calculus 1]
 tags: [sequences, series, convergence tests, absolute convergence]
 description: The epsilon-N definition of a limit, completeness of the reals, and the full battery of convergence tests. Unit 1 of Calculus 1.
 math: true

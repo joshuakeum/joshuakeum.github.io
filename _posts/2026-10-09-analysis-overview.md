@@ -1,7 +1,7 @@
 ---
 title: "Mathematical Analysis: Course Overview"
 date: 2026-10-09 08:00:00 +0900
-categories: [Course Notes, Mathematical Analysis]
+categories: [Study Notes, Mathematical Analysis]
 tags: [overview, real analysis, completeness, metric spaces, convergence]
 description: Scope, chapter map, notation conventions, and key takeaways for Introduction to Mathematical Analysis, Spring 2023.
 math: true

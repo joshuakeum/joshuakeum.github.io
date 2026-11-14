@@ -1,7 +1,7 @@
 ---
 title: "Mathematical Analysis: Series of Real Numbers"
 date: 2026-10-09 11:30:00 +0900
-categories: [Course Notes, Mathematical Analysis]
+categories: [Study Notes, Mathematical Analysis]
 tags: [series, convergence tests, dirichlet test, rearrangement, cauchy schwarz, square summable]
 description: The ratio and root tests in their sharp limsup form, Abel summation and the Dirichlet test, absolute versus conditional convergence and Riemann's rearrangement theorem, and square summable sequences with the CBS and Minkowski inequalities. Chapter 7 of Introduction to Mathematical Analysis.
 math: true

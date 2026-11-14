@@ -1,7 +1,7 @@
 ---
 title: "Mathematical Analysis: The Real Numbers"
 date: 2026-10-09 08:30:00 +0900
-categories: [Course Notes, Mathematical Analysis]
+categories: [Study Notes, Mathematical Analysis]
 tags: [completeness, supremum, induction, countability, cantor diagonal]
 description: Sets and functions, induction, the field and order axioms, and the one axiom that separates the reals from the rationals — the least upper bound property — followed by the Archimedean property, density, and Cantor's uncountability argument. Chapter 1 of Introduction to Mathematical Analysis.
 math: true

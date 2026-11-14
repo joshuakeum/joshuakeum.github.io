@@ -1,7 +1,7 @@
 ---
 title: "Linear Algebra: Vector Spaces (Part 2)"
 date: 2026-10-11 00:40:00 +0900
-categories: [Course Notes, Linear Algebra]
+categories: [Study Notes, Linear Algebra]
 tags: [vector spaces, basis, dimension, quotient spaces]
 description: Definitions, theorems with proofs, and solved problems for Chapter 1 of Linear Algebra, §1.6 and §1.7 — bases and dimension, maximal linearly independent subsets, and quotient spaces.
 math: true

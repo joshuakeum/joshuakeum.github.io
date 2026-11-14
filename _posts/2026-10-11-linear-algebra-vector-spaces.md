@@ -1,7 +1,7 @@
 ---
 title: "Linear Algebra: Vector Spaces (Part 1)"
 date: 2026-10-11 00:30:00 +0900
-categories: [Course Notes, Linear Algebra]
+categories: [Study Notes, Linear Algebra]
 tags: [vector spaces, subspaces, span, linear independence]
 description: Definitions, theorems with proofs, and solved problems for Chapter 1 of Linear Algebra, §1.1 to §1.5 — fields, vector spaces, subspaces, span, and linear dependence and independence.
 math: true

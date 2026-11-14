@@ -1,7 +1,7 @@
 ---
 title: "Mathematical Analysis: Limits and Continuity"
 date: 2026-10-09 10:00:00 +0900
-categories: [Course Notes, Mathematical Analysis]
+categories: [Study Notes, Mathematical Analysis]
 tags: [limits, continuity, uniform continuity, compactness, intermediate value theorem, discontinuities]
 description: Limits of functions and the sequential criterion, continuity and its topological characterization, what compactness and connectedness give when pushed through a continuous map, uniform continuity, and the classification of discontinuities. Chapter 4 of Introduction to Mathematical Analysis.
 math: true

@@ -1,7 +1,7 @@
 ---
 title: "Linear Algebra: Course Overview"
 date: 2026-10-11 00:10:00 +0900
-categories: [Course Notes, Linear Algebra]
+categories: [Study Notes, Linear Algebra]
 tags: [overview, linear algebra, vector spaces, linear transformations, determinant]
 description: Course information, scope, chapter contents, and notation for Linear Algebra, Fall 2023.
 math: true
