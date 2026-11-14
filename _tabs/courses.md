@@ -1,12 +1,13 @@
 ---
 layout: page
-title: Courses
+title: Courses and Studies
 icon: fas fa-graduation-cap
 order: 2
 ---
 
-An index of the undergraduate courses I have written up here. Each entry links
-to that course's archive, where its posts are collected.
+An index of the subjects I have written up here — undergraduate courses I have
+taken, and subjects I have studied on my own. Each entry links to that subject's
+archive, where its posts are collected.
 
 {%- comment -%}
   The `size` filter returns 0 for both nil (every entry commented out) and an
@@ -16,7 +17,7 @@ to that course's archive, where its posts are collected.
 
 {% if course_count == 0 %}
 
-> No courses in the registry yet. Add entries to `_data/courses.yml`{: .filepath }
+> Nothing in the registry yet. Add entries to `_data/courses.yml`{: .filepath }
 > and they will appear here.
 {: .prompt-tip }
 
