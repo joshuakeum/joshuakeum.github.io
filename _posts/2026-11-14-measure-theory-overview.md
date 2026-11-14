@@ -43,7 +43,6 @@ been written up yet.
 
 - 3A Integration with Respect to a Measure
 - 3B Limits of Integrals & Integrals of Limits
-- 3C Riemann Integration and Lebesgue Integration
 
 **Chapter 4 — Differentiation**
 
