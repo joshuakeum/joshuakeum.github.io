@@ -1,7 +1,7 @@
 ---
 title: "Calculus 1: Power Series and the Elementary Functions"
 date: 2026-10-05 11:00:00 +0900
-categories: [Course Notes, Calculus 1]
+categories: [Study Notes, Calculus 1]
 tags: [power series, radius of convergence, exponential, trigonometric, hyperbolic]
 description: Radius of convergence, term-by-term differentiation, and the exponential, trigonometric and hyperbolic functions defined by their series. Unit 2 of Calculus 1.
 math: true

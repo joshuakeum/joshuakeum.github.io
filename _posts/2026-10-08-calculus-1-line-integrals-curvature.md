@@ -1,7 +1,7 @@
 ---
 title: "Calculus 1: Line Integrals and Curvature"
 date: 2026-10-08 10:00:00 +0900
-categories: [Course Notes, Calculus 1]
+categories: [Study Notes, Calculus 1]
 tags: [line integral, curvature, centre of mass, osculating circle, unit tangent, unit normal]
 description: Integrating along a curve — mass, averages and centres of mass — and curvature as the acceleration you would feel travelling at unit speed. Ends with the moving frame, the osculating circle, and why slow in, quick out feels right. Unit 7 of Calculus 1, the last.
 math: true

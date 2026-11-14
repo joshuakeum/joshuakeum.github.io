@@ -1,7 +1,7 @@
 ---
 title: "Mathematical Analysis: Sequences and Series of Functions"
 date: 2026-10-09 12:00:00 +0900
-categories: [Course Notes, Mathematical Analysis]
+categories: [Study Notes, Mathematical Analysis]
 tags: [pointwise convergence, uniform convergence, weierstrass m-test, interchange of limits, power series]
 description: Pointwise convergence and the three interchange questions it fails, uniform convergence and what it repairs, the Weierstrass M-test, and why differentiation is the hardest limit to interchange. Chapter 8 of Introduction to Mathematical Analysis, the last.
 math: true

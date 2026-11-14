@@ -1,7 +1,7 @@
 ---
 title: "Calculus 1: Parametrized Curves and Arc Length"
 date: 2026-10-08 09:00:00 +0900
-categories: [Course Notes, Calculus 1]
+categories: [Study Notes, Calculus 1]
 tags: [parametrized curves, cycloid, velocity, arc length, reparametrization, polar coordinates]
 description: A curve is a moving particle, not a picture. Velocity and acceleration, the osculating plane, angular momentum and the law of equal areas, the length of a curve, and why parametrizing by arc length is almost always a waste of effort. Unit 6 of Calculus 1.
 math: true

@@ -1,7 +1,7 @@
 ---
 title: "Linear Algebra: Determinants (Part 1)"
 date: 2026-10-11 02:00:00 +0900
-categories: [Course Notes, Linear Algebra]
+categories: [Study Notes, Linear Algebra]
 tags: [determinant, cofactor expansion, orientation, cramer's rule, classical adjoint]
 description: Definitions, theorems with proofs, and solved problems for Chapter 4 of Linear Algebra, §4.1 to §4.3 — determinants of order 2, area and orientation, cofactor expansion, row operations, the product rule, Cramer's rule, and the classical adjoint.
 math: true

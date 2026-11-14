@@ -1,7 +1,7 @@
 ---
 title: "Calculus 1: Mean Value Theorems, L'Hôpital's Rule, and Taylor's Theorem"
 date: 2026-10-05 12:00:00 +0900
-categories: [Course Notes, Calculus 1]
+categories: [Study Notes, Calculus 1]
 tags: [mean value theorem, l'hopital, taylor, approximation, little-o]
 description: Cauchy's mean value theorem as the common root of L'Hôpital's rule and Taylor's theorem, with the remainder bound that makes approximation usable. Unit 3 of Calculus 1.
 math: true

@@ -1,7 +1,7 @@
 ---
 title: "Linear Algebra: Determinants (Part 2)"
 date: 2026-10-11 02:10:00 +0900
-categories: [Course Notes, Linear Algebra]
+categories: [Study Notes, Linear Algebra]
 tags: [determinant, alternating multilinear forms, permutations, finite fields, characteristic]
 description: Definitions, theorems with proofs, and solved problems for Chapter 4 of Linear Algebra, §4.5 — the determinant as the unique alternating n-linear function and the permutation formula — followed by the lecture on fields, characteristic, and finite fields.
 math: true

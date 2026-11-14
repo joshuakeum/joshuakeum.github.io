@@ -1,7 +1,7 @@
 ---
 title: "Linear Algebra: Linear Transformations and Matrices (Part 2)"
 date: 2026-10-11 01:10:00 +0900
-categories: [Course Notes, Linear Algebra]
+categories: [Study Notes, Linear Algebra]
 tags: [linear transformations, isomorphism, change of basis, dual space]
 description: Definitions, theorems with proofs, and solved problems for Chapter 2 of Linear Algebra, §2.4 to §2.6 — invertibility and isomorphisms, the change of coordinate matrix, and dual spaces.
 math: true

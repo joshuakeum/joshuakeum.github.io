@@ -1,7 +1,7 @@
 ---
 title: "Linear Algebra: Elementary Matrix Operations and Systems of Linear Equations (Part 2)"
 date: 2026-10-11 01:40:00 +0900
-categories: [Course Notes, Linear Algebra]
+categories: [Study Notes, Linear Algebra]
 tags: [systems of linear equations, gaussian elimination, reduced row echelon form]
 description: Definitions, theorems with proofs, and solved problems for Chapter 3 of Linear Algebra, §3.3 and §3.4 — solution sets of systems of linear equations, consistency, Gaussian elimination, and the reduced row echelon form.
 math: true
