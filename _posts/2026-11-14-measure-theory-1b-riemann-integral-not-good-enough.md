@@ -115,25 +115,28 @@ $$\hookrightarrow$$ Not too strong! (Does not work well with limits.)
 {: .problem #ex-1b-1 }
 
 *Solution.* Divide $$[0,1]$$ into $$n(n-1)+2$$ equal subintervals
-(partition $$P$$). All rational numbers are in at most two subintervals.
+(partition $$P$$). All rational numbers $$q_k$$ with denominator at most $$n$$ are in at most
+two subintervals; every other subinterval has supremum at most
+$$\frac{1}{n+1}$$.
 
 $$
 \begin{aligned}
 \therefore\ U(f,P,[0,1])
-&\le \frac{2}{n(n-1)+2} \sum_{k=1}^{1+n(n-1)/2} f(q_k) \\
+&\le \frac{2}{n(n-1)+2} \sum_{k=1}^{2+n(n-1)/2} f(q_k) + \frac{1}{n+1} \\
 &\le \frac{2}{n(n-1)+2} \cdot
-   \Bigl( 1 + \frac{1}{2} + \frac{1}{3} + \frac{1}{3} + \cdots \Bigr) \\
+   \Bigl( 1 + 1 + \frac{1}{2} + \frac{1}{3} + \frac{1}{3} + \cdots \Bigr)
+   + \frac{1}{n+1} \\
 &= \frac{2}{n(n-1)+2} \cdot
-   \Bigl( 1 + \sum_{k=2}^{n} \frac{k-1}{k} \Bigr) \\
+   \Bigl( 2 + \sum_{k=2}^{n} \frac{k-1}{k} \Bigr) + \frac{1}{n+1} \\
 &= \frac{2}{n(n-1)+2} \times
-   \Bigl( n - \sum_{k=2}^{n} \frac{1}{k} \Bigr) \\
-&\le \frac{2n}{n(n-1)+2}.
+   \Bigl( n + 1 - \sum_{k=2}^{n} \frac{1}{k} \Bigr) + \frac{1}{n+1} \\
+&\le \frac{2(n+1)}{n(n-1)+2} + \frac{1}{n+1}.
 \end{aligned}
 $$
 
 $$
 \therefore\ 0 \le U(f,[0,1]) \le U(f,P,[0,1])
-\le \frac{2n}{n(n-1)+2} \xrightarrow{\,n \to \infty\,} 0.
+\le \frac{2(n+1)}{n(n-1)+2} + \frac{1}{n+1} \xrightarrow{\,n \to \infty\,} 0.
 $$
 
 $$\therefore\ L(f,[0,1]) = U(f,[0,1]) = 0$$.
@@ -168,9 +171,14 @@ g(x) =
 \end{cases}
 $$
 
+Then $$L(f,[0,1]) = L(g,[0,1]) = 0$$ and $$U(f,[0,1]) = U(g,[0,1]) = 1$$,
+while $$f + g = 1$$, so $$L(f+g,[0,1]) = U(f+g,[0,1]) = 1$$. Hence
+$$0 + 0 < 1$$ and $$1 < 1 + 1$$.
+
 ## References
 
 - Sheldon Axler, *Measure, Integration & Real Analysis* — Section 1B and
   Exercises 1B. The exercise statements are quoted from the book.
 - The notes and the exercise answers are mine, typeset from my handwritten
-  notebook without changes to the mathematics.
+  notebook. The structure of each answer is unchanged; small slips in the
+  answers are corrected.

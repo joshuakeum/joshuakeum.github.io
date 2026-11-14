@@ -402,4 +402,5 @@ Similarly do for every point.
 - Sheldon Axler, *Measure, Integration & Real Analysis* — Section 1A and
   Exercises 1A. The exercise statements are quoted from the book.
 - The notes and the exercise answers are mine, typeset from my handwritten
-  notebook without changes to the mathematics.
+  notebook. The structure of each answer is unchanged; small slips in the
+  answers are corrected.
