@@ -158,6 +158,10 @@ _**Fig 9.** Phylogenetic tree of the core 1,066 PadeK homologues retrieved by PS
 
 #### Sequence Similarity Networks
 
+- **Sequence Similarity Network** is a graph-based bioinformatics tool that visualizes and analyzes relations across a large set of protein or gene sequences.
+  - Each **node** refers each protein or gene sequence.
+  - Each **edge** represent pairwise sequence alignments that meet certain conditions such as exceeding a user-defined threshold for alignment score of BLAST ($$AS = -\log_{10} \left ( 2^{-\textrm{bit.score}} \cdot \textrm{length}_1 \cdot \textrm{length}_2 \right )$$), percent identity, or the negative logarithm of E-value.
+
 #### MMseqs2
 
 ## Pangenomic Analysis
