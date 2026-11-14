@@ -21,6 +21,17 @@
 #   instructor  Optional.
 #   summary     Optional. One or two sentences on what the course covered.
 #
+- term: 2026 Fall
+  title: Measure Theory and Real Analysis
+  subject: Mathematics
+  category: Measure Theory and Real Analysis
+  summary: >-
+    Self-study from Sheldon Axler's Measure, Integration & Real Analysis,
+    Chapters 1 to 6. Riemann integration, measures and Lebesgue measure,
+    integration with respect to a measure, differentiation, product
+    measures, and Banach spaces. One post per section, built from my own
+    handwritten notes and worked exercises.
+
 - term: 2023 Fall
   code: "881.007"
   title: Linear Algebra
