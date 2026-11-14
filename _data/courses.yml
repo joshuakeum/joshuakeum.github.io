@@ -1,7 +1,10 @@
-# The course registry that powers the "Courses" tab (`_tabs/courses.md`).
+# The registry that powers the "Courses and Studies" tab (`_tabs/courses.md`).
 #
-# Add one entry per course. Entries are grouped under their `term`, in the
-# order the terms first appear in this file, so keep newest terms at the top.
+# Add one entry per course or self-studied subject. For a self-studied subject,
+# use a term such as "Self-Study" (or the period you studied it) and leave out
+# `code` and `instructor`; the card renders without them. Entries are grouped
+# under their `term`, in the order the terms first appear in this file, so keep
+# newest terms at the top.
 #
 # Fields
 # ------
