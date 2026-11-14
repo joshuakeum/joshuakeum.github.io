@@ -87,7 +87,7 @@ functions need not be Riemann integrable.
 
 > **Theorem.** Suppose $$a, b, M \in \mathbb{R}$$ with $$a < b$$. Suppose
 > $$f_1, f_2, \dots$$ is a sequence of "Riemann integrable" functions such
-> that $$|f_k(x)| \le M$$. Suppose $$\lim_{k \to \infty} f_k(x)$$ exists for
+> that $$\lvert f_k(x)\rvert  \le M$$. Suppose $$\lim_{k \to \infty} f_k(x)$$ exists for
 > each $$x \in [a,b]$$. Define $$f : [a,b] \to \mathbb{R}$$ by
 > $$f(x) = \lim_{k \to \infty} f_k(x)$$. If $$f$$ is Riemann integrable on
 > $$[a,b]$$, then
