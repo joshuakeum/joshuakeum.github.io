@@ -1220,6 +1220,29 @@ so the complement of $$f^{-1}(B)$$ lies in $$\{f \ne c\}$$ and is countable.
 If $$c \notin B$$, then $$f^{-1}(B) \subseteq \{f \ne c\}$$ is countable. In
 both cases $$f^{-1}(B) \in \mathcal{S}$$. $$\square$$
 
+**Example.** Let $$X = \mathbb{R}$$ and let $$\mathcal{S}$$ be the countable
+or co-countable subsets of $$\mathbb{R}$$.
+
+- $$f = \chi_{\mathbb{Q}}$$ is $$\mathcal{S}$$-measurable. Take $$c = 0$$:
+  $$\{f \ne 0\} = \mathbb{Q}$$ is countable. Directly,
+  $$f^{-1}(\{1\}) = \mathbb{Q}$$ is countable and
+  $$f^{-1}(\{0\}) = \mathbb{R} \setminus \mathbb{Q}$$ has a countable
+  complement, so every preimage lies in $$\mathcal{S}$$.
+- A function with infinitely many values can also be measurable. Let
+  $$f(n) = n$$ for $$n \in \mathbb{Z}^+$$ and $$f(x) = 0$$ for every other
+  $$x$$. Then $$\{f \ne 0\} = \mathbb{Z}^+$$ is countable, so $$f$$ is
+  $$\mathcal{S}$$-measurable, although $$f(X) = \{0\} \cup \mathbb{Z}^+$$ is
+  infinite.
+- $$f = \chi_{[0,\infty)}$$ is **not** $$\mathcal{S}$$-measurable. Both
+  $$\{f \ne 0\} = [0,\infty)$$ and $$\{f \ne 1\} = (-\infty,0)$$ are
+  uncountable, and for any other $$c$$ the set $$\{f \ne c\}$$ is all of
+  $$\mathbb{R}$$. Directly, $$f^{-1}(\{1\}) = [0,\infty)$$ is neither countable
+  nor co-countable.
+- $$f(x) = x^2$$ is **not** $$\mathcal{S}$$-measurable. Each value is taken at
+  most twice, so $$\{f \ne c\}$$ is uncountable for every $$c$$. Directly,
+  $$f^{-1}((1,\infty)) = (-\infty,-1) \cup (1,\infty)$$ is neither countable
+  nor co-countable.
+
 > **Exercise 22.** Suppose $$B \subseteq \mathbb{R}$$ and $$f : B \to
 > \mathbb{R}$$ is an increasing function. Prove that $$f$$ is continuous at
 > every element of $$B$$ except for a countable subset of $$B$$.
