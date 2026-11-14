@@ -245,7 +245,7 @@ $$\therefore\ \forall \varepsilon' > 0$$, $$\exists P$$ such that
 $$L(f,P,[a,b]) > k - \varepsilon'$$ and $$U(f,P,[a,b]) < k + \varepsilon'$$.
 
 Take $$\varepsilon' = \frac{1}{2}\varepsilon$$. Then $$\forall \varepsilon > 0$$,
-$$\exists P$$ such that
+$$\exists P$$ (the merge of the two partitions above) such that
 
 $$
 U(f,P,[a,b]) - L(f,P,[a,b]) < 2\varepsilon' = \varepsilon.
@@ -273,24 +273,21 @@ $$\therefore$$ $$f$$ is Riemann integrable.
 
 $$
 \begin{cases}
-\begin{aligned}
-L(f+g,P,[a,b]) &\ge L(f,P,[a,b]) + L(g,P,[a,b]) \\
-&\ge L(f,[a,b]) + L(g,[a,b])
-\end{aligned} \\[1.2em]
-\begin{aligned}
-U(f+g,P,[a,b]) &\le U(f,P,[a,b]) + U(g,P,[a,b]) \\
-&\le U(f,[a,b]) + U(g,[a,b])
-\end{aligned}
+L(f+g,P,[a,b]) \ge L(f,P,[a,b]) + L(g,P,[a,b]) \\[0.6em]
+U(f+g,P,[a,b]) \le U(f,P,[a,b]) + U(g,P,[a,b])
 \end{cases}
 $$
 
 $$
 \begin{aligned}
-L(f+g,[a,b]) &= \inf_P L(f+g,P,[a,b]) \ge L(f,[a,b]) + L(g,[a,b]) \\
-&= U(f,[a,b]) + U(g,[a,b]) \ge \sup_P U(f+g,P,[a,b]) \\
+L(f+g,[a,b]) &= \sup_P L(f+g,P,[a,b]) \ge L(f,[a,b]) + L(g,[a,b]) \\
+&= U(f,[a,b]) + U(g,[a,b]) \ge \inf_P U(f+g,P,[a,b]) \\
 &= U(f+g,[a,b]).
 \end{aligned}
 $$
+
+Here the suprema and infima are taken over a common refinement of
+partitions for $$f$$ and $$g$$.
 
 Also, $$L(f+g,[a,b]) \le U(f+g,[a,b])$$.
 
@@ -312,7 +309,7 @@ $$
 $$[a,b]$$ such that $$g(x) \ne f(x)$$.
 
 Consider the partition $$P$$ where
-$$a < x_0 - \varepsilon < x_0 + \varepsilon < \cdots < x_n - \varepsilon < x_n + \varepsilon < b$$.
+$$a < x_1 - \varepsilon < x_1 + \varepsilon < \cdots < x_n - \varepsilon < x_n + \varepsilon < b$$.
 
 $$
 \begin{aligned}
@@ -354,7 +351,7 @@ $$\therefore\ \displaystyle \int_a^b g = \int_a^b f$$.
 > Prove that $$F$$ is continuous on $$[a,b]$$.
 {: .problem #ex-1a-11 }
 
-*Solution.* (i) Prove that $$F$$ is left-continuous $$t = a$$.
+*Solution.* (i) Prove that $$F$$ is right-continuous at $$t = a$$.
 
 $$
 \Longleftrightarrow\ \lim_{t \to a+} \left| \int_a^t f \right| = 0.
@@ -369,7 +366,7 @@ $$
 \end{aligned}
 $$
 
-$$\therefore$$ $$t \to a+$$ 이면,
+$$\therefore$$ As $$t \to a+$$,
 
 $$
 \lim_{t \to a+} \int_a^t f \le \lim_{t \to a+} (t-a) \sup_{[a,b]} f = 0.
