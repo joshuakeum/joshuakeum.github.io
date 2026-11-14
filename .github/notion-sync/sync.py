@@ -111,19 +111,27 @@ class Images:
         if entry and entry["sha256"] == digest and (ROOT / entry["path"].lstrip("/")).exists():
             return entry["path"]
         ext = TYPES.get(ctype) or Path(urllib.parse.urlsplit(url).path).suffix.lower().replace(".jpeg", ".jpg") or ".png"
-        path = "/%s/notion-%s%s" % (IMG_DIR, block_id.replace("-", "")[:12], ext)
-        if entry and entry["path"] != path:
-            (ROOT / entry["path"].lstrip("/")).unlink(missing_ok=True)
-        (ROOT / path.lstrip("/")).write_bytes(clean(data, ext))
+        # The whole block id, not a prefix: blocks created close together share
+        # their first characters, and a prefix gave a replaced image the same
+        # file name as the one it replaced.
+        path = "/%s/notion-%s%s" % (IMG_DIR, block_id.replace("-", ""), ext)
+        old = entry["path"] if entry else None
         self.manifest[block_id] = {"path": path, "sha256": digest}
+        if old and old != path:
+            self.discard(old)
+        (ROOT / path.lstrip("/")).write_bytes(clean(data, ext))
         return path
+
+    def discard(self, path):
+        """Delete a downloaded image, unless another block still points at it."""
+        if Path(path).name.startswith("notion-") and not any(
+                e["path"] == path for e in self.manifest.values()):
+            (ROOT / path.lstrip("/")).unlink(missing_ok=True)
 
     def prune(self):
         """Delete downloaded images whose blocks are gone from the page."""
         for block_id in [b for b in self.manifest if b not in self.seen]:
-            path = self.manifest.pop(block_id)["path"]
-            if Path(path).name.startswith("notion-"):
-                (ROOT / path.lstrip("/")).unlink(missing_ok=True)
+            self.discard(self.manifest.pop(block_id)["path"])
 
 
 def front_matter(current, title, uses_math):
@@ -164,6 +172,11 @@ def main(argv):
     images.prune()
     for w in warnings:
         print("warning:", w)
+    missing = sorted({p for p in re.findall(r"\]\(/(assets/img/[^)\s]+)\)", text)
+                      if not (ROOT / p).exists()})
+    if missing:
+        raise SystemExit("The post links to images that are not in the repository, "
+                         "so nothing was written: " + ", ".join(missing))
     old_body = current.split("\n---\n", 1)[1]
     new_body = text.split("\n---\n", 1)[1]
     if len(new_body) < len(old_body) / 2 and not force:
