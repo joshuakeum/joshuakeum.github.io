@@ -29,7 +29,7 @@ been written up yet.
 **Chapter 1 — Riemann Integration**
 
 - [1A Review: Riemann Integral](/posts/measure-theory-1a-riemann-integral/)
-- 1B Riemann Integral Is Not Good Enough
+- [1B Riemann Integral Is Not Good Enough](/posts/measure-theory-1b-riemann-integral-not-good-enough/)
 
 **Chapter 2 — Measures**
 
