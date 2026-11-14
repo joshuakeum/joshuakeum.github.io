@@ -129,7 +129,7 @@ _**Fig 8**. PSI-BLAST result of PadeK. (A) pE of the hits in each cycle, ranked;
 
 Note: Most PF07475 members are the housekeeping HPrKs. A whole-family fetch will be dominated by those, so you have to filter by genomic context, keeping kinases with lasso B/C genes nearby.
 
-## Clustering of Homologous Proteins into Subfamilies
+## Profiling Homologous Proteins into Subfamilies
 
 ### Idea
 
