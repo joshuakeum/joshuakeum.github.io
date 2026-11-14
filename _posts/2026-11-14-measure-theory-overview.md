@@ -34,7 +34,7 @@ been written up yet.
 **Chapter 2 — Measures**
 
 - [2A Outer Measure on $$\mathbb{R}$$](/posts/measure-theory-2a-outer-measure/)
-- 2B Measurable Spaces and Functions
+- [2B Measurable Spaces and Functions](/posts/measure-theory-2b-measurable-spaces-and-functions/)
 - 2C Measures and Their Properties
 - 2D Lebesgue Measure
 - 2E Convergence of Measurable Functions
