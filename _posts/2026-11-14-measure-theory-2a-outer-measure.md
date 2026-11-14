@@ -40,7 +40,7 @@ E.g. we expect the size of the set $$(1,3) \cup (7,10)$$ to be $$5$$.
 > $$
 {: .definition #def-length }
 
-> **Definition (Outer measure; $$|A|$$).** The outer measure $$|A|$$ of a set
+> **Definition (Outer measure; $$\lvert A\rvert$$).** The outer measure $$\lvert A\rvert$$ of a set
 > $$A \subseteq \mathbb{R}$$ is defined by
 >
 > $$
@@ -65,7 +65,7 @@ $$
 $$\therefore\ A \subseteq \bigcup_{k=1}^{\infty} I_k$$ and
 $$\sum \ell(I_k) = 2\varepsilon n$$.
 
-$$|A| \le 2\varepsilon n$$. $$\varepsilon \to 0$$ $$\therefore\ |A| = 0$$.
+$$\lvert A\rvert \le 2\varepsilon n$$. $$\varepsilon \to 0$$ $$\therefore\ \lvert A\rvert = 0$$.
 
 > **Theorem (Countable sets have outer measure 0).** Every countable subset of
 > $$\mathbb{R}$$ has outer measure $$0$$.
@@ -86,20 +86,20 @@ $$
 = \varepsilon \sum_{k=1}^{\infty} \frac{1}{2^{k-1}} = 2\varepsilon \to 0.
 $$
 
-$$\therefore\ |A| = 0$$.
+$$\therefore\ \lvert A\rvert = 0$$.
 
-$$\hookrightarrow$$ $$|\mathbb{Q}| = 0$$. $$\square$$
+$$\hookrightarrow$$ $$\lvert \mathbb{Q}\rvert = 0$$. $$\square$$
 
 > **Theorem (Outer measure preserves order).** Suppose $$A$$ and $$B$$ are
-> subsets of $$\mathbb{R}$$ with $$A \subseteq B$$. Then $$|A| \le |B|$$.
+> subsets of $$\mathbb{R}$$ with $$A \subseteq B$$. Then $$\lvert A\rvert \le \lvert B\rvert$$.
 {: .theorem #thm-order }
 
 *Proof.* Suppose $$I_1, I_2, \dots$$ is a sequence of open intervals with
 $$B \subseteq \bigcup I_k$$. Then $$A \subseteq B \subseteq \bigcup I_k$$.
 
-$$\therefore\ |A| \le \sum \ell(I_k)$$.
+$$\therefore\ \lvert A\rvert \le \sum \ell(I_k)$$.
 
-$$\therefore\ |A| \le \inf\{\sum \ell(I_k)\} = |B|$$. $$\square$$
+$$\therefore\ \lvert A\rvert \le \inf\{\sum \ell(I_k)\} = \lvert B\rvert$$. $$\square$$
 
 > **Definition (Translation; $$t + A$$).** If $$t \in \mathbb{R}$$ and
 > $$A \subseteq \mathbb{R}$$, the translation $$t + A$$ is defined by
@@ -111,22 +111,22 @@ $$\therefore\ |A| \le \inf\{\sum \ell(I_k)\} = |B|$$. $$\square$$
 
 > **Theorem (Outer measure is translation invariant).** Suppose
 > $$t \in \mathbb{R}$$ and $$A \subseteq \mathbb{R}$$. Then
-> $$|t + A| = |A|$$.
+> $$\lvert t + A\rvert = \lvert A\rvert$$.
 {: .theorem #thm-translation }
 
 *Proof.* Suppose $$I_1, I_2, \dots$$ is a sequence of open intervals whose
 union contains $$A$$. Then $$t + I_1, t + I_2, \dots$$ is a sequence whose
 union contains $$t + A$$.
 
-① $$|t + A| \le \sum \ell(t + I_k) = \sum \ell(I_k)$$.
+① $$\lvert t + A\rvert \le \sum \ell(t + I_k) = \sum \ell(I_k)$$.
 
-$$\therefore\ |t + A| \le \inf \sum \ell(I_k) = |A|$$.
+$$\therefore\ \lvert t + A\rvert \le \inf \sum \ell(I_k) = \lvert A\rvert$$.
 
 ② Consider $$A = -t + (t + A)$$.
 
-$$\therefore\ |A| = |(-t) + (t + A)| \le |t + A|$$ by ①.
+$$\therefore\ \lvert A\rvert = \lvert (-t) + (t + A)\rvert \le \lvert t + A\rvert$$ by ①.
 
-$$\therefore\ |A| = |t + A|$$. $$\square$$
+$$\therefore\ \lvert A\rvert = \lvert t + A\rvert$$. $$\square$$
 
 > **Theorem (Countable subadditivity of outer measure).** Suppose
 > $$A_1, A_2, \dots$$ is a sequence of subsets of $$\mathbb{R}$$. Then
@@ -136,8 +136,8 @@ $$\therefore\ |A| = |t + A|$$. $$\square$$
 > $$
 {: .theorem #thm-subadditivity }
 
-*Proof.* If $$|A_k| = +\infty$$ for some $$k \in \mathbb{Z}^+$$, then the
-inequality definitely holds. Thus, assume $$|A_k| < \infty$$ for all
+*Proof.* If $$\lvert A_k\rvert = +\infty$$ for some $$k \in \mathbb{Z}^+$$, then the
+inequality definitely holds. Thus, assume $$\lvert A_k\rvert < \infty$$ for all
 $$k \in \mathbb{Z}^+$$.
 
 Let $$\varepsilon > 0$$. For each $$k \in \mathbb{Z}^+$$, let
@@ -170,7 +170,7 @@ $$
 $$
 
 $$\varepsilon \to 0$$;
-$$\displaystyle \Bigl| \bigcup_{k=1}^{\infty} A_k \Bigr| \le \sum_{k=1}^{\infty} |A_k|$$.
+$$\displaystyle \Bigl\lvert \bigcup_{k=1}^{\infty} A_k \Bigr\rvert \le \sum_{k=1}^{\infty} \lvert A_k\rvert$$.
 $$\square$$
 
 Also, countable subadditivity implies finite subadditivity.
@@ -244,15 +244,15 @@ $$\therefore\ F \subseteq G_1 \cup G_2 \cup \cdots \cup G_n$$
 \emptyset$$). $$\square$$
 
 > **Theorem (Outer measure of a closed interval).** Suppose
-> $$a, b \in \mathbb{R}$$ with $$a < b$$. Then $$|[a,b]| = b - a$$.
+> $$a, b \in \mathbb{R}$$ with $$a < b$$. Then $$\lvert [a,b]\rvert = b - a$$.
 {: .theorem #thm-closed-interval }
 
 *Proof.* ① If $$\varepsilon > 0$$, then $$(a - \varepsilon, b + \varepsilon),
 \emptyset, \emptyset, \dots$$ is a sequence of open intervals whose union
 contains $$[a,b]$$.
 
-$$\therefore\ |[a,b]| \le b - a + 2\varepsilon$$. $$\Rightarrow$$
-$$\varepsilon \to 0$$; $$|[a,b]| \le b - a$$.
+$$\therefore\ \lvert [a,b]\rvert \le b - a + 2\varepsilon$$. $$\Rightarrow$$
+$$\varepsilon \to 0$$; $$\lvert [a,b]\rvert \le b - a$$.
 
 ② Suppose $$I_1, I_2, \dots$$ is a sequence of open intervals such that
 $$[a,b] \subseteq \bigcup_{k=1}^{\infty} I_k$$.
@@ -302,7 +302,7 @@ $$
 \therefore\ \inf \sum_{k=1}^{\infty} \ell(I_n) = |[a,b]| \ge b - a.
 $$
 
-$$\therefore\ |[a,b]| = b - a$$. $$\square$$
+$$\therefore\ \lvert [a,b]\rvert = b - a$$. $$\square$$
 
 > **Corollary (Nontrivial intervals are uncountable).** Every interval in
 > $$\mathbb{R}$$ that contains at least two distinct elements is uncountable.
@@ -311,7 +311,7 @@ $$\therefore\ |[a,b]| = b - a$$. $$\square$$
 *Proof.* Suppose $$I$$ is an interval that contains $$a, b \in \mathbb{R}$$
 with $$a < b$$.
 
-$$\Rightarrow$$ $$|I| \ge |[a,b]| = b - a > 0$$.
+$$\Rightarrow$$ $$\lvert I\rvert \ge \lvert [a,b]\rvert = b - a > 0$$.
 
 Then, since every countable subset of $$\mathbb{R}$$ has outer measure $$0$$,
 we can conclude that $$I$$ is uncountable. $$\square$$
@@ -368,7 +368,7 @@ $$
 \le \sum_{k=1}^{\infty} |r_k + V|.
 $$
 
-$$\therefore\ \sum_{k=1}^{\infty} |V| \ge 2$$, and thus $$|V| > 0$$.
+$$\therefore\ \sum_{k=1}^{\infty} \lvert V\rvert \ge 2$$, and thus $$\lvert V\rvert > 0$$.
 
 Note that the sets $$r_1 + V, r_2 + V, \dots$$ are disjoint. $$\cdots (**)$$
 
@@ -384,13 +384,13 @@ Let $$n \in \mathbb{Z}^+$$. Clearly $$\bigcup_{k=1}^{n} (r_k + V)
 \subseteq [-3,3]$$ because $$V \subseteq [-1,1]$$ and each
 $$r_k \in [-2,2]$$.
 
-$$\therefore\ \Bigl| \bigcup_{k=1}^{n} (r_k + V) \Bigr| \le 6$$.
+$$\therefore\ \Bigl\lvert \bigcup_{k=1}^{n} (r_k + V) \Bigr\rvert \le 6$$.
 
-However, $$\displaystyle \sum_{k=1}^{n} |r_k + V| = \sum_{k=1}^{n} |V| =
-n|V|$$.
+However, $$\displaystyle \sum_{k=1}^{n} \lvert r_k + V\rvert =
+\sum_{k=1}^{n} \lvert V\rvert = n\lvert V\rvert$$.
 
-Then, since $$|V| > 0$$, we can choose $$n \in \mathbb{Z}^+$$ such that
-$$n|V| > 6$$.
+Then, since $$\lvert V\rvert > 0$$, we can choose $$n \in \mathbb{Z}^+$$ such that
+$$n\lvert V\rvert > 6$$.
 
 Thus,
 
@@ -400,30 +400,30 @@ $$
 $$
 
 $$\hookrightarrow$$ If $$A_1, A_2, \dots$$ are disjoint, we expect
-$$\bigl| \bigcup_{k=1}^{n} A_k \bigr| = \sum_{k=1}^{n} |A_k|$$.
+$$\bigl\lvert \bigcup_{k=1}^{n} A_k \bigr\rvert = \sum_{k=1}^{n} \lvert A_k\rvert$$.
 
 But the result above suggests that there exist disjoint subsets with
-$$\bigl| \bigcup_{k=1}^{n} A_k \bigr| \ne \sum_{k=1}^{n} |A_k|$$.
+$$\bigl\lvert \bigcup_{k=1}^{n} A_k \bigr\rvert \ne \sum_{k=1}^{n} \lvert A_k\rvert$$.
 
 ## Exercises 2A
 
 > **Exercise 1.** Prove that if $$A$$ and $$B$$ are subsets of $$\mathbb{R}$$
-> and $$|B| = 0$$, then $$|A \cup B| = |A|$$.
+> and $$\lvert B\rvert = 0$$, then $$\lvert A \cup B\rvert = \lvert A\rvert$$.
 {: .problem #ex-2a-1 }
 
 *Solution.* If $$A$$ and $$B$$ are subsets of $$\mathbb{R}$$ and
-$$|B| = 0$$, by the countable subadditivity of outer measure,
+$$\lvert B\rvert = 0$$, by the countable subadditivity of outer measure,
 
 $$
 |A \cup B| \le |A| + |B| = |A|.
 $$
 
-Also, since $$A \subseteq A \cup B$$, $$|A| \le |A \cup B|$$.
+Also, since $$A \subseteq A \cup B$$, $$\lvert A\rvert \le \lvert A \cup B\rvert$$.
 
-$$\therefore\ |A \cup B| = |A|$$.
+$$\therefore\ \lvert A \cup B\rvert = \lvert A\rvert$$.
 
 > **Exercise 2.** Suppose $$A \subseteq \mathbb{R}$$ and $$t \in \mathbb{R}$$.
-> Let $$tA = \{ta : a \in A\}$$. Prove that $$|tA| = |t|\,|A|$$.
+> Let $$tA = \{ta : a \in A\}$$. Prove that $$\lvert tA\rvert = \lvert t\rvert \,\lvert A\rvert$$.
 >
 > [Assume that $$0 \cdot \infty$$ is defined to be $$0$$.]
 {: .problem #ex-2a-2 }
@@ -439,13 +439,13 @@ $$
 = |t| \sum_{k=1}^{\infty} \ell(I_k).
 $$
 
-$$\therefore\ |tA| = |t|\,|A|$$.
+$$\therefore\ \lvert tA\rvert = \lvert t\rvert \,\lvert A\rvert$$.
 
 > **Exercise 3.** Prove that if $$A, B \subseteq \mathbb{R}$$ and
-> $$|A| < \infty$$, then $$|B \setminus A| \ge |B| - |A|$$.
+> $$\lvert A\rvert < \infty$$, then $$\lvert B \setminus A\rvert \ge \lvert B\rvert - \lvert A\rvert$$.
 {: .problem #ex-2a-3 }
 
-*Solution.* If $$A, B \subseteq \mathbb{R}$$ and $$|A| < \infty$$, as
+*Solution.* If $$A, B \subseteq \mathbb{R}$$ and $$\lvert A\rvert < \infty$$, as
 $$A \cup (B \cap A^c) = B$$,
 
 $$
@@ -453,7 +453,7 @@ $$
 \quad \text{(countable subadditivity)},
 $$
 
-$$\therefore\ |B \setminus A| \ge |B| - |A|$$.
+$$\therefore\ \lvert B \setminus A\rvert \ge \lvert B\rvert - \lvert A\rvert$$.
 
 > **Exercise 5.** Suppose $$\mathcal{A}$$ is a set of closed subsets of
 > $$\mathbb{R}$$ such that $$\bigcap_{F \in \mathcal{A}} F = \emptyset$$. Prove
@@ -499,12 +499,12 @@ $$\square$$
 > $$
 {: .problem #ex-2a-6 }
 
-*Solution.* ① $$|(a,b)| = b - a$$ $$\Rightarrow$$ By Def.
+*Solution.* ① $$\lvert (a,b)\rvert = b - a$$ $$\Rightarrow$$ By Def.
 
-② $$|(a,b]| = |(a,b) \cup \{b\}| = |(a,b)| = b - a$$
-($$\because$$ $$|\text{finite subsets}| = 0$$).
+② $$\lvert (a,b]\rvert = \lvert (a,b) \cup \{b\}\rvert = \lvert (a,b)\rvert = b - a$$
+($$\because$$ $$\lvert \text{finite subsets}\rvert = 0$$).
 
-③ Same for $$|[a,b)| = b - a$$.
+③ Same for $$\lvert [a,b)\rvert = b - a$$.
 
 > **Exercise 7.** Suppose $$a, b, c, d$$ are real numbers with $$a < b$$ and
 > $$c < d$$. Prove that
@@ -528,10 +528,10 @@ $$
 \ge |(a,d)| - |[b,c]|.
 $$
 
-$$\therefore\ (b - a) + (d - c) = |(a,b) \cup (c,d)|$$.
+$$\therefore\ (b - a) + (d - c) = \lvert (a,b) \cup (c,d)\rvert$$.
 
-② If $$|(a,b) \cup (c,d)| = (b - a) + (d - c) = |(a,b)| + |(c,d)|$$, it
-should be $$|(a,b) \cap (c,d)| = 0$$.
+② If $$\lvert (a,b) \cup (c,d)\rvert = (b - a) + (d - c) = \lvert (a,b)\rvert + \lvert (c,d)\rvert$$, it
+should be $$\lvert (a,b) \cap (c,d)\rvert = 0$$.
 
 $$\therefore\ (a,b) \cap (c,d) = \emptyset$$ as $$(a,b)$$ and $$(c,d)$$ are
 open intervals.
@@ -547,7 +547,7 @@ open intervals.
 > - **(a)** Show that $$F$$ is a closed subset of $$\mathbb{R}$$.
 > - **(b)** Prove that if $$I$$ is an interval contained in $$F$$, then
 >   $$I$$ contains at most one element.
-> - **(c)** Prove that $$|F| = \infty$$.
+> - **(c)** Prove that $$\lvert F\rvert = \infty$$.
 {: .problem #ex-2a-12 }
 
 *Solution.* Suppose $$r_1, r_2, \dots$$ is a sequence that contains every
@@ -582,11 +582,11 @@ $$
 |F| \ge |\mathbb{R}| - |\mathbb{R} \setminus F| = +\infty.
 $$
 
-$$\therefore\ |F| = +\infty$$.
+$$\therefore\ \lvert F\rvert = +\infty$$.
 
 > **Exercise 13.** Suppose $$\varepsilon > 0$$. Prove that there exists a
 > subset $$F$$ of $$[0,1]$$ such that $$F$$ is closed, every element of $$F$$
-> is an irrational number, and $$|F| > 1 - \varepsilon$$.
+> is an irrational number, and $$\lvert F\rvert > 1 - \varepsilon$$.
 {: .problem #ex-2a-13 }
 
 *Solution.* Let $$r_1, r_2, \dots$$ be an enumeration of
@@ -613,10 +613,10 @@ $$
 \end{aligned}
 $$
 
-Thus, $$|F| \ge |[0,1]| - |[0,1] \setminus F| \ge 1 - \varepsilon$$.
+Thus, $$\lvert F\rvert \ge \lvert [0,1]\rvert - \lvert [0,1] \setminus F\rvert \ge 1 - \varepsilon$$.
 
 Applying this with $$\varepsilon / 2$$ in place of $$\varepsilon$$ gives
-$$|F| \ge 1 - \varepsilon / 2 > 1 - \varepsilon$$.
+$$\lvert F\rvert \ge 1 - \varepsilon / 2 > 1 - \varepsilon$$.
 
 ## References
 
