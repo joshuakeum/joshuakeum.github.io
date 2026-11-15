@@ -171,7 +171,7 @@ _**Fig 10.** SSN Analysis of PadeK homologues. (A) SSN of the 1,064 PadeK homolo
 
 #### MMseqs2
 
-![Figure](/assets/img/bioinformatics-walkthrough/notion-41851c3c9b4980da8b87e817a22860f6.svg){: w="6510" h="3617" }
+- **Many-against-many sequence searching 2** **(MMseqs2)** is a ultra fast and sensitive sequence searching and clustering suite. It can act both as BLAST (and PSI-BLAST if it is used iteratively) and protein clustering tools (such as EFI-EST).
 
 ## Pangenomic Analysis
 
