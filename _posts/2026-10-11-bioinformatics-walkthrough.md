@@ -162,8 +162,8 @@ _**Fig 9.** Phylogenetic tree of the core 1,064 PadeK homologues retrieved by PS
   - SSN is advantageous in rapidly mapping superfamilies of proteins or genes into its subfamilies without depending on heavy computational limits.
   - Below is the SSN result of the 1,064 PadeK homologues and its mapping onto the phylogenetic tree.
 
-![SSN Analysis of PadeK homologues. (A) SSN of the 1,064 PadeK homologues. Edges with alignment score higher than 95 are shown. The color of the edge is mapped to each cluster. Each node represents a single accession. 120 accessions, including PadeK, are singletons. (B) Cluster color of each cluster is mapped as the second color box on the phylogenetic tree. Each cluster well-behaves as the accessions in the same cluster are closely placed in the phylogenetic tree.](/assets/img/bioinformatics-walkthrough/notion-41851c3c9b4980a18983cd94e6478ed9.svg){: w="6256" h="3617" }
-_**Fig 10.** SSN Analysis of PadeK homologues. (A) SSN of the 1,064 PadeK homologues. Edges with alignment score higher than 95 are shown. The color of the edge is mapped to each cluster. Each node represents a single accession. 120 accessions, including PadeK, are singletons. (B) Cluster color of each cluster is mapped as the second color box on the phylogenetic tree. Each cluster well-behaves as the accessions in the same cluster are closely placed in the phylogenetic tree._
+![SSN Analysis of PadeK homologues. (A) SSN of the 1,064 PadeK homologues made by EFI-EST. Edges with alignment score higher than 95 are shown. The color of the edge is mapped to each cluster. Each node represents a single accession. 120 accessions, including PadeK, are singletons. (B) The color of each cluster is mapped as the second color box on the phylogenetic tree. Each cluster well-behaves as the accessions in the same cluster are closely placed in the phylogenetic tree.](/assets/img/bioinformatics-walkthrough/notion-41851c3c9b4980a18983cd94e6478ed9.svg){: w="6256" h="3617" }
+_**Fig 10.** SSN Analysis of PadeK homologues. (A) SSN of the 1,064 PadeK homologues made by EFI-EST. Edges with alignment score higher than 95 are shown. The color of the edge is mapped to each cluster. Each node represents a single accession. 120 accessions, including PadeK, are singletons. (B) The color of each cluster is mapped as the second color box on the phylogenetic tree. Each cluster well-behaves as the accessions in the same cluster are closely placed in the phylogenetic tree._
 
 - **Tools**
   - **SSN Construction**: [**EFI-EST**](https://efi.igb.illinois.edu/efi-est) ([Oberg et al., *J. Mol. Biol*., **2023**](https://doi.org/10.1016/j.jmb.2023.168018))
@@ -172,6 +172,10 @@ _**Fig 10.** SSN Analysis of PadeK homologues. (A) SSN of the 1,064 PadeK homolo
 #### MMseqs2
 
 - **Many-against-many sequence searching 2** **(MMseqs2)** is a ultra fast and sensitive sequence searching and clustering suite. It can act both as BLAST (and PSI-BLAST if it is used iteratively) and protein clustering tools (such as EFI-EST).
+  - [**Github Link**](https://github.com/soedinglab/mmseqs2) ([Steinegger, Söding, *Nat. Biotechnol.*, **2017**](https://doi.org/10.1038/nbt.3988))
+
+![Clustering result of PadeK homologues using MMseqs2. (A) Network of the 1,064 PadeK homologues. Set cover method was used for creating the network. Edges mean over 56% percent identity, over 80% coverage, and under 1e-50 E-value in the all-versus-all alignment search. 183 accessions are singletons. (B) The color of each cluster made by MMseqs2 is mapped as the third color box on the phylogenetic tree alongside the EFI-EST SSN clusters mapped on the second color box. MMseqs2 subdivides the largest cluster of the SSN.](/assets/img/bioinformatics-walkthrough/notion-41a51c3c9b498009b329ec2293e1bd67.svg){: w="6510" h="3617" }
+_**Fig 11.** Clustering result of PadeK homologues using MMseqs2. (A) Network of the 1,064 PadeK homologues. Set cover method was used for creating the network. Edges mean over 56% percent identity, over 80% coverage, and under 1e-50 E-value in the all-versus-all alignment search. 183 accessions are singletons. (B) The color of each cluster made by MMseqs2 is mapped as the third color box on the phylogenetic tree alongside the EFI-EST SSN clusters mapped on the second color box. MMseqs2 subdivides the largest cluster of the SSN._
 
 ## Pangenomic Analysis
 
