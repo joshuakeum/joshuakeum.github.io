@@ -1,15 +1,15 @@
 ---
-title: "Mathematical Statistics 1: Homework 3, Chapter 2 Exercises"
+title: "Mathematical Statistics 1: Chapter 2 Exercises"
 date: 2026-11-21 10:20:00 +0900
 categories: [Study Notes, Mathematical Statistics 1]
-tags: [homework, joint distribution, conditional expectation, covariance, multivariate mgf, independence]
-description: Homework 3 of Mathematical Statistics 1, the Chapter 2 part — textbook exercises 2.1 to 2.17 on joint, marginal and conditional distributions, covariance, joint moment generating functions, the multiple correlation coefficient and independence.
+tags: [exercises, joint distribution, conditional expectation, covariance, multivariate mgf, independence]
+description: Worked exercises 2.1 to 2.17 for Chapter 2 of Mathematical Statistics 1 — joint, marginal and conditional distributions, covariance, joint moment generating functions, the multiple correlation coefficient, and independence.
 math: true
 mermaid: false
 render_with_liquid: false
 ---
 
-> The problems are from the Homework 3 sheet ("Chapter 1, exercises 18–25; Chapter 2, all problems") and from the textbook. This post holds the Chapter 2 part; the Chapter 1 part is in [Homework 3, Chapter 1 Exercises](/posts/mathstat1-homework-3-chapter-1/). The answers are my own, translated into English. I checked each result against the problem; the only change is one matrix step in Exercise 2.12(c), marked **Correction**, and a consistency check marked **Added** at the end of 2.17. The structure of every answer is unchanged. This homework uses [Part 1 to Part 5](/posts/mathstat1-joint-distribution/) of Chapter 2.
+> The exercise statements are from the textbook; the answers are my own, translated into English. These exercises use [Parts 1 to 5](/posts/mathstat1-joint-distribution/) of Chapter 2.
 {: .prompt-info }
 
 ### Exercise 2.1
@@ -351,8 +351,6 @@ $$
 
 so the bound is attained and the given equality holds.
 
-**Correction.** In the chain after "$$(\sigma_{21}a)^2$$" the original wrote the numerator as $$\mathrm{tr}(p^t\sigma_{12}\Sigma_{11}^{-1}\sigma_{21}p)$$, which does not multiply as matrices ($$\sigma_{12}$$ is a $$k \times 1$$ vector and $$\Sigma_{11}^{-1}$$ is $$k \times k$$). The correct matrix between $$p^t$$ and $$p$$ is $$\Sigma_{11}^{-1/2}\sigma_{12}\sigma_{21}\Sigma_{11}^{-1/2}$$; the trace argument is kept, and its trace is $$\sigma_{21}\Sigma_{11}^{-1}\sigma_{12}$$, as above.
-
 **(d)** From (c), $$\mathrm{Corr}(Y, L) = \rho_{Y;X_1,\dots,X_k}$$, that is, $$\dfrac{\mathrm{Cov}(Y, L)}{\sqrt{\mathrm{Var}(Y)}\sqrt{\mathrm{Var}(L)}} = \rho_{Y;X_1,\dots,X_k}$$. Then
 
 $$
@@ -531,12 +529,12 @@ $$
 \mathrm{Var}\bigl(E(Y \mid X_1)\bigr) = \begin{pmatrix}\frac{1}{36} & \frac{1}{36} \\[0.3em] \frac{1}{36} & \frac{1}{36}\end{pmatrix}, \qquad E\bigl(\mathrm{Var}(Y \mid X_1)\bigr) = E\begin{pmatrix}\frac{1}{25} & \frac{1}{25} \\ \frac{1}{25} & \frac{34}{225}\end{pmatrix} = \begin{pmatrix}\frac{1}{25} & \frac{1}{25} \\[0.3em] \frac{1}{25} & \frac{34}{225}\end{pmatrix}.
 $$
 
-**Added.** As a check, the sum of the two matrices is $$\begin{pmatrix}\frac{61}{900} & \frac{61}{900} \\ \frac{61}{900} & \frac{161}{900}\end{pmatrix}$$, which is the lower-right block of $$\mathrm{Var}(X)$$ in 2.16 (b), i.e. $$\mathrm{Var}(Y)$$, as the decomposition of the variance matrix requires.
+As a check, the sum of the two matrices is $$\begin{pmatrix}\frac{61}{900} & \frac{61}{900} \\ \frac{61}{900} & \frac{161}{900}\end{pmatrix}$$, which is the lower-right block of $$\mathrm{Var}(X)$$ in 2.16 (b), i.e. $$\mathrm{Var}(Y)$$, as the decomposition of the variance matrix requires.
 
 ## References
 
 - 김우철, *수리통계학* (Mathematical Statistics), revised 2nd edition, 민영사, 2021 — Chapter 2 exercises 2.1 to 2.17. The exercise statements are translated from the book.
-- Mathematical Statistics 1 (326.311), Seoul National University, Spring 2025. Instructor: Jaeyong Lee (이재용). Homework 3 sheet.
-- The answers are mine, translated into English. Where a step was wrong it is corrected and marked; the structure of every answer is unchanged.
+- Mathematical Statistics 1 (326.311), Seoul National University, Spring 2025. Instructor: Jaeyong Lee (이재용).
+- The answers are mine, translated into English.
 
-[Overview](/posts/mathstat1-overview/) · [Homework 3, Chapter 1 Exercises](/posts/mathstat1-homework-3-chapter-1/) · [Chapter 2 Part 5](/posts/mathstat1-multivariate/)
+[Overview](/posts/mathstat1-overview/) · [Chapter 1 Exercises](/posts/mathstat1-exercises-chapter-1/) · [Chapter 2 Part 5](/posts/mathstat1-multivariate/)

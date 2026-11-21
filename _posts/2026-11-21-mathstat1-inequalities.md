@@ -9,7 +9,7 @@ mermaid: false
 render_with_liquid: false
 ---
 
-> My handwritten notes, translated into English. Section 5 of Chapter 1 in my notes. It corresponds to §1.6 of the textbook; sections 5.6 and 5.7 (importance sampling and the Cramér–Chernoff method) go beyond the textbook. Statements and proofs follow my notes; I only corrected expressions that were mathematically wrong. Material taken from the textbook is collected at the end under "Supplement from the textbook".
+> My handwritten notes, translated into English. Section 5 of Chapter 1 in my notes. It corresponds to §1.6 of the textbook; sections 5.6 and 5.7 (importance sampling and the Cramér–Chernoff method) go beyond the textbook. Statements and proofs follow my notes. Material taken from the textbook is collected at the end under "Supplement from the textbook".
 {: .prompt-info }
 
 ## 5.1 Convex functions
@@ -285,6 +285,6 @@ which is Liapounov's inequality.
 
 - 김우철, *수리통계학* (Mathematical Statistics), revised 2nd edition, 민영사, 2021 — Chapter 1.
 - Mathematical Statistics 1 (326.311), Spring 2025. Instructor: Jaeyong Lee (이재용). My handwritten lecture notes, Chapter 1.
-- The notes are translated without changing their wording; remarks written in the margins of the notes are kept. Where a statement in the notes was mathematically wrong it is corrected in the text.
+- The notes are translated without changing their wording; remarks written in the margins of the notes are kept.
 
 [Previous](/posts/mathstat1-expectation-mgf/) · [Overview](/posts/mathstat1-overview/)
