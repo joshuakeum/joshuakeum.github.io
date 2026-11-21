@@ -839,4 +839,4 @@ Therefore $$\det(C + yy^T) = \det(C)\bigl(1 + y^TC^{-1}y\bigr)$$.
 - Mathematical Statistics 1 (326.311), Seoul National University, Spring 2025. Instructor: Jaeyong Lee (이재용). The additional problems are from the course's Homework 4.
 - The answers are mine, translated into English.
 
-[Overview](/posts/mathstat1-overview/) · [Chapter 2 Exercises](/posts/mathstat1-exercises-chapter-2/) · [Chapter 3 Part 5](/posts/mathstat1-normal/)
+[Overview](/posts/mathstat1-overview/) · [Chapter 2 Exercises](/posts/mathstat1-exercises-chapter-2/) · [Chapter 3 Part 5](/posts/mathstat1-normal/) · [Chapter 4 Exercises](/posts/mathstat1-exercises-chapter-4/)

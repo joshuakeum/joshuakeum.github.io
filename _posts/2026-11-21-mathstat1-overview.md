@@ -22,7 +22,7 @@ render_with_liquid: false
 
 ## Scope
 
-The notes cover three chapters of the textbook: Chapter 1, the probability distribution of a single random variable; Chapter 2, probability distributions of several random variables; and Chapter 3, the standard families of distributions. All three chapters are written up here.
+The notes cover four chapters of the textbook: Chapter 1, the probability distribution of a single random variable; Chapter 2, probability distributions of several random variables; Chapter 3, the standard families of distributions; and Chapter 4, sampling distributions. All four chapters are written up here.
 
 The course starts from the definition of probability on a $$\sigma$$-field, with a measure-theoretic flavor that the textbook leaves out: why a $$\sigma$$-field is needed, what a random variable is as a measurable function, and why a cumulative distribution function determines a distribution. It then develops expectation and generating functions, and ends the chapter with the inequalities used throughout statistics.
 
@@ -67,6 +67,16 @@ My notes for this chapter cover the Bernoulli, binomial, geometric, negative bin
 - [Part 4 — Gamma-Related Distributions](/posts/mathstat1-gamma-beta/): waiting time of a Poisson process, the gamma and beta functions, the gamma, exponential, chi-square, beta and Dirichlet distributions. *(my notes, section 3)*
 - [Part 5 — Normal Distribution and Summary of Distributions](/posts/mathstat1-normal/): the normal distribution, standardization, quantiles, and a summary of the distributions of the chapter. *(textbook §3.6)*
 - [Chapter 3 Exercises](/posts/mathstat1-exercises-chapter-3/): textbook exercises 3.1 to 3.18, Stirling's formula, the shapes of the gamma and beta densities, and partitioned matrices.
+
+**Chapter 4 — Sampling Distributions**
+
+My notes for this chapter cover transformations of random variables, sampling and statistics, the $$t$$-distribution and the fundamental theorem of the normal distribution, and order statistics. The multivariate normal distribution is translated from the textbook and says so at the top.
+
+- [Part 1 — Transformation of Random Variables and Sampling](/posts/mathstat1-transformations-sampling/): densities of functions of random variables, the Jacobian, statistics and sampling distributions. *(my notes, sections 0 and 1)*
+- [Part 2 — The t and F Distributions and Sampling from a Normal Population](/posts/mathstat1-t-f-distribution/): Student's $$t$$-distribution, $$\bar{X}$$ and $$S^2$$ of a normal sample, the confidence interval for the mean, and the $$\chi^2$$ and $$F$$ distributions. *(my notes, section 2)*
+- [Part 3 — Distribution of Order Statistics](/posts/mathstat1-order-statistics/): joint and marginal densities, the uniform and exponential cases. *(my notes, section 3)*
+- [Part 4 — Multivariate Normal Distribution](/posts/mathstat1-multivariate-normal/): density, linear transformations, marginal and conditional distributions, quadratic forms, linear regression. *(textbook §4.4)*
+- [Chapter 4 Exercises](/posts/mathstat1-exercises-chapter-4/): textbook exercises 4.1 to 4.26, and the shapes of the $$F$$ and $$t$$ densities with a simulation of the $$t$$ statistic.
 
 ## Notation
 
