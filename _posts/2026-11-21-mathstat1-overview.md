@@ -22,7 +22,7 @@ render_with_liquid: false
 
 ## Scope
 
-The notes cover four chapters of the textbook: Chapter 1, the probability distribution of a single random variable; Chapter 2, probability distributions of several random variables; Chapter 3, the standard families of distributions; and Chapter 4, sampling distributions. All four chapters are written up here.
+The notes cover five chapters of the textbook: Chapter 1, the probability distribution of a single random variable; Chapter 2, probability distributions of several random variables; Chapter 3, the standard families of distributions; Chapter 4, sampling distributions; and Chapter 5, approximation of sampling distributions. All five chapters are written up here.
 
 The course starts from the definition of probability on a $$\sigma$$-field, with a measure-theoretic flavor that the textbook leaves out: why a $$\sigma$$-field is needed, what a random variable is as a measurable function, and why a cumulative distribution function determines a distribution. It then develops expectation and generating functions, and ends the chapter with the inequalities used throughout statistics.
 
@@ -77,6 +77,17 @@ My notes for this chapter cover transformations of random variables, sampling an
 - [Part 3 — Distribution of Order Statistics](/posts/mathstat1-order-statistics/): joint and marginal densities, the uniform and exponential cases. *(my notes, section 3)*
 - [Part 4 — Multivariate Normal Distribution](/posts/mathstat1-multivariate-normal/): density, linear transformations, marginal and conditional distributions, quadratic forms, linear regression. *(textbook §4.4)*
 - [Chapter 4 Exercises](/posts/mathstat1-exercises-chapter-4/): textbook exercises 4.1 to 4.26, and the shapes of the $$F$$ and $$t$$ densities with a simulation of the $$t$$ statistic.
+
+**Chapter 5 — Approximation of Sampling Distributions**
+
+My notes for this chapter cover convergence in probability, consistency, the laws of large numbers, and convergence in distribution. The central limit theorem, the computation of limiting distributions (Slutsky, delta method) and simulation are translated from the textbook and say so at the top.
+
+- [Part 1 — Convergence in Probability](/posts/mathstat1-convergence-in-probability/): almost sure convergence, consistency, the law of large numbers, consistency of the sample variance, correlation and quantiles. *(my notes, section 1)*
+- [Part 2 — Convergence in Distribution](/posts/mathstat1-convergence-in-distribution/): the definition, proofs through densities and mgfs, Slutsky's theorem. *(my notes, section 2)*
+- [Part 3 — The Central Limit Theorem](/posts/mathstat1-central-limit-theorem/): the one- and many-dimensional theorems and normal approximations. *(textbook §5.1)*
+- [Part 4 — Computing Limiting Distributions and the Delta Method](/posts/mathstat1-limiting-distributions/): the studentized mean, the sample variance, chi-square approximations, the delta method, Fisher's transformation, the sample quantile. *(textbook §5.3)*
+- [Part 5 — Approximation by Simulation](/posts/mathstat1-simulation/): random numbers, Monte Carlo integration, approximating $$\pi$$. *(textbook §5.4)*
+- [Chapter 5 Exercises](/posts/mathstat1-exercises-chapter-5/): textbook exercises 5.1 to 5.18, with my answers as written for 5.1 to 5.12 and written-out answers for those I had not answered.
 
 ## Notation
 
