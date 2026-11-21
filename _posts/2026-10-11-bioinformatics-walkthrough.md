@@ -129,9 +129,7 @@ _**Fig 8**. PSI-BLAST result of PadeK. (A) pE of the hits in each cycle, ranked;
 
 Note: Most PF07475 members are the housekeeping HPrKs. A whole-family fetch will be dominated by those, so you have to filter by genomic context, keeping kinases with lasso B/C genes nearby.
 
-## Profiling Homologous Proteins into Subfamilies
-
-### Idea
+## Profiling Homologous Proteins into SubfamiliesIdea
 
 After obtaining a set of homologous genes, we need to dissect it into subfamilies for analysis. By this clustering, we want the genes to be placed in similar genomic context inside each subfamily. (**Divide and Conquer!**)
 
@@ -146,10 +144,10 @@ After obtaining a set of homologous genes, we need to dissect it into subfamilie
 - **Phylogenetic tree** is a graphical representation which shows the evolutionary history between a set of species, taxa, protein, genome, etc.
   - One can anticipate similar enzymatic activity of enzyme accessions nearby the query in the phylogenetic tree due to the similarity in enzyme sequences.
   - Combined with the concept of BGCs, closely related biosynthetic enzymes are more highly likely to serve similar roles in the contexts of BGCs.
-  - Below is the **MSA-based phylogenetic tree of the PadeK-homologues retrieved by PSI-BLAST**.
+  - Below (**Fig 9**) is the **MSA-based phylogenetic tree of the PadeK-homologues retrieved by PSI-BLAST**.
 
-![Phylogenetic tree of the core 1,066 PadeK homologues retrieved by PSI-BLAST.  L-INS-i of the MAFFT package was used for MSA construction, FastTree 2 was used to build the phylogenetic tree, and ETE 3 was used to visualize the tree. The right color box shows the phylum taxonomy of each homologue. (Note: The tree is not rooted but I drew it as if it is rooted for visual purposes.)](/assets/img/bioinformatics-walkthrough/notion-41851c3c9b49.svg){: w="2082" h="4340" }
-_**Fig 9.** Phylogenetic tree of the core 1,066 PadeK homologues retrieved by PSI-BLAST.  L-INS-i of the MAFFT package was used for MSA construction, FastTree 2 was used to build the phylogenetic tree, and ETE 3 was used to visualize the tree. The right color box shows the phylum taxonomy of each homologue. (Note: The tree is not rooted but I drew it as if it is rooted for visual purposes.)_
+![Phylogenetic tree of the core 1,064 PadeK homologues retrieved by PSI-BLAST. Two accessions of the core 1,066 homologues were not fetched since they were not in NCBI Entrez database. L-INS-i of the MAFFT package was used for MSA construction, FastTree 2 was used to build the phylogenetic tree, and ETE 3 was used to visualize the tree. The right color box shows the phylum taxonomy of each homologue. (Note: The tree is not rooted but I drew it as if it is rooted for visual purposes.)](/assets/img/bioinformatics-walkthrough/notion-41851c3c9b49.svg){: w="2082" h="4340" }
+_**Fig 9.** Phylogenetic tree of the core 1,064 PadeK homologues retrieved by PSI-BLAST. Two accessions of the core 1,066 homologues were not fetched since they were not in NCBI Entrez database. L-INS-i of the MAFFT package was used for MSA construction, FastTree 2 was used to build the phylogenetic tree, and ETE 3 was used to visualize the tree. The right color box shows the phylum taxonomy of each homologue. (Note: The tree is not rooted but I drew it as if it is rooted for visual purposes.)_
 
 - **Tools**
   - **MSA Construction**: [**MAFFT**](https://github.com/GSLBiotech/mafft) ([Katoh et al., *Brief. Bioinform.*, **2019**](https://academic.oup.com/bib/article/20/4/1160/4106928?login=false)), [**Clustal Omega**](https://github.com/GSLBiotech/clustal-omega) ([Sievers et al., *Mol. Syst. Biol.*, **2011**](https://doi.org/10.1038/msb.2011.75))
@@ -158,7 +156,26 @@ _**Fig 9.** Phylogenetic tree of the core 1,066 PadeK homologues retrieved by PS
 
 #### Sequence Similarity Networks
 
+- **Sequence Similarity Network (SSN)** is a graph-based bioinformatics tool that visualizes and analyzes relations across a large set of protein or gene sequences.
+  - Each **node** refers each protein or gene sequence.
+  - Each **edge** represent pairwise sequence alignments that meet certain conditions such as exceeding a user-defined threshold for alignment score of BLAST ($$AS = -\log_{10} \left ( 2^{-\textrm{bit.score}} \cdot \textrm{length}_1 \cdot \textrm{length}_2 \right )$$), percent identity, or the negative logarithm of E-value.
+  - SSN is advantageous in rapidly mapping superfamilies of proteins or genes into its subfamilies without depending on heavy computational limits.
+  - Below (**Fig 10**) is the SSN result of the 1,064 PadeK homologues and its mapping onto the phylogenetic tree.
+
+![SSN Analysis of PadeK homologues. (A) SSN of the 1,064 PadeK homologues made by EFI-EST. Edges with alignment score higher than 95 are shown. The color of the edge is mapped to each cluster. Each node represents a single accession. 120 accessions, including PadeK, are singletons. (B) The color of each cluster is mapped as the second color box on the phylogenetic tree. Each cluster well-behaves as the accessions in the same cluster are closely placed in the phylogenetic tree.](/assets/img/bioinformatics-walkthrough/notion-41851c3c9b4980a18983cd94e6478ed9.svg){: w="6256" h="3617" }
+_**Fig 10.** SSN Analysis of PadeK homologues. (A) SSN of the 1,064 PadeK homologues made by EFI-EST. Edges with alignment score higher than 95 are shown. The color of the edge is mapped to each cluster. Each node represents a single accession. 120 accessions, including PadeK, are singletons. (B) The color of each cluster is mapped as the second color box on the phylogenetic tree. Each cluster well-behaves as the accessions in the same cluster are closely placed in the phylogenetic tree._
+
+- **Tools**
+  - **SSN Construction**: [**EFI-EST**](https://efi.igb.illinois.edu/efi-est) ([Oberg et al., *J. Mol. Biol*., **2023**](https://doi.org/10.1016/j.jmb.2023.168018))
+  - **Network Visualization**: [**Cytoscape**](https://cytoscape.org/) ([Shannon et al., *Genome Res.*, **2003**](https://doi.org/10.1101/gr.1239303))
+
 #### MMseqs2
+
+- **Many-against-many sequence searching 2** **(MMseqs2)** is a ultra fast and sensitive sequence searching and clustering suite. It can act both as BLAST (and PSI-BLAST if it is used iteratively) and protein clustering tools (such as EFI-EST).
+  - [**Github Link**](https://github.com/soedinglab/mmseqs2) ([Steinegger, Söding, *Nat. Biotechnol.*, **2017**](https://doi.org/10.1038/nbt.3988))
+
+![Clustering result of PadeK homologues using MMseqs2. (A) Network of the 1,064 PadeK homologues. Set cover method was used for creating the network. Edges mean over 56% percent identity, over 80% coverage, and under 1e-50 E-value in the all-versus-all alignment search. 183 accessions are singletons. (B) The color of each cluster made by MMseqs2 is mapped as the third color box on the phylogenetic tree alongside the EFI-EST SSN clusters mapped on the second color box. MMseqs2 subdivides the largest cluster of the SSN.](/assets/img/bioinformatics-walkthrough/notion-41a51c3c9b498009b329ec2293e1bd67.svg){: w="6510" h="3617" }
+_**Fig 11.** Clustering result of PadeK homologues using MMseqs2. (A) Network of the 1,064 PadeK homologues. Set cover method was used for creating the network. Edges mean over 56% percent identity, over 80% coverage, and under 1e-50 E-value in the all-versus-all alignment search. 183 accessions are singletons. (B) The color of each cluster made by MMseqs2 is mapped as the third color box on the phylogenetic tree alongside the EFI-EST SSN clusters mapped on the second color box. MMseqs2 subdivides the largest cluster of the SSN._
 
 ## Pangenomic Analysis
 

@@ -2,5 +2,13 @@
   "41851c3c-9b49-801f-9524-ebc5aa2e3b8d": {
     "path": "/assets/img/bioinformatics-walkthrough/notion-41851c3c9b49.svg",
     "sha256": "1ae6d25809a155d35a4af34aa1e8998a658ddbf5f182938eb3091928904eb021"
+  },
+  "41851c3c-9b49-80a1-8983-cd94e6478ed9": {
+    "path": "/assets/img/bioinformatics-walkthrough/notion-41851c3c9b4980a18983cd94e6478ed9.svg",
+    "sha256": "3a835841b68feed1e9a709d919c0d12e45c5e9d4d424436b81b9a30f4bcff572"
+  },
+  "41a51c3c-9b49-8009-b329-ec2293e1bd67": {
+    "path": "/assets/img/bioinformatics-walkthrough/notion-41a51c3c9b498009b329ec2293e1bd67.svg",
+    "sha256": "f4f69a60214fd71d79441f9b19fd36731cebdefe35c13e8e8ed7a665fcf0184a"
   }
 }
