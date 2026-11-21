@@ -32,6 +32,20 @@
     measures, and Banach spaces. One post per section, built from my own
     handwritten notes and worked exercises.
 
+- term: 2025 Spring
+  code: "326.311"
+  title: Mathematical Statistics 1
+  subject: Statistics
+  category: Mathematical Statistics 1
+  instructor: Jaeyong Lee (이재용)
+  summary: >-
+    The first course of mathematical statistics, following 김우철's
+    Mathematical Statistics. Probability on a sigma-field, conditional
+    probability and independence, random variables and their
+    distributions, expectation and generating functions, and the basic
+    probability inequalities. The write-ups translate my handwritten
+    notes and solve the homework.
+
 - term: 2023 Fall
   code: "881.007"
   title: Linear Algebra
