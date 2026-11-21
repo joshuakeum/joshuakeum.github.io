@@ -9,7 +9,7 @@ mermaid: false
 render_with_liquid: false
 ---
 
-> My handwritten notes, translated into English. They cover section 3 of Chapter 2 in my notes (conditional distribution, conditional expectation, conditional mean and variance, linear prediction), which corresponds to §2.3 of the textbook. Statements and proofs follow my notes; I only corrected expressions that were mathematically wrong. The textbook material that my notes leave out is collected at the end under "Supplement from the textbook". It uses [Part 1](/posts/mathstat1-joint-distribution/) and [Part 2](/posts/mathstat1-joint-characteristics/).
+> My handwritten notes, translated into English. They cover section 3 of Chapter 2 in my notes (conditional distribution, conditional expectation, conditional mean and variance, linear prediction), which corresponds to §2.3 of the textbook. Statements and proofs follow my notes. The textbook material that my notes leave out is collected at the end under "Supplement from the textbook". It uses [Part 1](/posts/mathstat1-joint-distribution/) and [Part 2](/posts/mathstat1-joint-characteristics/).
 {: .prompt-info }
 
 ## Notes
@@ -166,7 +166,7 @@ $$
 
 $$\therefore\ a = \mu_2 - \mu_1\dfrac{\sigma_{12}}{\sigma_{11}}$$, and the predictor is $$\mu_2 - \mu_1\dfrac{\sigma_{12}}{\sigma_{11}} + \dfrac{\sigma_{12}}{\sigma_{11}}X_1 = \mu_2 + \dfrac{\sigma_{12}}{\sigma_{11}}(X_1 - \mu_1)$$. $$\square$$
 
-**Correction.** The last expression was written with a minus sign, $$\mu_2 - \frac{\sigma_{12}}{\sigma_{11}}(X_1 - \mu_1)$$; the line just before it gives the plus sign, which is also the one in the statement of the theorem.
+
 
 
 ## Supplement from the textbook
@@ -288,6 +288,6 @@ which agrees with $$\mathrm{Var}(Y) = 2/63$$ of Example 2.2.4.
 
 - 김우철, *수리통계학* (Mathematical Statistics), revised 2nd edition, 민영사, 2021 — Chapter 2, §2.3.
 - Mathematical Statistics 1 (326.311), Seoul National University, Spring 2025. Instructor: Jaeyong Lee (이재용). My handwritten lecture notes, Chapter 2 section 3.
-- The notes are translated without changing their wording; remarks written in the margins are kept. The proof of part (a) of the linear prediction theorem ends in a sign slip, corrected where marked. The proofs of parts (c)(i) and (d) of the conditional average and variance theorem are not written out in my notes; they are in the supplement (Theorems 2.3.5 and 2.3.6 of the book).
+- The notes are translated without changing their wording; remarks written in the margins are kept.
 
 [Previous](/posts/mathstat1-joint-characteristics/) · [Overview](/posts/mathstat1-overview/) · [Next](/posts/mathstat1-independence/)

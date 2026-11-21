@@ -9,7 +9,7 @@ mermaid: false
 render_with_liquid: false
 ---
 
-> My handwritten notes, translated into English. Section 1 of Chapter 1 in my notes. It corresponds to §1.1 of the textbook. Statements and proofs follow my notes; I only corrected expressions that were mathematically wrong. Material taken from the textbook is collected at the end under "Supplement from the textbook".
+> My handwritten notes, translated into English. Section 1 of Chapter 1 in my notes. It corresponds to §1.1 of the textbook. Statements and proofs follow my notes. Material taken from the textbook is collected at the end under "Supplement from the textbook".
 {: .prompt-info }
 
 <!-- notes p1 -->
@@ -138,7 +138,7 @@ $$
 > - (d) (countable subadditivity) $$P(A_1 \cup A_2 \cup \cdots) \le P(A_1) + P(A_2) + \cdots$$.
 {: .theorem #thm-union-probability }
 
-(a) follows from the additivity applied to $$A_1 \cup A_2 = (A_1 \setminus A_2) \cup (A_1 \cap A_2) \cup (A_2 \setminus A_1)$$, $$A_1 = (A_1 \setminus A_2) \cup (A_1 \cap A_2)$$ and $$A_2 = (A_2 \setminus A_1) \cup (A_1 \cap A_2)$$. (b) and (c) follow from (a) by mathematical induction; (d) is property (6) above. Proofs of (c) and of Bonferroni's inequality are written out in [Homework 1](/posts/mathstat1-homework-1/).
+(a) follows from the additivity applied to $$A_1 \cup A_2 = (A_1 \setminus A_2) \cup (A_1 \cap A_2) \cup (A_2 \setminus A_1)$$, $$A_1 = (A_1 \setminus A_2) \cup (A_1 \cap A_2)$$ and $$A_2 = (A_2 \setminus A_1) \cup (A_1 \cap A_2)$$. (b) and (c) follow from (a) by mathematical induction; (d) is property (6) above. Proofs of (c) and of Bonferroni's inequality are written out in [Chapter 1 Exercises](/posts/mathstat1-exercises-chapter-1/).
 
 **Example 1.1.1 (Bernoulli trial).** Tossing a fair coin and observing the face: $$\mathcal{C} = \{H, T\}$$, $$P(\{H\}) = P(\{T\}) = \tfrac{1}{2}$$. An experiment with only two possible outcomes, called success $$s$$ and failure $$f$$, is a *Bernoulli trial*: $$\mathcal{C} = \{s, f\}$$, $$P(\{s\}) = p$$, $$P(\{f\}) = 1 - p$$ ($$0 < p < 1$$).
 
@@ -152,6 +152,6 @@ $$
 
 - 김우철, *수리통계학* (Mathematical Statistics), revised 2nd edition, 민영사, 2021 — Chapter 1.
 - Mathematical Statistics 1 (326.311), Spring 2025. Instructor: Jaeyong Lee (이재용). My handwritten lecture notes, Chapter 1.
-- The notes are translated without changing their wording; remarks written in the margins of the notes are kept. Where a statement in the notes was mathematically wrong it is corrected in the text.
+- The notes are translated without changing their wording; remarks written in the margins of the notes are kept.
 
 [Overview](/posts/mathstat1-overview/) · [Next](/posts/mathstat1-conditional-probability/)

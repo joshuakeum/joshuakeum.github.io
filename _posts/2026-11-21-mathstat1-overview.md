@@ -28,11 +28,11 @@ The course starts from the definition of probability on a $$\sigma$$-field, with
 
 ## How these notes are organized
 
-These are my handwritten lecture notes, translated into English, with the homework solutions I wrote for the course.
+These are my handwritten lecture notes, translated into English, with the exercises I solved for the course.
 
-- **Wording.** The translation keeps my wording. Only expressions that are mathematically wrong are corrected, and a correction is stated where it is made.
+- **Wording.** The translation keeps my wording.
 - **Textbook.** The textbook is used only where my notes leave something out. Such material is collected at the end of each post under "Supplement from the textbook" and is a translation of the book, not my own writing.
-- **Homework.** The homework problems are in a separate post. My answers are translated as I wrote them; where an answer was mathematically wrong, the missing or corrected content is added and marked.
+- **Exercises.** The exercises of each chapter are in a separate post, with my answers translated as I wrote them.
 - **Sections.** Each section of Chapter 1 in my notes is its own post. The notes number their sections $$1$$ to $$5$$ and then number subsections inside them; the textbook's own numbering ($$1.1$$ to $$1.6$$) is given at the top of each post.
 
 ## Chapter contents
@@ -44,9 +44,7 @@ These are my handwritten lecture notes, translated into English, with the homewo
 - [Part 3 — Random Variables, CDFs and Density Functions](/posts/mathstat1-random-variables-cdf/): random variables and their distributions, the CDF and its characterization, discrete and continuous random variables.
 - [Part 4 — Expectation, Moments and Generating Functions](/posts/mathstat1-expectation-mgf/): expectation, variance, skewness and kurtosis, moment generating and cumulant generating functions.
 - [Part 5 — Inequalities](/posts/mathstat1-inequalities/): convex functions, AM–GM, Liapounov, Markov, Chebyshev and Jensen, importance sampling, the Cramér–Chernoff method.
-- [Homework 1](/posts/mathstat1-homework-1/): textbook Chapter 1 exercises 1 to 5, inclusion–exclusion and Bonferroni's inequality, and the pairing probability of the textbook's Example 1.1.2.
-- [Homework 2](/posts/mathstat1-homework-2/): textbook Chapter 1 exercises 7 to 12 and 14 to 17, Examples 1.5.6 and 1.5.7, discontinuities of a CDF, existence of a random variable with a given CDF, symmetric distributions.
-- [Homework 3, Chapter 1 exercises](/posts/mathstat1-homework-3-chapter-1/): exercises 18 to 25 on cumulants, skewness, kurtosis, Jensen's inequality and moment generating functions.
+- [Chapter 1 Exercises](/posts/mathstat1-exercises-chapter-1/): textbook exercises 1.1 to 1.5, 1.7 to 1.12, 1.14 to 1.25, inclusion–exclusion and Bonferroni's inequality, Examples 1.1.2, 1.5.6 and 1.5.7, and problems on distribution functions.
 
 **Chapter 2 — Probability Distributions of Several Random Variables**
 
@@ -57,7 +55,7 @@ My notes for this chapter cover conditional distributions only (section 3). The 
 - [Part 3 — Conditional Distribution and Expectation](/posts/mathstat1-conditional-distribution/): conditional density, conditional expectation, best predictor, EVVE, linear prediction. *(my notes, with §2.3 supplement)*
 - [Part 4 — Independence of Random Variables](/posts/mathstat1-independence/): independence, products and sums of independent variables. *(textbook §2.4)*
 - [Part 5 — Multivariate Random Variables](/posts/mathstat1-multivariate/): mean vector, variance matrix, multivariate mgf, conditional distributions, independence of several variables. *(textbook §2.5)*
-- [Homework 3, Chapter 2 exercises](/posts/mathstat1-homework-3-chapter-2/): textbook exercises 2.1 to 2.17.
+- [Chapter 2 Exercises](/posts/mathstat1-exercises-chapter-2/): textbook exercises 2.1 to 2.17.
 
 **Chapter 3 — Various Distributions** (not yet written up)
 
