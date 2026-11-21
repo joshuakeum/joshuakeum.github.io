@@ -36,7 +36,7 @@ been written up yet.
 - [2A Outer Measure on $$\mathbb{R}$$](/posts/measure-theory-2a-outer-measure/)
 - [2B Measurable Spaces and Functions](/posts/measure-theory-2b-measurable-spaces-and-functions/)
 - [2C Measures and Their Properties](/posts/measure-theory-2c-measures-and-their-properties/)
-- 2D Lebesgue Measure
+- [2D Lebesgue Measure](/posts/measure-theory-2d-lebesgue-measure/)
 - 2E Convergence of Measurable Functions
 
 **Chapter 3 — Integration**
