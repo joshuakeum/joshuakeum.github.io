@@ -22,7 +22,7 @@ render_with_liquid: false
 
 ## Scope
 
-The notes cover three chapters of the textbook: Chapter 1, the probability distribution of a single random variable; Chapter 2, probability distributions of several random variables; and Chapter 3, the standard families of distributions. Chapters 1 and 2 are written up here; Chapter 3 is not yet.
+The notes cover three chapters of the textbook: Chapter 1, the probability distribution of a single random variable; Chapter 2, probability distributions of several random variables; and Chapter 3, the standard families of distributions. All three chapters are written up here.
 
 The course starts from the definition of probability on a $$\sigma$$-field, with a measure-theoretic flavor that the textbook leaves out: why a $$\sigma$$-field is needed, what a random variable is as a measurable function, and why a cumulative distribution function determines a distribution. It then develops expectation and generating functions, and ends the chapter with the inequalities used throughout statistics.
 
@@ -33,7 +33,7 @@ These are my handwritten lecture notes, translated into English, with the exerci
 - **Wording.** The translation keeps my wording.
 - **Textbook.** The textbook is used only where my notes leave something out. Such material is collected at the end of each post under "Supplement from the textbook" and is a translation of the book, not my own writing.
 - **Exercises.** The exercises of each chapter are in a separate post, with my answers translated as I wrote them.
-- **Sections.** Each section of Chapter 1 in my notes is its own post. The notes number their sections $$1$$ to $$5$$ and then number subsections inside them; the textbook's own numbering ($$1.1$$ to $$1.6$$) is given at the top of each post.
+- **Sections.** Each section of a chapter in my notes is its own post. The notes number their sections $$1$$ to $$5$$ and then number subsections inside them; the textbook's own numbering ($$1.1$$ to $$1.6$$) is given at the top of each post.
 
 ## Chapter contents
 
@@ -57,7 +57,16 @@ My notes for this chapter cover conditional distributions only (section 3). The 
 - [Part 5 — Multivariate Random Variables](/posts/mathstat1-multivariate/): mean vector, variance matrix, multivariate mgf, conditional distributions, independence of several variables. *(textbook §2.5)*
 - [Chapter 2 Exercises](/posts/mathstat1-exercises-chapter-2/): textbook exercises 2.1 to 2.17.
 
-**Chapter 3 — Various Distributions** (not yet written up)
+**Chapter 3 — Various Distributions**
+
+My notes for this chapter cover the Bernoulli, binomial, geometric, negative binomial, hypergeometric, multinomial, Poisson, gamma, exponential, chi-square, beta and Dirichlet distributions. The normal distribution is translated from the textbook and says so at the top.
+
+- [Part 1 — Bernoulli and Binomial Distributions](/posts/mathstat1-binomial/): the Bernoulli distribution, the binomial expansion, the binomial distribution. *(my notes, sections 1.1 to 1.3)*
+- [Part 2 — Geometric, Negative Binomial, Hypergeometric and Multinomial Distributions](/posts/mathstat1-geometric-negative-binomial/): waiting times in a Bernoulli process, the memoryless property, sampling without replacement, the multinomial distribution. *(my notes, sections 1.4 to 1.7)*
+- [Part 3 — Poisson Distribution](/posts/mathstat1-poisson/): the Poisson approximation, the Poisson process and the distribution of its counts. *(my notes, section 2)*
+- [Part 4 — Gamma-Related Distributions](/posts/mathstat1-gamma-beta/): waiting time of a Poisson process, the gamma and beta functions, the gamma, exponential, chi-square, beta and Dirichlet distributions. *(my notes, section 3)*
+- [Part 5 — Normal Distribution and Summary of Distributions](/posts/mathstat1-normal/): the normal distribution, standardization, quantiles, and a summary of the distributions of the chapter. *(textbook §3.6)*
+- [Chapter 3 Exercises](/posts/mathstat1-exercises-chapter-3/): textbook exercises 3.1 to 3.18, Stirling's formula, the shapes of the gamma and beta densities, and partitioned matrices.
 
 ## Notation
 

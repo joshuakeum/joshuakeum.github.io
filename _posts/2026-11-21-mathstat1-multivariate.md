@@ -305,4 +305,4 @@ $$
 - 김우철, *수리통계학* (Mathematical Statistics), revised 2nd edition, 민영사, 2021 — Chapter 2, §2.5 (Examples 2.5.1 to 2.5.14, Theorems 2.5.1 to 2.5.11). Translated from the book; not from my notes.
 - Mathematical Statistics 1 (326.311), Seoul National University, Spring 2025. Instructor: Jaeyong Lee (이재용).
 
-[Previous](/posts/mathstat1-independence/) · [Overview](/posts/mathstat1-overview/) · [Chapter 2 Exercises](/posts/mathstat1-exercises-chapter-2/)
+[Previous](/posts/mathstat1-independence/) · [Overview](/posts/mathstat1-overview/) · [Chapter 2 Exercises](/posts/mathstat1-exercises-chapter-2/) · [Chapter 3 Part 1](/posts/mathstat1-binomial/)
