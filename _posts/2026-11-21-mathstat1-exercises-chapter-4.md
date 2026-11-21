@@ -786,4 +786,4 @@ _$$n = 100$$._
 - Mathematical Statistics 1 (326.311), Seoul National University, Spring 2025. Instructor: Jaeyong Lee (이재용). The additional problems are from the course's Homework 5.
 - The answers are mine, translated into English.
 
-[Overview](/posts/mathstat1-overview/) · [Chapter 3 Exercises](/posts/mathstat1-exercises-chapter-3/) · [Chapter 4 Part 4](/posts/mathstat1-multivariate-normal/)
+[Overview](/posts/mathstat1-overview/) · [Chapter 3 Exercises](/posts/mathstat1-exercises-chapter-3/) · [Chapter 4 Part 4](/posts/mathstat1-multivariate-normal/) · [Chapter 5 Part 1](/posts/mathstat1-convergence-in-probability/)
