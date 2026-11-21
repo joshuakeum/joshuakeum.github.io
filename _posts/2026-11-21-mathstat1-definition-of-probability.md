@@ -26,7 +26,7 @@ render_with_liquid: false
 
 **Examples.** Coin toss: $$\mathcal{C} = \{H, T\}$$. Die roll: $$\mathcal{C} = \{1,2,3,4,5,6\}$$.
 
-## 1.1 $$\sigma$$-fields
+## 1.1 [$$\sigma$$-fields](/posts/measure-theory-2b-measurable-spaces-and-functions/)
 
 > **Definition ($$\sigma$$-field).** For a collection $$\mathcal{B}$$ of subsets of the sample space $$\mathcal{C}$$, $$\mathcal{B}$$ is called a $$\sigma$$-field if it satisfies the following conditions.
 >
