@@ -14,6 +14,7 @@ render_with_liquid: false
 | Item | Detail |
 |---|---|
 | Course | Mathematical Statistics 1, 326.311 |
+| Institution | Seoul National University |
 | Semester | Spring 2025 |
 | Instructor | Jaeyong Lee (이재용) |
 | Credits | 3 |
