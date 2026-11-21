@@ -22,7 +22,7 @@ render_with_liquid: false
 
 ## Scope
 
-The notes cover three chapters of the textbook: Chapter 1, the probability distribution of a single random variable; Chapter 2, probability distributions of several random variables; and Chapter 3, the standard families of distributions. Chapter 1 is written up here; Chapters 2 and 3 are not yet.
+The notes cover three chapters of the textbook: Chapter 1, the probability distribution of a single random variable; Chapter 2, probability distributions of several random variables; and Chapter 3, the standard families of distributions. Chapters 1 and 2 are written up here; Chapter 3 is not yet.
 
 The course starts from the definition of probability on a $$\sigma$$-field, with a measure-theoretic flavor that the textbook leaves out: why a $$\sigma$$-field is needed, what a random variable is as a measurable function, and why a cumulative distribution function determines a distribution. It then develops expectation and generating functions, and ends the chapter with the inequalities used throughout statistics.
 
@@ -45,8 +45,19 @@ These are my handwritten lecture notes, translated into English, with the homewo
 - [Part 4 — Expectation, Moments and Generating Functions](/posts/mathstat1-expectation-mgf/): expectation, variance, skewness and kurtosis, moment generating and cumulant generating functions.
 - [Part 5 — Inequalities](/posts/mathstat1-inequalities/): convex functions, AM–GM, Liapounov, Markov, Chebyshev and Jensen, importance sampling, the Cramér–Chernoff method.
 - [Homework 1](/posts/mathstat1-homework-1/): textbook Chapter 1 exercises 1 to 5, inclusion–exclusion and Bonferroni's inequality, and the pairing probability of the textbook's Example 1.1.2.
+- [Homework 2](/posts/mathstat1-homework-2/): textbook Chapter 1 exercises 7 to 12 and 14 to 17, Examples 1.5.6 and 1.5.7, discontinuities of a CDF, existence of a random variable with a given CDF, symmetric distributions.
+- [Homework 3, Chapter 1 exercises](/posts/mathstat1-homework-3-chapter-1/): exercises 18 to 25 on cumulants, skewness, kurtosis, Jensen's inequality and moment generating functions.
 
-**Chapter 2 — Probability Distributions of Several Random Variables** (not yet written up)
+**Chapter 2 — Probability Distributions of Several Random Variables**
+
+My notes for this chapter cover conditional distributions only (section 3). The other sections are translated from the textbook and say so at the top.
+
+- [Part 1 — Distribution of Two Random Variables](/posts/mathstat1-joint-distribution/): joint and marginal densities, the joint CDF. *(textbook §2.1)*
+- [Part 2 — Characteristics of a Joint Distribution](/posts/mathstat1-joint-characteristics/): covariance, correlation, joint moments and the joint moment generating function. *(textbook §2.2)*
+- [Part 3 — Conditional Distribution and Expectation](/posts/mathstat1-conditional-distribution/): conditional density, conditional expectation, best predictor, EVVE, linear prediction. *(my notes, with §2.3 supplement)*
+- [Part 4 — Independence of Random Variables](/posts/mathstat1-independence/): independence, products and sums of independent variables. *(textbook §2.4)*
+- [Part 5 — Multivariate Random Variables](/posts/mathstat1-multivariate/): mean vector, variance matrix, multivariate mgf, conditional distributions, independence of several variables. *(textbook §2.5)*
+- [Homework 3, Chapter 2 exercises](/posts/mathstat1-homework-3-chapter-2/): textbook exercises 2.1 to 2.17.
 
 **Chapter 3 — Various Distributions** (not yet written up)
 
