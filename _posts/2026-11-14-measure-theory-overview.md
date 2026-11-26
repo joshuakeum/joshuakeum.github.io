@@ -37,7 +37,7 @@ been written up yet.
 - [2B Measurable Spaces and Functions](/posts/measure-theory-2b-measurable-spaces-and-functions/)
 - [2C Measures and Their Properties](/posts/measure-theory-2c-measures-and-their-properties/)
 - [2D Lebesgue Measure](/posts/measure-theory-2d-lebesgue-measure/)
-- 2E Convergence of Measurable Functions
+- [2E Convergence of Measurable Functions](/posts/measure-theory-2e-convergence-of-measurable-functions/)
 
 **Chapter 3 — Integration**
 
