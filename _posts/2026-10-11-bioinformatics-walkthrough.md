@@ -129,7 +129,9 @@ _**Fig 8**. PSI-BLAST result of PadeK. (A) pE of the hits in each cycle, ranked;
 
 Note: Most PF07475 members are the housekeeping HPrKs. A whole-family fetch will be dominated by those, so you have to filter by genomic context, keeping kinases with lasso B/C genes nearby.
 
-## Profiling Homologous Proteins into SubfamiliesIdea
+## Profiling Homologous Proteins into Subfamilies
+
+### Idea
 
 After obtaining a set of homologous genes, we need to dissect it into subfamilies for analysis. By this clustering, we want the genes to be placed in similar genomic context inside each subfamily. (**Divide and Conquer!**)
 
