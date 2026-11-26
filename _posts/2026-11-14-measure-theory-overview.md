@@ -41,7 +41,7 @@ been written up yet.
 
 **Chapter 3 — Integration**
 
-- 3A Integration with Respect to a Measure
+- [3A Integration with Respect to a Measure](/posts/measure-theory-3a-integration-with-respect-to-a-measure/)
 - 3B Limits of Integrals & Integrals of Limits
 
 **Chapter 4 — Differentiation**
